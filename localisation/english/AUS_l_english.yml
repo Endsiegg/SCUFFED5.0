@@ -624,7 +624,7 @@ AUS_reclaim_historical_lands_desc:0 "With the declaration of the reformation of 
 AUS_invade_czechoslovakia:0 "Invade [CZE.GetNameDef]"
 AUS_invade_czechoslovakia_desc:0 ""
 
-AUS_prepare_czechoslovak_invasion:0 "Prepare [CZE.GetAdjective] Invasion"
+AUS_prepare_czechoslovak_invasion:0 "Planning Ahead"
 AUS_prepare_czechoslovak_invasion_desc:0 ""
 
 AUS_dissociate_austrofascism_from_nazism:0 "Austrofascism, not Nazism"

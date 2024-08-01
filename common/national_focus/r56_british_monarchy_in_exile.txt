@@ -32,7 +32,7 @@
 		}		
 				
 		offset = {
-			x = 27
+			x = 8
 			y = 0
 			trigger = {
 				has_focus_tree = r56_australian_focus

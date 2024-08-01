@@ -14,13 +14,19 @@ shared_focus = {
 		}
 	  }
 	  offset = {
-		x = 38
+		x = 30
 		y = 0
 		trigger = {
 		  tag = RAJ
 		}
 	  }
-
+	  offset = {
+		x = -2
+		y = 7
+		trigger = {
+		  tag = ven
+		}
+	  }
 	ai_will_do = {
 		factor = 10	
 	}
@@ -332,11 +338,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 1500
-
-	}
+		add_tech_bonus = {
+			name = infantry
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+		}
 	}
 	search_filters = {	FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_IMPROVEMENT }
 }
@@ -364,21 +371,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_equipment_to_stockpile = {
-			type = artillery_equipment
-			amount = 100
-
-	}
-	add_equipment_to_stockpile = {
-		type = anti_air_equipment
-		amount = 50
-
-	}
-	add_equipment_to_stockpile = {
-	type = anti_tank_equipment
-	amount = 30
-
-	}
+		add_tech_bonus = {
+			name = artillery
+			bonus = 0.5
+			uses = 2
+			category = artillery
+		}
 	}
 	search_filters = {	FOCUS_FILTER_MANPOWER }
 }
@@ -406,11 +404,12 @@ shared_focus = {
 	}
 
 	completion_reward = {
-		add_equipment_to_stockpile = {
-			type = support_equipment
-			amount = 300
-
-	}
+		add_tech_bonus = {
+			name = support_tech
+			bonus = 0.5
+			uses = 2
+			category = support_tech
+		}
 	}
 	search_filters = {	FOCUS_FILTER_MANPOWER }
 }
@@ -671,7 +670,7 @@ shared_focus = {
 
 shared_focus = {
 	id = GEN_ARMY_mass_firearm_production
-	icon = GFX_focus_generic_military_academy
+	icon = GFX_focus_generic_limited_social_mobilization
 	prerequisite = { focus = GEN_ARMY_weapon_prototype_development }
 	x = 0
 	y = 1
@@ -684,9 +683,7 @@ shared_focus = {
 		has_tech = radio
 		}
 	completion_reward = {
-		add_ideas = age_17
-		add_ideas = age_50
-		add_ideas = SAU_radio_innovations1
+		add_ideas = GEN_reinforcements
 	}
 	search_filters = {	FOCUS_FILTER_MILITARY_IMPROVEMENT }
 }
@@ -1106,7 +1103,7 @@ shared_focus = {
 			name = land_doc_bonus
 			cost_reduction = 0.50
 			uses = 2
-			category = cat_mass_assault
+			category = cat_mobile_warfare
 		}
 	}
 	search_filters = {	FOCUS_FILTER_MILITARY_IMPROVEMENT }

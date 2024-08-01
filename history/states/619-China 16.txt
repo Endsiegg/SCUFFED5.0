@@ -15,7 +15,7 @@ state={
 		victory_points = {
 			2015 3
 		}
-		owner = TNG
+		owner = SIK
 		add_core_of = TNG
 		add_core_of = SIK
 		add_core_of = CHI

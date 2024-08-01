@@ -68,7 +68,7 @@ bookmarks = {
 			}
 			focuses = {
 				ENG_decolonization
-				
+				ENG_imperial_federation
 				ENG_enact_the_mosley_manifesto
 			}
 		}
@@ -376,12 +376,13 @@ bookmarks = {
             history = "URG_GATHERING_STORM_DESC"
             ideology = neutrality
             ideas = {
-                
-                
+                URG_aftermath_of_paso_morlan
+                URG_legacy_of_batlle
             }
             focuses = {
-                
-               
+                URG_communist_revolution
+                URG_the_terra_dictatorship
+                URG_revisionist_coup
             }
         }
 
@@ -411,9 +412,9 @@ bookmarks = {
 				SWE_nationalist_military_garrisons
 			}
 			focuses = {
-            	
-           		
-				
+            	SWE_the_red_menace
+           		SWE_prince_gustafs_coup
+				SWE_sweden_first
 			}
 		}
 

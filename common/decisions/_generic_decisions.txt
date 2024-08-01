@@ -98,7 +98,7 @@ political_actions = {
 		days_remove = 180
 		days_re_enable = 540
 
-		cost = 50
+		cost = 100
 
 		complete_effect = {
 
@@ -2083,6 +2083,20 @@ war_measures = {
 
 		allowed = {
 			has_dlc = "Arms Against Tyranny"
+			NOT = {	#r56 note: moved here from visible, some majors dont have this unlock ported yet
+				original_tag = SOV
+				AND = {
+					has_dlc = "Trial of Allegiance"
+					OR = {
+						original_tag = BRA
+						original_tag = CHL
+						original_tag = ARG
+						original_tag = PAR
+						#original_tag = URG #currently uses R56 tree, but might be supplemented with DLC branches
+					}
+				}
+			}
+			original_tag = JAP
 		}
 
 		available = {
@@ -2091,14 +2105,6 @@ war_measures = {
 
 		visible = {
 			date > 1939.1.1		#R56 addition - avoid long lists of unavailable decisions
-			# NOT = {	#R56 TOOD
-			# 	OR = {
-			# 		tag = ENG #has a focus
-			# 		tag = USA #has a focus
-			# 		tag = SOV #has a focus
-			# 		tag = JAP #has a focus
-			# 	}
-			# } 
 		}
 
 		fire_only_once = yes

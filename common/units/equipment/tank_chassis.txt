@@ -119,10 +119,10 @@ equipments = {
 			category = tank_radio_module
 			count < 2
 		}
-		#module_count_limit = { #Not allowed in slots. Fuck secondary cannons on light tanks.
-		#	category = tank_secondary_turret
-		#	count < 2
-		#}
+		module_count_limit = { #Not allowed in slots. Fuck secondary cannons on light tanks.
+			category = tank_secondary_turret
+			count < 2
+		}
 		module_count_limit = {
 			module = amphibious_drive
 			count < 2
@@ -380,7 +380,7 @@ equipments = {
 		}
 		module_count_limit = {
 			category = tank_secondary_turret
-			count < 2 #one secondary turret allowed
+			count < 3 #one secondary turret allowed
 		}
 		module_count_limit = {
 			module = amphibious_drive
@@ -617,18 +617,6 @@ equipments = {
 		module_count_limit = {
 			module = sloped_armor
 			count < 2
-		}
-		#module_count_limit = { #allowed 2 on heavies.
-		#	category = tank_secondary_turret
-		#	count < 3
-		#}
-		module_count_limit = { #allowed 2 on heavies.
-			module = secondary_turret_small_cannon
-			count < 3
-		}
-		module_count_limit = { #allowed 2 on heavies. y? too lazy to redo the t35.
-			module = secondary_turret_hmg
-			count < 3
 		}
 		module_count_limit = {
 			category = tank_radio_module

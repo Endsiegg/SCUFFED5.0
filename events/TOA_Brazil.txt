@@ -504,7 +504,7 @@ country_event = {
 			every_owned_state = {
 				limit = {
 					is_controlled_by = PREV
-					region = 280
+					region = 163
 				}
 				ROOT = {
 					transfer_state = PREV
@@ -548,7 +548,7 @@ country_event = {
 			every_owned_state = {
 				limit = {
 					is_controlled_by = FROM
-					region = 280
+					region = 163	#vanilla has own region for Guyanas, this is just the R56 Amazones+Guyanas zone
 				}
 				ROOT = {
 					create_wargoal = {
@@ -1129,11 +1129,9 @@ country_event = {
 		}
 		effect_tooltip = {
 			FROM = {
-				annex_country = { 
-					target = PREV 
-					transfer_troops = yes 
-				}
+				puppet = ROOT
 			}
+			set_cosmetic_tag = POR_const_kingdom_neutrality
 		}
 	}		
 	# Propose Portugese Commonwealth
@@ -1226,24 +1224,11 @@ country_event = {
 				}
 			}
 		}
+		puppet = FROM
 		FROM = {
-			every_owned_state = {
-				limit = {
-					is_core_of = POR
-				}
-				add_core_of = ROOT
-			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = POR_const_kingdom_neutrality
 		}
-		annex_country = { 
-			target = FROM
-			transfer_troops = yes
-		}
-		drop_cosmetic_tag = yes
-		set_cosmetic_tag = BRA_uk_POR
-		#FROM = {
-		#	drop_cosmetic_tag = yes
-		#	set_cosmetic_tag = POR_const_kingdom_neutrality
-		#}
 		hidden_effect = {
 			news_event = { id = JUNO_brazil_news.3 hours = 1 }
 		}
@@ -2040,7 +2025,7 @@ country_event = { #USA refuses to share tech
 
 	# Better than nothing
 	option = { 
-		name = JUNO_brazil_events.122.a
+		name = JUNO_brazil_events.122.b 
 		ai_chance = {
 			base = 1
 		}
@@ -3186,14 +3171,6 @@ country_event = {
 		ai_chance = {
 			base = 1
 		}
-		FROM = {
-			every_owned_state = {
-				limit = {
-					is_core_of = PREV
-				}
-				add_core_of = ROOT
-			}
-		}
 		annex_country = {
 			target = FROM
 			transfer_troops = yes
@@ -3527,7 +3504,6 @@ country_event = {
 		date > 1938.07.01
 
 		has_government = democratic
-		has_completed_focus	= BRA_repeal_the_national_security_law
 		NOT = {
 			OR = {
 				has_completed_focus = BRA_romanticize_the_old_empire
@@ -3569,7 +3545,6 @@ country_event = {
 		IF = {
 			limit = {
 				has_government = democratic
-				has_completed_focus = BRA_repeal_the_national_security_law
 			}
 			country_event = {
 				id = JUNO_brazil_events.200

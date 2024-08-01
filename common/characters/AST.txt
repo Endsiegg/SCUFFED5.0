@@ -151,7 +151,7 @@ characters={
 				}
 			}
 			corps_commander={
-				traits = { decided_planner }
+				traits = { }
 				skill = 4
 				attack_skill = 4
 				defense_skill = 3
@@ -186,7 +186,7 @@ characters={
 				}
 			}
 			corps_commander={
-				traits = { decided_planner }
+				traits = { }
 				skill = 4
 				attack_skill = 4
 				defense_skill = 3
@@ -218,7 +218,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits = { meticulous}
+			traits = { }
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
@@ -1034,7 +1034,7 @@ characters={
 						has_dlc = "Together for Victory"
 						#has_global_flag = ast_tfv_focus_tree
 					}
-					has_completed_focus = AST_support_the_policy_of_appeasement
+					has_completed_focus = AST_R56_appeasment_in_europe
 				}
 				else = {
 					has_government = democratic
@@ -1173,7 +1173,11 @@ AST_George_Jackson={
 						has_dlc = "Together for Victory"
 					#	has_global_flag = ast_tfv_focus_tree
 					}
-					has_completed_focus = AST_support_the_centre_party
+					OR = {
+						has_completed_focus = AST_support_the_centre_party
+						has_completed_focus = AST_R56_australia_first
+					}
+					
 				}
 				if = {
 					limit = { 
@@ -1238,10 +1242,10 @@ AST_George_Jackson={
 						has_dlc = "Together for Victory"
 						#has_global_flag = ast_tfv_focus_tree
 					}
-					has_completed_focus = AST_empower_the_workers
-				}
-				else ={
-					has_completed_focus = AST_R56_appeal_to_the_labour_dissidents
+					OR = {
+						has_completed_focus = AST_empower_the_workers
+						has_completed_focus = AST_R56_appeal_to_the_labour_dissidents
+					}
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }	

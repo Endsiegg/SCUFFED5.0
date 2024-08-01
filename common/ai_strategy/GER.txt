@@ -848,6 +848,7 @@ middle_east_ally = {
 	enable = {
 		tag = GER
 		OR = {
+			has_completed_focus = GER_middle_eastern_diplomacy
 			has_completed_focus = GER_turkey_friend_vanilla
 		}
 		OR = {
@@ -975,7 +976,7 @@ denmark_ally = {
 	}
 	enable = {
 		tag = GER
-		
+		DEN = { has_completed_focus = DEN_DNSAP_Takeover }
 		has_completed_focus = GER_denmark_friend
 		country_exists = DEN
 	}
@@ -2239,12 +2240,16 @@ GER_we_dont_fight_pathetic_sweden = { # :O
 		has_government = fascism
 		SWE = {
 			OR = {
+				has_idea = SWE_neutrality_idea_sweden
+				has_idea = SWE_foreign_policy
 			}
 		}
 	}
 	abort = {
 		SWE = {
 			NOT = {
+				has_idea = SWE_neutrality_idea_sweden
+				has_idea = SWE_foreign_policy
 			}
 		}
 	}
@@ -2269,12 +2274,16 @@ GER_we_dont_fight_pathetic_sweden_on_historical = { # :O
 		has_government = fascism
 		SWE = {
 			OR = {
+				has_idea = SWE_neutrality_idea_sweden
+				has_idea = SWE_foreign_policy
 			}
 		}
 	}
 	abort = {
 		SWE = {
 			NOT = {
+				has_idea = SWE_neutrality_idea_sweden
+				has_idea = SWE_foreign_policy
 			}
 		}
 	}

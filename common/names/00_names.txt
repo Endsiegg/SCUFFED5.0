@@ -296,8 +296,8 @@ ENG = {
 		names = { Albert Alexander Alfred Archibald Arthur Bernard Charles Colbert
 			Colin Cyril David Donald Douglas Edmund Edward Fairfax  Francis
 			Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian
-			James Jeremy John Leopold Lester Martin Nigel Oswald Max
-			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake
+			James Jeremy John Leopold Lester Martin Nigel Oswald Max Alfie
+			Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Jake Harry
 		  }
 	}
 	female = {
@@ -306,7 +306,7 @@ ENG = {
 	surnames = { 	Allenby Beatty Beresford Brown Buller Butler Campbell Cardigan Churchill
 			Cochrane Cockburn Dundas Fisher French Gough Grant Grenfell Haig Murphy
 			Hamilton Hardinge Havelock Hope Jellicoe Kitchener Lyons Madden Milne Montgomery
-			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin
+			Moresby Mundy Napier Plummer Ragland Roberts Seaton Seymour Collin Watkins
 			Smith Stewart Thesiger Tyron Tyrwhitt Williams Wolseley Wood Leiper Roberts Taylor Miller Holland Neville Howard Stopford Young Martin Thornbrough Jones Williams Davies Thomas Roberts
 			
 		}

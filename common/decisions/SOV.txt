@@ -1,9 +1,4 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
 ####### NO STEP BACK! #######
-
 @DAYS_DETERMINED = 180 #Used for propaganda campaign SOV_heroes_forward -> Value should be the same as SOV_default_propaganda_campaign_duration
 
 debug_decisions = { #TODO_Manu: Comment these out
@@ -876,6 +871,7 @@ SOV_paranoia_system = {
 		}
 
 		available = {
+			has_completed_focus = SOV_look_to_the_east
 			any_neighbor_country = {
 				original_tag = JAP
 				NOT = {
@@ -885,6 +881,7 @@ SOV_paranoia_system = {
 		}
 
 		visible = {
+			has_completed_focus = SOV_look_to_the_east
 			has_country_leader = {				#Stalin is out? Hied it then
 				character = SOV_iosif_stalin
 				ruling_only = yes
@@ -922,6 +919,7 @@ SOV_paranoia_system = {
 		}
 
 		available = {
+			has_completed_focus = SOV_look_to_the_east
 			any_neighbor_country = {
 				original_tag = JAP
 				NOT = {
@@ -932,6 +930,7 @@ SOV_paranoia_system = {
 		}
 
 		visible = {
+			has_completed_focus = SOV_look_to_the_east
 			has_country_leader = {				#Stalin is out? Hied it then
 				character = SOV_iosif_stalin
 				ruling_only = yes
@@ -1014,6 +1013,7 @@ SOV_paranoia_system = {
 		}
 
 		available = {
+			has_completed_focus = SOV_look_to_the_east
 			any_neighbor_country = {
 				OR = {
 					original_tag = JAP
@@ -1026,6 +1026,7 @@ SOV_paranoia_system = {
 		}
 
 		visible = {
+			has_completed_focus = SOV_look_to_the_east
 			has_country_leader = {				#Stalin is out? Hied it then
 				character = SOV_iosif_stalin
 				ruling_only = yes
@@ -5703,94 +5704,92 @@ SOV_diplomacy_baltic_decision_category = {
 		}
 	}
 
-	SOV_send_ultimatum_to_country_baltic = {
-        priority = 50
+	SOV_send_ultimatum_to_baltic_countries = {
+		priority = 50
 
-        icon = eng_trade_unions_demand
+		icon = eng_trade_unions_demand
 
-        ai_will_do = {
-            base = 200
-            modifier = {
-                factor = 10
-                has_political_power > 160
-            }
-            modifier = {
-                factor = 10
-                date > 1940.6.1
-            }
-            modifier = {
-                factor = 0
-                OR = {
-                    is_in_faction_with = FROM
-                    surrender_progress > 0.15
-                }
-            }
-        }
+		ai_will_do = {
+			base = 400
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+			modifier = {
+				factor = 10
+				date > 1940.6.1
+			}
+			modifier = {
+				factor = 0
+				surrender_progress > 0.15
+			}
+		}
 
-        targets = { EST LAT LIT }
+		allowed = {
+			original_tag = SOV
+		}
 
-        target_trigger = {
-            SOV_basic_ultimatum_triggers = yes
-        }
+		available = {
+			any_other_country = {
+				OR = {
+					original_tag = EST
+					original_tag = LAT
+					original_tag = LIT
+				}
+				NOT = { has_war_with = ROOT }
+				is_subject = no
+			}
+		}
 
-        target_root_trigger = {
-            has_completed_focus = SOV_claims_in_baltic
-            is_subject = no
-        }
+		visible = {
+			has_completed_focus = SOV_claims_in_baltic
+		}
 
-        allowed = {
-            original_tag = SOV
-        }
+		days_remove = 60
 
-        available = {
-            FROM = {
-                exists = yes
-                has_capitulated = no
-                NOT = { has_war_with = ROOT }
-                is_subject = no
-            }
-        }
+		cost = 150
 
-        visible = {
-        }
+		remove_effect = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = EST
+						original_tag = LAT
+						original_tag = LIT
+					}
+					NOT = { has_war_with = ROOT }		#from scripted triggers
+					NOT = { is_in_faction_with = ROOT } #CAN'T SEND ULTIMATUMS TO ALLIES OR SUBJECTS
+					#OR = { #Can send Ultimatum to non-allies or puppets (but not to faction allies)
+					#	NOT = { is_in_faction_with = ROOT }
+					#	is_Subject_of = ROOT
+					#}
+					NOT = { has_country_flag = SOV_ultimatum_sent_flag }
+				}
+				set_country_flag = SOV_ultimatum_sent_flag
+				if = {
+					limit = {
+						original_tag = EST
+					}
+					country_event = { id = baltic.1 hours = 16 random_hours = 8 }
+				}
+				if = {
+					limit = {
+						original_tag = LAT
+					}
+					country_event = { id = baltic.2 hours = 16 random_hours = 8 }
+				}
+				if = {
+					limit = {
+						original_tag = LIT
+					}
+					country_event = { id = baltic.3 hours = 16 random_hours = 8 }
+				}
+			}
+			custom_effect_tooltip = SOV_ultimatum_baltic_effects_tt
 
-        days_remove = SOV_ultimatum_days
-
-        cost = SOV_send_ultimatum_to_country_cost
-
-        remove_effect = {
-            if = {
-                limit = {
-                    FROM = { tag = EST }
-                }
-                EST = {
-                    set_country_flag = SOV_ultimatum_sent_flag
-                    country_event = { id = baltic.1 hours = 16 random_hours = 8 }
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = { tag = LAT }
-                }
-                LAT = {
-                    set_country_flag = SOV_ultimatum_sent_flag
-                    country_event = { id = baltic.2 hours = 16 random_hours = 8 }
-                }
-            }
-            else_if = {
-                limit = {
-                    FROM = { tag = LIT }
-                }
-                LIT = {
-                    set_country_flag = SOV_ultimatum_sent_flag
-                    country_event = { id = baltic.3 hours = 16 random_hours = 8 }
-                }
-            }
-            custom_effect_tooltip = SOV_ultimatum_baltic_effects_tt
-
-            custom_effect_tooltip = SOV_decision_will_be_locked_tt
-        }
-    }
+			custom_effect_tooltip = SOV_decision_will_be_locked_tt
+		}
+	}
 
 	SOV_fight_alongside_country_comrades_baltic = {
 		priority = 100
@@ -5931,13 +5930,6 @@ SOV_diplomacy_nordic_decision_category = {
 				}
 				#SOV_is_valid_subject = yes # The Soviet Union might not give a sh*t about their petty overlord ;) # -> THE USSR does indeed not care about their petty overlord, for now.
 				NOT = { has_war_with = ROOT }
-				if = {
-					limit = {
-						original_tag = FIN
-					}
-					#Lone Wolf Finland can't join any factions
-					NOT = {	has_idea = FIN_the_lone_wolf }
-				}
 			}
 			NOT = { has_country_flag = SOV_pressure_government_active_flag }
 		}
@@ -6806,16 +6798,16 @@ SOV_diplomacy_middle_east_decision_category = {
 		}
 
 		available =  {
+			#PER = { has_capitulated = yes }	#Doesnt seem to work
 			custom_trigger_tooltip = {
 				tooltip = "All starting Iranian states controlled by [SOV.GetNameDef] or her allies."
-
 				all_of_scopes = {
-				array = SOV_iranian_initial_states
-				OR = {
-					is_controlled_by = SOV
-					any_allied_country = {
-						controls_state = PREV
-					}
+					array = SOV_iranian_initial_states
+					OR = {
+						is_controlled_by = SOV
+						any_allied_country = {
+							controls_state = PREV
+						}
 						AND = {
 							has_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
 							OR = {
@@ -7486,7 +7478,7 @@ SOV_diplomacy_asia_decision_category = {
 				has_full_control_of_state = 618 #DZUNGARIA
 			}
 			num_of_civilian_factories_available_for_projects > 0
-			has_equipment = { small_plane_airframe > 39 }
+			has_equipment = { fighter_equipment > 39 }
 			has_equipment = { infantry_equipment > 499 }
 			NOT = { has_country_flag = SOV_sinkiang_investment_ongoing_flag }
 		}
@@ -7553,7 +7545,7 @@ SOV_diplomacy_asia_decision_category = {
 				custom_effect_tooltip = SOV_sinikiang_influence_cg_tt_sov
 
 				send_equipment = {
-					type = small_plane_airframe
+					type = fighter_equipment
 					amount = 40
 					target = SIK
 				}
@@ -8915,9 +8907,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -8976,9 +8965,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9037,9 +9023,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9103,9 +9086,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9167,9 +9147,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9231,9 +9208,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9295,9 +9269,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9357,9 +9328,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9421,9 +9389,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9485,9 +9450,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9549,13 +9511,10 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
-			has_full_control_of_state = 227 #STALINO
+			has_full_control_of_state = 195 #LENINGRAD
 			num_of_civilian_factories_available_for_projects > 0
 			SOV_has_active_ship_designer_any_black_sea = yes
 			NOT = { has_country_flag = SOV_merge_ship_decision_ongoing_flag }
@@ -9570,7 +9529,7 @@ SOV_merge_designers_dec_cat = {
 		cancel_trigger = {
 			OR = {
 				SOV_has_active_ship_designer_any_black_sea = no
-				NOT = { has_full_control_of_state = 227 } #STALINO
+				NOT = { has_full_control_of_state = 195 } #LENINGRAD
 			}
 		}
 
@@ -9615,9 +9574,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9676,9 +9632,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9743,9 +9696,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9808,9 +9758,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9871,13 +9818,10 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
-			has_full_control_of_state = 399 #UDMURTIA (Izhevsk)
+			has_full_control_of_state = 399 #IZHEVSK
 			num_of_civilian_factories_available_for_projects > 0
 			SOV_has_active_materiel_designer_tula = yes
 			NOT = { has_country_flag = SOV_merge_materiel_decision_ongoing_flag }
@@ -9893,7 +9837,7 @@ SOV_merge_designers_dec_cat = {
 		cancel_trigger = {
 			OR = {
 				SOV_has_active_materiel_designer_tula = no
-				NOT = { has_full_control_of_state = 399 } #UDMURTIA (Izhevsk)
+				NOT = { has_full_control_of_state = 399 } #IZHEVSK
 			}
 		}
 
@@ -9934,9 +9878,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -9997,9 +9938,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -10058,9 +9996,6 @@ SOV_merge_designers_dec_cat = {
 
 		allowed = {
 			original_tag = SOV
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
 		}
 
 		available = {
@@ -11195,7 +11130,6 @@ SOV_kill_trotsky_dec_cat = {
 					FROM = {
 						controls_state = 110 #OSTLANDET (Oslo) -> Trotsky not accepted in Mexico (or Soviets being super fast to kill him, which should be impossible btw)
 					}
-					has_global_flag = NOR_trotsky_in_norway
 					NOT = {
 						has_global_flag = trotsky_exile_mexico
 						has_global_flag = flag_mexico_invited_trotsky_to_government
@@ -13729,14 +13663,25 @@ SOV_soviet_civil_war_dec_cat = {
 				}
 				custom_effect_tooltip = SOV_assassinate_stalin_good_tt
 				custom_effect_tooltip = SOV_assassinate_stalin_outcome_tt
-				hidden_effect = { # Warlider was here
-					retire_character = SOV_iosif_stalin
-					SOV_promote_to_country_leader_beriya = yes
-					news_event = {
-						id = NSB_soviet_communist_civil_war.009
+				hidden_effect = {
+					random_list = {
+						80 = {
+							retire_character = SOV_iosif_stalin
+							SOV_promote_to_country_leader_beriya = yes
+							news_event = {
+								id = NSB_soviet_communist_civil_war.009
+							}
+							subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
+							SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
+						}
+						20 = {
+							SOV_paranoia_very_high_increase_effect = yes
+							news_event = {
+								id = NSB_soviet_communist_civil_war.008
+							}
+						}
 					}
-					subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 2 } #Stalin will always have the Authority Undermined trait (+2 weekly Paranoia)
-					SOV_paranoia_modifier_update_gui_tooltip = yes #Update Paranoia UI
+					# TODO Create events
 				}
 			}
 			ELSE = {
@@ -15311,14 +15256,7 @@ SOV_soviet_civil_war_dec_cat = {
 				OR = {
 					#region = 155 # Manchuria
 					region = 151
-					region = 261 
-					region = 262 
 					region = 149
-					region = 256
-					region = 257
-					region = 258
-					region = 259
-					region = 260
 					region = 152
 				}
 			}
@@ -15813,7 +15751,7 @@ SOV_soviet_civil_war_dec_cat = {
 		}
 
 		targets = {
-			state = 566  # Chita
+			state = 566  # Irkutsk
 		}
 		target_trigger = {
 			FROM = { state = 566  }

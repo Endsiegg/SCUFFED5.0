@@ -17,7 +17,14 @@ INS_HOL = {
     color = rgb { 203 138 74 }
     color_ui = rgb { 255 179 96 }
 }
-
+GER_germania = {
+    color = rgb { 7 7 7 }
+    color_ui = rgb { 67 65 64 }
+}
+papal_states = {
+	color = rgb { 151 0 102 }
+	color_ui = rgb { 151 0 102 }
+}
 HUN_EMPIRE = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
@@ -26,6 +33,11 @@ HUN_EMPIRE = {
 GRE_balkans = {
 	color = rgb { 0 0 80 }
 	color_ui = rgb { 0 0 80 }
+}
+
+FORM_TIM = {
+	color = rgb { 205 51 51 }
+	color_ui = rgb { 205 51 51 }
 }
 
 
@@ -1901,4 +1913,14 @@ TBE_third_bulgarian_empire_fascism = {
 TBE_third_bulgarian_empire_neutrality = {
 	color = rgb { 138 249 195 }
 	color_ui = rgb { 138 249 195 }
+}
+
+ICE_Island = {
+    color = rgb { 7 7 7 }
+    color_ui = rgb { 67 65 64 }
+}
+
+Macedonian_GRE = {
+    color = rgb { 34 0 101 }
+    color_ui = rgb { 67 65 64 }
 }

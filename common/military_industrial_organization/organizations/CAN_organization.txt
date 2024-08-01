@@ -28,6 +28,22 @@ CAN_vickers_armstrong_can_organization = {
 	}	
 }
 
+CAN_vauxhall_organization = {
+	include = generic_infantry_tank_organization
+	name = ENG_vauxhall_organization
+	icon = GFX_idea_vauxhall
+
+	allowed = {
+		original_TAG = CAN
+	}
+
+
+	initial_trait = {
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+}
 
 #####################
 
@@ -284,13 +300,10 @@ CAN_inglis_company_organization = {
 	icon = GFX_idea_inglis_company
 	allowed = {
 		original_TAG = CAN
-		has_dlc = "Together for Victory"
 	}
 
 	visible = {
-		owner = {
-			has_global_flag = can_tfv_focus_tree
-		}	
+
 	}
 	initial_trait = {
 		name = generic_mio_initial_trait_support_equipment_manufacturer
@@ -308,12 +321,9 @@ CAN_small_arms_limited_organization = {
 	icon = GFX_idea_small_arms_limited
 	allowed = {
 		original_TAG = CAN
-		has_dlc = "Together for Victory"
 	}
 	visible = {
-		owner = {
-			has_global_flag = can_tfv_focus_tree
-		}	
+
 	}
 	initial_trait = {
 		name = generic_mio_initial_trait_infantry_manufacturer

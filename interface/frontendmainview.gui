@@ -391,10 +391,21 @@ guiTypes = {
 		
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 258 }
+			position = { x = 16 y = 218 }
 			quadTextureSprite ="GFX_main_lobby_button"	
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
+		}
+		
+		ButtonType = {
+			name = "discord_button"
+			position = { x = 16 y = 258 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "Discord"
+			buttonFont = "hoi_24header"
+			web_link = "https://discord.gg/8MuW2GMKBx"
+			clicksound = click_default
+			oversound = ui_menu_over
 		}
 
 		ButtonType = {
@@ -563,7 +574,7 @@ guiTypes = {
 			quadTextureSprite ="discord"
 			#clicksound = click_default
 			pdx_tooltip = "MENU_DISCORD"
-			web_link = "https://discord.gg/hoi4"
+			web_link = "https://discord.gg/sv3Huesj"
 			scale = 0.9
 		}
 

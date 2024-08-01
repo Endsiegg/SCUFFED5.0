@@ -544,7 +544,7 @@ focus_tree = {
 			division_template = {
 				name = "Irregular Cavalry Division"		
 				division_names_group = ETH_CAV_01
-				is_locked = yes
+				is_locked = no
 				force_allow_recruiting = yes
 				regiments = {
 					cavalry = { x = 0 y = 0 }
@@ -556,7 +556,7 @@ focus_tree = {
 			division_template = {
 				name = "Irregular Camelry Division"		
 				division_names_group = ETH_CAV_01
-				is_locked = yes
+				is_locked = no
 				force_allow_recruiting = yes
 				regiments = {
 					camelry = { x = 0 y = 0 }
@@ -2870,7 +2870,7 @@ focus_tree = {
 	 				}
 	 				division_template = {
 						name = "Congolese Mercenaries"
-						is_locked = yes
+						is_locked = no
 						division_names_group = ETH_CONGO_MERCS
 						priority = 1
 						template_counter = 3
@@ -2917,7 +2917,7 @@ focus_tree = {
 	 				}
 	 				division_template = {
 						name = "Arab Mercenaries"
-						is_locked = yes
+						is_locked = no
 						division_names_group = ETH_ARAB_MERCS
 						priority = 1
 						template_counter = 21
@@ -5721,7 +5721,7 @@ focus_tree = {
 			#}
 			division_template = {
 				name = "Red Guards"
-				is_locked = yes
+				is_locked = no
 				priority = 2
 				template_counter = 69
 				override_model = ETH_infantry_alt_0_entity
@@ -5737,7 +5737,7 @@ focus_tree = {
 			}
 			division_template = {
 				name = "Black Lions"
-				is_locked = yes
+				is_locked = no
 				priority = 2
 				template_counter = 60
 				regiments = {
@@ -7769,7 +7769,7 @@ focus_tree = {
 				}
 				division_template = {
 					name = "Guards"
-					is_locked = yes
+					is_locked = no
 					priority = 2
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -8061,7 +8061,7 @@ focus_tree = {
 				}
 				division_template = {
 					name = "Eritrean Askari"
-					is_locked = yes
+					is_locked = no
 					division_names_group = ETH_ASKARI
 					priority = 1
 					template_counter = 67
@@ -8088,7 +8088,7 @@ focus_tree = {
 				limit = { has_cosmetic_tag = gojjam	}
 				division_template = {
 					name = "Sudanese Mercenaries"
-					is_locked = yes
+					is_locked = no
 					division_names_group = ETH_SUDAN_MERCS
 					priority = 1
 					template_counter = 3
@@ -8116,7 +8116,7 @@ focus_tree = {
 				limit = { has_cosmetic_tag = jimma}
 				division_template = {
 					name = "Arab Mercenaries"
-					is_locked = yes
+					is_locked = no
 					division_names_group = ETH_ARAB_MERCS
 					priority = 1
 					template_counter = 21

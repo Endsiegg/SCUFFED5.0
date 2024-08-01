@@ -1,7 +1,3 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
 characters={
 	#tungans
 	#-----Ma Hushan 36th division
@@ -21,17 +17,14 @@ characters={
 			}
 			army={
 				large="gfx/leaders/TNG/r56_TNG_Ma_Hushan.dds"
-				small="gfx/interface/ideas/tng/r56rp_idea_TNG_advisor_ma_hushan.dds"
+				small="GFX_idea_generic_air_asia_2"
 			}
 		}
 		advisor={
 			slot = army_chief
 			idea_token = TNG_ma_hushan
-			#allowed = {
-			#	original_tag = TNG
-			#}
-			available = {
-				is_hired_as_advisor = no
+			allowed = {
+				original_tag = TNG
 			}
 			traits = {
 				army_chief_morale_2
@@ -40,54 +33,7 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = TNG_ma_hushan_advisor
-			#allowed = {
-			#	original_tag = TNG
-			#}
-			available = {
-				is_country_leader = no
-				not_already_hired_except_as = political_advisor
-			}
-			visible = {
-			}  
-            on_add = {
-				if = {
-					limit = {
-						owner = {
-							tag = CHI
-						}
-					}
-					owner = {
-						add_stability = -0.05
-					}
-					
-				}
-            }
-            on_remove = {
-				if = {
-					limit = {
-						owner = {
-							tag = CHI
-						}
-					}
-					owner = {
-						add_stability = 0.05
-					}
-				}
-            }
-			cost = 100
-			
-			ai_will_do = {
-				factor = 1
-			}
-	
-			traits = { 
-				army_connections
-			}
-		}
+		}		
 		country_leader={
 			ideology=despotism
 			expire="1965.1.1"

@@ -226,22 +226,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Krishna_Pillai
 			available = {
-				has_government = communism
-				OR = {
-					has_completed_focus = RAJ_Pillais_Influence
-					hidden_trigger = {
-						has_country_flag = ILP_BYPASSED
-					}
-					NOT = {
-						has_country_flag = ILP_victory
-					}
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Krishna Pillai"
-						ruling_only = yes
-					}
-				}
+				always = yes
 			}
 			allowed = {
 				original_tag = RAJ
@@ -426,10 +411,7 @@ portraits={
 			idea_token = RAJ_w_h_gould_bradford
 			ledger = navy
 			available = {
-				OR = {
-					is_in_faction_with = ENG
-					is_puppet_of = ENG
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -456,10 +438,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					is_in_faction_with = ENG
-					is_puppet_of = ENG
-				}
+				always = yes
 			}
 			traits = {
 				navy_chief_commerce_raiding_2
@@ -483,15 +462,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					has_completed_focus = RAJ_Provincial_Elections
-					has_country_flag = sarojini_naidu_enable
-					hidden_trigger = {
-						has_country_flag = INC_BYPASSED
-						has_country_flag = UP_BYPASSED
-						has_country_flag = ILP_BYPASSED
-					}
-				}
+				always = yes
 			}
 			traits = {
 				raj_womens_figurehead
@@ -500,7 +471,7 @@ portraits={
 				factor = 1.000
 			}
 		}
-		name="RAJ_sarojini_naidu"
+		name="Sarojini Naidu"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_female_africa"
@@ -536,19 +507,13 @@ portraits={
 				original_tag = RAJ
 			}
 			available = {
-				OR = {
-					has_government = communism
-					has_country_leader = {
-						ruling_only = yes
-						name = "Subhas Chandra Bose"
-					}
-				}
+				always = yes
 			}
 			traits = {
 				propaganda_expert editor
 			}
 		}
-		name="RAJ_pramod_ranjan_sengupta"
+		name="Pramod Ranjan Sengupta"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_arab_2"
@@ -582,25 +547,17 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_mahatma_mohandas_gandhi
 			available = {
-				has_completed_focus = RAJ_Launch_The_Quit_India_Movement
-				is_subject = yes
+				always = yes
 			}
 			cost = 75.000
+			available = {
+				always = yes
+			}
 			allowed = {
 				tag = RAJ
 			}
-			on_add = {
-				add_to_variable = {
-					ind_influence_daily = 0.050
-				}
-			}
-			on_remove = {
-				add_to_variable = {
-					ind_influence_daily = -0.050
-				}
-			}
 			traits = {
-				pacifistic_activist
+				raj_father_of_india
 			}
 		}
 		name="RAJ_mahatma_mohandas_gandhi"
@@ -618,10 +575,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					is_in_faction_with = ENG
-					is_puppet_of = ENG
-				}
+				always = yes
 			}
 			traits = {
 				army_chief_defensive_2
@@ -645,10 +599,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					has_cosmetic_tag = RAJ_UK
-					is_puppet = yes
-				}
+				always = yes
 			}
 			traits = {
 				navy_chief_decisive_battle_2
@@ -693,23 +644,7 @@ portraits={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = RAJ_Indian_National_Congress
-						has_completed_focus = RAJ_Indian_National_Congress
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = yes
 			}
 			visible = {
 				has_global_flag = raj_tfv_focus_tree
@@ -754,41 +689,14 @@ portraits={
 			}
 		}
 	}
-	RAJ_Francis_Mudie={
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_Francis_Mudie
-			available = {
-				OR = {
-					has_completed_focus = RAJ_Provincial_Elections
-					hidden_trigger = {
-						has_country_flag = INC_BYPASSED
-						has_country_flag = UP_BYPASSED
-						has_country_flag = ILP_BYPASSED
-					}
-					has_country_flag = Francis_Mudie_enable
-				}
-			}
-			allowed = {
-				tag = RAJ
-			}
-			traits = {
-				railroad_enthusiast
-			}
-		}
-		name="RAJ_Francis_Mudie"
-		portraits={
-			army={
-				small="GFX_idea_RAJ_Francis_Mudie"
-			}
-		}
-	}
+
 	RAJ_homi_j_bhabha={
 		advisor={
 			slot = theorist
 			idea_token = RAJ_homi_j_bhabha
 			ledger = army
 			available = {
+				always = yes
 			}
 			allowed = {
 				original_tag = RAJ
@@ -808,42 +716,6 @@ portraits={
 		}
 	}
 	RAJ_subhas_chanda_bose_tfv={
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_subhas_chanda_bose_tfv
-			allowed = {
-				tag = RAJ
-			}
-			visible = {
-				has_global_flag = raj_tfv_focus_tree
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				fascist_demagogue
-			}
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			ai_will_do = {
-				base = 0.000
-			}
-		}
 		name="Subhas Chandra Bose"
 		portraits={
 			army={
@@ -878,15 +750,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_john_mathai
 			available = {
-				OR = {
-					has_completed_focus = RAJ_Provincial_Elections
-					hidden_trigger = {
-						has_country_flag = INC_BYPASSED
-						has_country_flag = UP_BYPASSED
-						has_country_flag = ILP_BYPASSED
-					}
-					has_country_flag = john_mathai_enable
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -931,23 +795,7 @@ portraits={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = RAJ_Provincial_Elections
-						has_completed_focus = RAJ_Independent_Labour_Party
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = yes
 			}
 			traits = {
 				communist_revolutionary
@@ -998,10 +846,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Chhotu_Ram
 			available = {
-				OR = {
-					has_country_flag = UP_victory
-					has_country_flag = Chhotu_Ram_enable
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -1010,7 +855,7 @@ portraits={
 				proponent_of_peasents
 			}
 		}
-		name="RAJ_Chhotu_Ram"
+		name="Chhotu Ram"
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Chhotu_Ram"
@@ -1086,13 +931,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Narendra_Deva
 			available = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-				NOT = {
-					has_country_flag = raj_expel_socialists
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -1101,7 +940,7 @@ portraits={
 				accomplished_professor
 			}
 		}
-		name="RAJ_Narendra_Deva"
+		name="Narendra Deva"
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Narendra_Deva"
@@ -1113,10 +952,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Jwala_Prasad_Srivastava
 			available = {
-				OR = {
-					has_country_flag = Jwala_Prasad_Srivastava_enable
-					has_country_flag = UP_victory
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -1125,7 +961,7 @@ portraits={
 				defence_industrialist
 			}
 		}
-		name="RAJ_Jwala_Prasad_Srivastava"
+		name="Jwala Prasad Srivastava"
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Jwala_Prasad_Srivastava"
@@ -1140,10 +976,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					has_cosmetic_tag = RAJ_UK
-					is_puppet = yes
-				}
+				always = yes
 			}
 			traits = {
 				air_chief_safety_2
@@ -1188,16 +1021,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					is_in_faction_with = ENG
-					is_puppet_of = ENG
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Louis Mountbatten"
-						ruling_only = yes
-					}
-				}
+				always = yes
 			}
 			traits = {
 				navy_chief_maneuver_2
@@ -1230,10 +1054,7 @@ portraits={
 				tag = RAJ
 			}
 			available = {
-				OR = {
-					is_in_faction_with = ENG
-					is_puppet_of = ENG
-				}
+				always = yes
 			}
 			traits = {
 				army_chief_reform_2
@@ -1263,16 +1084,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Shripad_Amrit_Dange
 			available = {
-				has_government = communism
-				OR = {
-					has_completed_focus = RAJ_Danges_Influence
-					hidden_trigger = {
-						has_country_flag = ILP_BYPASSED
-					}
-					NOT = {
-						has_country_flag = ILP_victory
-					}
-				}
+				always = yes
 			}
 			allowed = {
 				original_tag = RAJ
@@ -1281,7 +1093,7 @@ portraits={
 				trade_unionist
 			}
 		}
-		name="RAJ_Shripad_Amrit_Dange"
+		name="Shripad Amrit Dange"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_india_1"
@@ -1293,7 +1105,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_agha_khan_iii
 			available = {
-				has_country_flag = AIML_UP_COALITION
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -1336,16 +1148,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Ram_Manohar
 			available = {
-				OR = {
-					has_completed_focus = RAJ_An_Offer_for_Rajagopalachari
-					hidden_trigger = {
-						has_country_flag = INC_BYPASSED
-					}
-					has_government = communism
-				}
-				NOT = {
-					has_country_flag = raj_expel_socialists
-				}
+				always = yes
 			}
 			allowed = {
 				original_tag = RAJ
@@ -1354,7 +1157,7 @@ portraits={
 				editor
 			}
 		}
-		name="RAJ_Ram_Manohar"
+		name="Ram Manohar"
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Ram_Manohar"
@@ -1366,13 +1169,7 @@ portraits={
 			slot = political_advisor
 			idea_token = RAJ_Sir_Jeremy_Raisman
 			available = {
-				OR = {
-					has_country_flag = Sir_Jeremy_Raisman_enable
-					has_completed_focus = RAJ_Azads_Support
-					hidden_trigger = {
-						has_country_flag = INC_BYPASSED
-					}
-				}
+				always = yes
 			}
 			allowed = {
 				tag = RAJ
@@ -1381,7 +1178,7 @@ portraits={
 				mobilization_specialist
 			}
 		}
-		name="RAJ_Sir_Jeremy_Raisman"
+		name="Sir Jeremy Raisman"
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Sir_Jeremy_Raisman"
@@ -1401,12 +1198,7 @@ portraits={
 				}
 			}
 			available = {
-				has_country_flag = RAJ_subhas_chanda_bose_enable
-				has_completed_focus = RAJ_Linlithgows_Reign
-				NOT = {
-					has_global_flag = azad_hind_spawed
-					has_completed_focus = RAJ_Provincial_Elections
-				}
+				always = yes
 			}
 			traits = {
 				militiant_independence_activist
@@ -1458,34 +1250,7 @@ portraits={
 			}
 		}
 	}
-	RAJ_Jawaharlal_Nehru_advisor={
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_Jawaharlal_Nehru_advisor
-			available = {
-				has_government = democratic
-				NOT = {
-					has_country_leader = {
-						name = "Jawaharlal Nehru"
-						ruling_only = yes
-					}
-					has_idea = RAJ_Indian_National_Congress_Reigning
-				}
-			}
-			allowed = {
-				tag = RAJ
-			}
-			traits = {
-				raj_father_of_india
-			}
-		}
-		name="Jawaharlal Nehru "
-		portraits={
-			army={
-				small="GFX_idea_RAJ_Jawaharlal_Nehru_advisor"
-			}
-		}
-	}
+	
 
 	#BBA characters
 	RAJ_orde_wingate = {

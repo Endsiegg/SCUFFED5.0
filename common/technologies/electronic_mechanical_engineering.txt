@@ -154,6 +154,10 @@ technologies = {
 			leads_to_tech = improved_decimetric_radar 
 			research_cost_coeff = 1
 		}
+		enable_equipment_modules = {
+			tank_radio_2
+			ship_radar_2
+		}
 		coordination_bonus = 0.01
 		research_cost = 1.25
 		start_year = 1938
@@ -200,10 +204,7 @@ technologies = {
 			level = 3
 		}
 		coordination_bonus = 0.01
-		enable_equipment_modules = {
-			tank_radio_2
-			ship_radar_2
-		}
+		
 
 		path = {
 			leads_to_tech = centimetric_radar 
@@ -255,6 +256,12 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_radar_3
 			air_air_radar_1
+		}
+		enable_equipment_modules = { 
+			ship_radar_4
+			tank_radio_3
+			air_ground_radar_2
+			air_air_radar_2
 		}
 
 		static_anti_air_hit_chance_factor = 0.2
@@ -367,12 +374,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		enable_equipment_modules = { 
-			ship_radar_4
-			tank_radio_3
-			air_ground_radar_2
-			air_air_radar_2
-		}
+	
 		
 		static_anti_air_hit_chance_factor = 0.2
 		
@@ -473,7 +475,7 @@ technologies = {
 		} 
 
 		research_cost = 2.5
-		start_year = 1939
+		start_year = 1938
 		
 		folder = {
 			name = electronics_folder
@@ -502,44 +504,6 @@ technologies = {
 		}
 	}
 
-	r56rp_gyro_gunsights = {
-		
-		research_cost = 0.8
-
-		enable_equipment_modules = { 
-			r56rp_gyro_gunsight
-		}
-		
-		folder = {
-			name = electronics_folder
-			position = { x = 5 y = 8 }
-		}
-		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 3
-				date > "1938.1.6"
-			}
-			
-			modifier = {
-				factor = 3
-				date > "1939.1.1"
-			}
-		}
-		
-		categories = {
-			electronics
-			computing_tech
-			air_equipment
-			plane_modules_tech
-			mio_cat_all_light_fighter_and_modules
-			mio_cat_all_medium_aircraft_and_modules
-			mio_cat_all_heavy_aircraft_and_modules
-			mio_cat_all_light_aircraft_and_modules
-		}
-	}
 	
 	improved_computing_machine = {
 		# small boost to research speed

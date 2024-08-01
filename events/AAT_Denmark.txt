@@ -2908,7 +2908,7 @@ country_event = { #Denmark gets support
 		custom_effect_tooltip = DEN_danish_brigade_template_tt
 		division_template = {
 			name = "Danske Brigade"
-			is_locked = yes
+			is_locked = no
 			#force_allow_recruiting = yes
 			priority = 1
 			template_counter = 3
@@ -9705,7 +9705,10 @@ country_event = { #Forts makes the people feels safe
 			has_completed_focus = DEN_refortify_tunestillingen
 			has_completed_focus = DEN_fortify_the_islands
 		}
-		
+		else = {
+			has_completed_focus = DEN_The_Frederick_Line
+			has_completed_focus = DEN_Fortify_the_Southern_Islands
+		}
 		has_war = no
 		has_civil_war = no
 	}

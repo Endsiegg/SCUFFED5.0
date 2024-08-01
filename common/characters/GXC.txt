@@ -1,7 +1,3 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
 characters={
 	GXC_li_zongren={
 		name=GXC_li_zongren
@@ -17,42 +13,12 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = GXC_li_zongren
-			cost = 250
-			#allowed  = {
-			#	original_tag  = GXC
-			#}
-			available = {
-				is_country_leader = no
-				not_already_hired_except_as = political_advisor
+			allowed  = {
+				original_tag  = GXC
 			}
 			traits  = {
-				hardened_officer 
+				prince_of_terror 
 			}
-			on_add = {
-				if = {
-					limit = {
-						owner = {
-							tag = CHI
-						}
-					}
-					owner = {
-						add_stability = -0.05
-					}
-					
-				}
-            }
-            on_remove = {
-				if = {
-					limit = {
-						owner = {
-							tag = CHI
-						}
-					}
-					owner = {
-						add_stability = 0.05
-					}
-				}
-            }
 		}
 		field_marshal = {
 			traits = { old_guard infantry_officer defensive_doctrine homeland_connoisseur }

@@ -609,6 +609,7 @@ focus_tree = {
                 technology = improved_special_forces
                 technology = extreme_environment_training
                 technology = survival_training
+                technology = elite_forces
             }
 			if = {
 				limit = {
@@ -3002,7 +3003,7 @@ focus_tree = {
 			#change this into a womens rights scripted effect?
 			if = {
 				limit = {
-					has_idea = r56i_laws_gender_traditional
+					#has_idea = r56i_laws_gender_traditional
 				}
 				swap_ideas = {
 					remove_idea = r56i_laws_gender_traditional
@@ -3011,7 +3012,7 @@ focus_tree = {
 			}
 			else_if = {			
 				limit = {
-					has_idea = r56i_laws_gender_patriarchy
+					#has_idea = r56i_laws_gender_patriarchy
 				}
 				swap_ideas = {
 					remove_idea = r56i_laws_gender_patriarchy
@@ -3021,7 +3022,7 @@ focus_tree = {
 			else_if = {
 			
 				limit = {
-					has_idea = r56i_laws_gender_limited
+					#has_idea = r56i_laws_gender_limited
 				}
 				swap_ideas = {
 					remove_idea = r56i_laws_gender_limited
@@ -3029,7 +3030,7 @@ focus_tree = {
 				}			
 			}
 			else = {
-				add_ideas = r56i_laws_gender_limited
+				#add_ideas = r56i_laws_gender_limited
 			}			
 		}
 	}

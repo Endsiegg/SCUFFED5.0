@@ -54,5 +54,7 @@ sub_units = {
 		hard_attack = -0.4
 		air_attack = -0.2
 
+		same_support_type = anti_air
+
 	}
 }

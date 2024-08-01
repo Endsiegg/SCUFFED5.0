@@ -85,7 +85,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 675 }			
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -164,15 +164,6 @@ focus_tree = {
 				uses = 1
 				category = electronics
 			}
-			random_owned_controlled_state = {
-				prioritize = { 291 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 	}
@@ -191,24 +182,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 1045 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 1049 }
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
 			random_owned_controlled_state = {
 				prioritize = { 291 }
 				add_extra_state_shared_building_slots = 1
@@ -246,7 +219,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 1050 }
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -255,16 +227,14 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 1045 }
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
 			random_owned_controlled_state = {
 				prioritize = { 291 }
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -273,7 +243,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 676 }
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -302,15 +271,10 @@ focus_tree = {
 
 		completion_reward = {
 			291 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
+				add_extra_state_shared_building_slots =3
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -368,10 +332,10 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 10 }
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -422,10 +386,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = fuel_silo
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}			
@@ -496,10 +460,10 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = { 675 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -539,13 +503,23 @@ focus_tree = {
 			}			
 			random_owned_controlled_state = {
 				prioritize = { 676 }
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = steel_mill
-					level = 3
+					level = 2
 					instant_build = yes
 				}
-			}				
+			}	
+			modify_building_resources = {
+				building = steel_mill
+				resource = steel
+				amount = 2
+			 }
+			 modify_building_resources = {
+				building = aluminum_mill
+				resource = aluminium
+				amount = 2
+			 }			
 	 	}
 	 	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
 	}

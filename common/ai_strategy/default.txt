@@ -1,6 +1,31 @@
 # Written by Henrik "Groogy" Hansson
 # Modified by Daniel "Da9L" Sjöberg
 
+ai_make_divs = {
+	enable = {
+		is_ai = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = infrastructure
+		value = 50000
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 49999
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 49998
+	}
+}
+
 default_unit_production = { #If adding country-unique ones, bear in mind that they STACK
 	enable = {
 		always = yes

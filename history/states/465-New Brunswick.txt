@@ -7,7 +7,7 @@ state={
 	state_category = rural
 
 	resources={ 
-		oil=1 #Stoney Creek Field
+		oil=7 #Stoney Creek Field
 	}
 
 	history={

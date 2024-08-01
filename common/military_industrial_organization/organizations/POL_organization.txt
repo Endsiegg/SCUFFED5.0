@@ -12,8 +12,7 @@ POL_pzinz_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_POL_pzinz
 	
-	allowed = {	
-		OR = {
+	allowed = {
 			AND = {
 				tag = POL
 				OR = {
@@ -21,8 +20,6 @@ POL_pzinz_organization = {
 					has_dlc = "No Step Back"
 				}
 			}
-			tag = ROM
-		}
 	}
 
 	available = {

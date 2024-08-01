@@ -1194,7 +1194,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			if = {
-				add_ideas = PUP_mobilizing_for_war1
+				add_ideas = spiritual_mobilization_idea
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }

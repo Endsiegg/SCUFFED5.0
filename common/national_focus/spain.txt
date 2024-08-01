@@ -1,8 +1,4 @@
-﻿#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
-### search_filters = {FOCUS_FILTER_POLITICAL}
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -30,7 +26,7 @@ focus_tree = {
 	}
 
 	default = no
-	shared_focus = IBERIAN_form_joint_alliance
+
 	continuous_focus_position = { x = 50 y = 2600 }
 
 	initial_show_position = {
@@ -136,8 +132,6 @@ focus_tree = {
 	}
 	focus = {
 		id = SPA_hand_over_the_ceda_campaign_chest
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -166,8 +160,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_negotiate_carlist_support
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -195,8 +187,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_army_of_africa
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -227,8 +217,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_secure_the_northern_garrisons
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -320,7 +308,23 @@ focus_tree = {
 		}
 		allow_branch = {
 			OR = {
-									
+				has_game_rule = {
+					rule = spr_fragmentation_status
+					option = SPR_FRAGMENTED
+				}
+				has_game_rule = {
+					rule = spr_fragmentation_status
+					option = SPR_15TH_CENTURY_ARAGON
+				}
+				has_game_rule = {
+					rule = spr_fragmentation_status
+					option = SPR_EU4
+				}	
+				has_game_rule = {
+					rule = spr_fragmentation_status
+					option = SPR_EU4_ANDALUSIA
+				}					
+														
 												
 			}
 		}
@@ -395,8 +399,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_con_paquito
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -477,6 +479,12 @@ focus_tree = {
 			    popularity = 0.05
 			}
 			if = {
+				limit = {
+					has_game_rule = {
+						rule = spr_fragmentation_status
+						option = SPR_EU4
+					}
+				}
 				add_popularity = {
 					ideology = democratic
 					popularity = 0.45
@@ -514,8 +522,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_secure_the_guardia_de_asalto
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -605,8 +611,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_train_the_union_youth
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -633,8 +637,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_enlarge_the_weapon_caches
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -657,8 +659,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_distribute_arms_to_the_people
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -686,8 +686,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_disband_the_army
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -703,6 +701,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
 			add_political_power = 200
+			add_timed_idea = { 
+				idea = SPA_anti_major_cuck_idea
+				days = 730
+			}
 			set_country_flag = SPR_disband_the_army_flag
 			custom_effect_tooltip = SPR_disband_the_army_tt
 			hidden_effect = { country_event = lar_spain.2 }
@@ -738,6 +740,10 @@ focus_tree = {
 			    popularity = 0.1
 			}
 			activate_mission = SPA_carlist_uprising_mission
+			add_timed_idea = { 
+				idea = SPA_anti_major_cuck_idea
+				days = 730
+			}
 		}
 	}
 
@@ -861,7 +867,7 @@ focus_tree = {
 				template_counter = 33
 				priority = 1
 				division_names_group = SPR_INF_01
-				is_locked = yes
+				is_locked = no
 				regiments = {
 					infantry = { x = 0 y = 0 }
 					infantry = { x = 0 y = 1 }
@@ -884,7 +890,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPA_bolster_offensive_infrastructure
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -957,6 +963,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_corpo_truppe_volontarie
 		available = {
+			NOT = { has_global_flag = scw_over }
 			has_volunteers_amount_from = {
 				tag = ITA
 				count > 0
@@ -995,6 +1002,7 @@ focus_tree = {
 	focus = {
 		id = SPA_the_condor_legion
 		available = {
+			NOT = { has_global_flag = scw_over }
 			has_volunteers_amount_from = {
 				tag = GER
 				count > 0
@@ -1035,6 +1043,7 @@ focus_tree = {
 	focus = {
 		id = SPA_equipment_shipments
 		available = {
+			NOT = { has_global_flag = scw_over }
 			OR = {
 				has_volunteers_amount_from = {
 					tag = ITA
@@ -1074,6 +1083,7 @@ focus_tree = {
 	focus = {
 		id = SPA_obtain_training_staff
 		available = {
+			NOT = { has_global_flag = scw_over }
 			OR = {
 				has_volunteers_amount_from = {
 					tag = ITA
@@ -1105,6 +1115,7 @@ focus_tree = {
 	focus = {
 		id = SPA_doctrinal_advancements
 		available = {
+			NOT = { has_global_flag = scw_over }
 			OR = {
 				has_volunteers_amount_from = {
 					tag = ITA
@@ -1144,8 +1155,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_secure_the_national_defense_council
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1166,8 +1175,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_suspend_the_constitution
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1204,8 +1211,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_primo_de_rivera_prisoner_exchange
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1227,8 +1232,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_eliminate_the_carlists
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_war_with = SPB
@@ -1285,8 +1288,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_establish_the_directory
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1506,7 +1507,7 @@ focus_tree = {
 		x = 4
 		y = 2
 		relative_position_id = SPA_establish_the_directory
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -1793,7 +1794,22 @@ focus_tree = {
 			}
 
 			if = {
-				limit = {			
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_15TH_CENTURY_ARAGON
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_EU4
+						}											
+														
+					}					
 					
 				}
 				165 = {
@@ -1858,6 +1874,12 @@ focus_tree = {
 				}				
 			}
 			if = {
+				limit = {
+					has_game_rule = {
+						rule = spr_fragmentation_status
+						option = SPR_EU4
+					}	
+				}
 				173 = {
 					OWNER = {
 						ROOT = {
@@ -1872,6 +1894,18 @@ focus_tree = {
 				}				
 			}
 			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_15TH_CENTURY_ARAGON
+						}																			
+					}	
+				}
 				792 = {
 					OWNER = {
 						ROOT = {
@@ -1896,7 +1930,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SPA_strengthen_the_supreme_reality_of_spain
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1932,7 +1966,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SPA_glory_and_wealth_on_the_sea_lanes
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -2095,7 +2129,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_glory_and_wealth_on_the_sea_lanes
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -2383,7 +2417,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SPA_unite_iberia
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -2428,7 +2462,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_the_will_to_empire
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -2653,7 +2687,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SPA_the_will_to_empire
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -2927,7 +2961,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SPA_motorization
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -3619,7 +3653,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SPA_expand_the_axis_gold_trade
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -3717,13 +3751,15 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			activate_mission = SPA_carlist_uprising_mission
+			add_timed_idea = { 
+				idea = SPA_anti_major_cuck_idea
+				days = 730
+			}
 		}
 	}
 
 	focus = {
 		id = SPA_save_the_alcazar
-		available = {
-		}
 		ai_will_do = {
 			factor = 10
 		}		
@@ -3750,8 +3786,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_martyrdom_for_primo_de_rivera
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -3976,8 +4010,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_foment_a_carlist_split
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -4007,8 +4039,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_a_methodical_approach
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -4030,8 +4060,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_tackle_the_vulnerable_fronts
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -4052,8 +4080,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_integrate_the_requetes
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -4179,7 +4205,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_portuguese_aid
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -4263,8 +4289,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_banish_the_party_leaders
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -4299,8 +4323,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_fuse_the_parties
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -4361,7 +4383,7 @@ focus_tree = {
 				}
 				set_global_flag = nationalist_victory
 				set_global_flag = scw_over
-				country_event = { id = lar_news.1 hours = 6 }
+				news_event = { id = lar_news.1 hours = 6 }
 			}
 		}
 	}
@@ -5132,7 +5154,6 @@ focus_tree = {
 					retire_ideology_leader = fascism
 					create_country_leader = {
 						name = "Francisco Franco"
-						desc = "POLITICS_FRANCISCO_FRANCO_DESC"
 						picture = "GFX_portrait_spain_francisco_franco_old"
 						expire = "1965.1.1"
 						ideology = fascism_ideology
@@ -5148,7 +5169,6 @@ focus_tree = {
 					retire_ideology_leader = neutrality
 					create_country_leader = {
 						name = "Francisco Franco"
-						desc = "POLITICS_FRANCISCO_FRANCO_DESC"
 						picture = "GFX_portrait_spain_francisco_franco_old"
 						expire = "1965.1.1"
 						ideology = despotism
@@ -5360,7 +5380,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_dictator_for_life
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -5504,7 +5524,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SPA_adopt_the_26_points
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -5806,6 +5826,10 @@ focus_tree = {
 				remove_idea = SPA_carlism_1
 				add_idea = SPA_disjointed_carlist_juntas
 			}
+			add_timed_idea = { 
+				idea = SPA_anti_major_cuck_idea
+				days = 730
+			}
 			activate_mission = SPA_fascist_crackdown_mission
 			#remove_ideas = SPA_carlism_1
 			#add_ideas = SPA_disjointed_carlist_juntas
@@ -5814,8 +5838,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_prepare_the_carlist_insurrection
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -5857,8 +5879,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_contact_the_union_militar_espanola
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -5885,8 +5905,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_head_the_junta_nacional
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -5904,7 +5922,6 @@ focus_tree = {
 			add_stability = 0.05
 			create_country_leader = {
 				name = "Manuel Fal Conde"
-				desc = "POLITICS_MANUEL_FAL_CONDE_DESC"
 				picture = "GFX_portrait_SPA_manuel_fal_conde"
 				expire = "1965.1.1"
 				ideology = despotism
@@ -5919,8 +5936,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_unite_the_requetes
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -5973,8 +5988,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_war_in_the_north
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -6046,8 +6059,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_revive_the_spirit_of_the_carlist_wars
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -6096,8 +6107,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_no_compromise_on_carlist_ideals
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_war_with = SPA
@@ -6821,6 +6830,24 @@ focus_tree = {
 				}
 			}
 			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_15TH_CENTURY_ARAGON
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_EU4
+						}											
+														
+					}					
+					
+				}
 				165 = {
 					OWNER = {
 						ROOT = {
@@ -6883,6 +6910,12 @@ focus_tree = {
 				}				
 			}
 			if = {
+				limit = {
+					has_game_rule = {
+						rule = spr_fragmentation_status
+						option = SPR_EU4
+					}	
+				}
 				173 = {
 					OWNER = {
 						ROOT = {
@@ -6897,6 +6930,18 @@ focus_tree = {
 				}				
 			}
 			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_FRAGMENTED
+						}
+						has_game_rule = {
+							rule = spr_fragmentation_status
+							option = SPR_15TH_CENTURY_ARAGON
+						}																			
+					}						
+				}
 				792 = {
 					OWNER = {
 						ROOT = {
@@ -7863,8 +7908,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_appropriate_the_means_of_production
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -8049,8 +8092,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_the_maximum_concession
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_global_flag = scw_over
@@ -8079,8 +8120,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_seize_public_transport
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -8255,7 +8294,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_ideas = r56i_laws_gender_equality
+			#add_ideas = r56i_laws_gender_equality
 		}
 	}
 
@@ -8468,8 +8507,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_masters_of_our_own_fate
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_war_with = SPD
@@ -9072,7 +9109,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SPR_a_new_way_of_warfare
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_IMPROVEMENT }
@@ -9084,7 +9121,7 @@ focus_tree = {
 			}
 			create_operative_leader = {
 				name = "Ramón Rufat Llop"
-				portrait_path = gfx/leaders/r56_generic/r56_portrait_generic_operative_europe_12.dds 
+				portrait_path = "GFX_portrait_europe_generic_operative_male_7"
 				traits = {  operative_infiltrator operative_escape_artist }
 				bypass_recruitment = no
 				available_to_spy_master = yes
@@ -9546,8 +9583,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_faith_in_the_cause
-		available = {
-		}
 		bypass = {
 			has_war_support > 0.98
 		}
@@ -9598,8 +9633,8 @@ focus_tree = {
 		prerequisite = { focus = SPR_militarize_the_people }
 		
 		icon = GFX_focus_spr_anarchism_knows_no_borders
-		x = -1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = SPR_militarize_the_people
 		cost = 10
 
@@ -9673,11 +9708,11 @@ focus_tree = {
 
 	focus = {
 		id = SPR_plant_the_seeds_of_revolution
-		prerequisite = { focus = SPR_militarize_the_people }
+		prerequisite = { focus = SPR_anarchism_knows_no_borders }
 		
 		icon = GFX_focus_prc_infiltration
-		x = 2
-		y = 0
+		x = -1
+		y = 1
 		relative_position_id = SPR_anarchism_knows_no_borders
 		cost = 10
 
@@ -9699,7 +9734,7 @@ focus_tree = {
 			division_template = {
 				name = "Anarchist Militia"
 				priority = 1
-				is_locked = yes
+				is_locked = no
 				division_names_group = SPD_INF_06
 				regiments = {
 					infantry = { x = 0 y = 0 }
@@ -9714,7 +9749,6 @@ focus_tree = {
 	focus = {
 		id = SPR_global_defense_council
 		prerequisite = { focus = SPR_anarchism_knows_no_borders }
-		prerequisite = { focus = SPR_plant_the_seeds_of_revolution }
 		
 		icon = GFX_goal_generic_alliance
 		x = 1
@@ -9749,10 +9783,11 @@ focus_tree = {
 	focus = {
 		id = SPR_voluntary_mountain_militias
 		icon = GFX_focus_GRE_a_land_of_mountains
+		prerequisite = { focus = SPR_anarchism_knows_no_borders }
 		prerequisite = { focus = SPR_fortify_the_pyrenees }
-		x = 0
+		x = -2
 		y = 2
-		relative_position_id = SPR_fortify_the_pyrenees
+		relative_position_id = SPR_anarchism_knows_no_borders
 		cost = 10
 		ai_will_do = {
 			base = 1
@@ -9898,8 +9933,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_arm_the_workers_militias
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_global_flag = scw_over
@@ -9983,8 +10016,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_demand_ministerial_positions
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_global_flag = scw_over
@@ -10012,8 +10043,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_the_stalinist_doctrine
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -10177,8 +10206,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_relocate_the_gold_reserves
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_global_flag = scw_over
@@ -10206,8 +10233,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_reaffirm_the_popular_front_strategy
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_global_flag = SPR_anarchist_uprising_flag
@@ -10256,8 +10281,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_crush_the_revolution
-		available = {
-		}
 		bypass = {
 			OR = {
 				has_war_with = SPC
@@ -11219,7 +11242,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SPR_the_red_tide
-		cost = 5
+		cost = 10
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -11903,8 +11926,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_a_red_iberia
-		available = {
-		}
 		bypass = {
 			has_war_with = POR
 		}
@@ -12612,8 +12633,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_new_leadership
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -12636,8 +12655,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_the_future_of_the_republic
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -12694,8 +12711,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_ensure_loyalty
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -12750,7 +12765,7 @@ focus_tree = {
 					template_counter = 3
 					priority = 1
 					division_names_group = SPR_INF_01
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -12959,8 +12974,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_strengthen_the_anti_fascist_coalition
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -14217,5 +14230,526 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_MILITARY_IMPROVEMENT }
 	}
+
+	#### INDUSTRY TREE
+
+	focus = {
+		id = SPR_industry_tree
+		icon = GFX_goal_generic_construction
+		cost = 5
+		ai_will_do = {
+			factor = 40
+		}
+		available = {
+
+		}
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		x = 32
+		y = 2
+
+
+	}
+	focus = {
+		id = SPR_increase_public_investments1
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_industry_tree
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = SPR_industry_tree
+		x = -1
+		y = 1
+
+	}
+	focus = {
+		id = SPR_create_the_ini1
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = SPR_increase_public_investments1
+		}
+		ai_will_do = {
+			factor = 30
+		}
+
+
+		completion_reward = {
+			add_ideas = SPR_ini
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = -2
+		y = 2
+		relative_position_id = SPR_industry_tree
+	}
+	focus = {
+		id = SPR_create_instalaza1
+		icon = GFX_goal_spr_fund_instalaza
+		cost = 5
+		ai_will_do = {
+			factor = 30
+		}
+		prerequisite = {
+			focus = SPR_create_the_ini1
+		}
+
+
+	
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = -1
+		y = 3
+		relative_position_id = SPR_industry_tree
+	}
+	focus = {
+		id = SPR_surevaluate_the_peseta1
+		icon = GFX_focus_GRE_Combat_depression
+		cost = 5
+		ai_will_do = {
+			factor = 35
+		}
+		prerequisite = {
+			focus = SPR_industry_tree
+		}
+
+
+		completion_reward = {
+			add_ideas = SPR_peseta_surevaluated
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 1
+		y = 1
+		relative_position_id = SPR_industry_tree
+	}
+	focus = {
+		id = SPR_save_the_education_budget1
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_increase_public_investments1
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		prerequisite = {
+			focus = SPR_surevaluate_the_peseta1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		x = 0
+		y = 2
+		relative_position_id = SPR_industry_tree
+	}
+	focus = {
+		id = SPR_repair_the_national_roads1
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_surevaluate_the_peseta1
+		}
+		available = {
+		}
+		ai_will_do = {
+			factor = 45
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 2
+		y = 2
+		relative_position_id = SPR_industry_tree
+
+	}
+	focus = {
+		id = SPR_expand_the_mines1
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+		}
+
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = excavation_tech_bonus
+				bonus = 1.5
+				uses = 2
+				category = excavation_tech
+			}			
+		#	add_resource = {
+		#	    type = tungsten
+		#	    amount = 21
+		#	    state = 171
+		#	}
+		#	add_resource = {
+		#	    type = steel
+		#	    amount = 13
+		#	    state = 166
+		#	}
+		#	add_resource = {
+		#	    type = steel
+		#	    amount = 13
+		#	    state = 173
+		#	}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		prerequisite = {
+			focus = SPR_repair_the_national_roads1
+		}
+		x = 1
+		y = 3
+		relative_position_id = SPR_industry_tree
+	}
+	focus = {
+		id = SPR_support_the_heavy_industry1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_create_instalaza1
+		}
+		ai_will_do = {
+			factor = 50
+		}
+
+
+		prerequisite = {
+			focus = SPR_expand_the_mines1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		x = 0
+		y = 4
+		relative_position_id = SPR_industry_tree
+	}
+
+
+
+
+
 
 }

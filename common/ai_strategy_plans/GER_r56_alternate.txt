@@ -37,7 +37,7 @@ GER_democratic_r56 = {
 		GER_deutsche_arbeitsfront
 		GER_autobahn
 		GER_kill_hitler
-		GER_begin_civilwar_democratic
+		GER_political_turmoil
 		GER_restore_weimar
 		GER_establish_bundesrepublik
 		GER_support_technocrats_I
@@ -112,9 +112,9 @@ GER_communist_comintern_r56 = {
 		#GER_privatize_reichsbahn
 		#GER_finish_reinhardt
 		GER_kill_hitler
-		GER_begin_civilwar_communist
+		GER_political_turmoil
 		GER_repeal_reichstag_fire_decree
-		
+		GER_alliance_with_soviets
 		GER_support_autarks_I
 	}
 
@@ -170,9 +170,9 @@ GER_communist_world_revolution_r56 = {
 		#GER_privatize_reichsbahn
 		#GER_finish_reinhardt
 		GER_kill_hitler
-		GER_begin_civilwar_communist
+		GER_political_turmoil
 		GER_repeal_reichstag_fire_decree
-		
+		GER_world_revolution
 		GER_support_autarks_I
 	}
 
@@ -256,16 +256,14 @@ GER_fascist_passive_r56 = {
 
 	ai_national_focuses = {
 		GER_begin_depression_recovery
-		
-		GER_appoint_economic_positions
+		GER_the_anglo_german_naval_agreement
 		GER_volksgemeinschaft
 		GER_deutsche_arbeitsfront
 		GER_autobahn
 		GER_denounce_versailles
 		GER_rhineland
 		GER_anti_comitern_pact
-		GER_develop_the_heer_r56
-		
+		GER_naval_plan_z
 		GER_support_autarks_I
 		GER_steelworks_issues
 		GER_support_autarks_II
@@ -280,29 +278,22 @@ GER_fascist_passive_r56 = {
 		GER_west_wall
 		GER_schwerepunkt_tactics
 		GER_demand_sudetenland
-		GER_czech_friend
 		GER_modernize_CAS
 		GER_demand_memel
 		GER_mol_rib_pact
 		GER_military_industrial_complex
-		GER_mobile_warfare
-		
+		GER_expand_blohm_voss_shipyards
 		GER_nationalize_resource_industries
 		GER_nationalize_aviation_industry
 		GER_danzig_or_war
 		GER_second_vienna_award
 		GER_air_superiority_english_channel
 		GER_strengthen_german_state
-		GER_support_military_research
-		
-		
-		GER_sweden_friend
+		GER_the_bismarck_class
+		GER_abandon_plan_z
 		GER_war_with_france
 		GER_around_maginot
-		GER_finland_friend
-		GER_build_panzer_army
-		GER_total_war
-		
+		GER_modular_submarine_construction
 		GER_demand_slovenia
 		GER_first_ljubljana_award
 		GER_fate_of_yugoslavia
@@ -366,10 +357,12 @@ GER_monarchist_allies_r56 = {
 		GER_begin_depression_recovery
 		#GER_rhineland
 		GER_rally_the_monarchists
+		GER_support_freikorps
+		GER_return_of_conservative_exiles
+		GER_contact_ludendorff
 		GER_a_new_reich
-		
 		GER_restore_the_empire
-		GER_r56rp_mon_allies_alliance
+		GER_mon_allies_alliance
 		#GER_mon_peaceful
 	}
 
@@ -438,8 +431,11 @@ GER_monarchist_central_powers_r56 = {
 		GER_begin_depression_recovery
 		#GER_rhineland
 		GER_rally_the_monarchists
+		GER_support_freikorps
+		GER_return_of_conservative_exiles
+		GER_contact_ludendorff
 		GER_a_new_reich
-		
+		GER_restore_the_empire
 		GER_restore_the_central_powers
 		GER_alliance_with_austria_hungary
 		GER_alliance_with_the_ottomans

@@ -1160,7 +1160,9 @@ on_actions = {
 									is_historical_focus_on = yes
 									has_government = democratic
 								}
-								
+								NOT = {
+									has_completed_focus = DEN_Restructure_the_Army_Command
+								}
 							}
 						}
 					}

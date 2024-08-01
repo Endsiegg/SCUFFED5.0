@@ -81,7 +81,7 @@
  SOV_Stalin_Cult:0 "Stalin Cult"
  SOV_Stalin_Cult_desc:0 "Encouraging Comrade Stalin's cult of personality will help give legitimacy to our government and increase worker efficiency. The Soviet people require a period of stability after many tumultuous years and they shall not be denied!"
  
- SOV_sing_katyusha_sing:0 "Sing Katyusha Sing!"
+ SOV_sing_katyusha_sing:0 "§4Sing Katyusha Sing!§!"
  SOV_sing_katyusha_sing_focus:0 "Sing Katyusha Sing!"
  SOV_sing_katyusha_sing_focus_desc:0 "The enemies of [ROOT.GetNameDef] will soon hear a song they will never forget."
  manufacturer_applies_bonus_instantly_tooltip:0 "§CThis Manufacturer is applying its effect even if you already unlocked the boosted unit(s).§!"
@@ -202,6 +202,7 @@
  SOV_Scientific_Cooperation_desc:0 ""
  SOV_Fascist_Counter_Coup:0 "Fascist Counter-Coup"
  SOV_Fascist_Counter_Coup_desc:0 ""
+LS_for_the_motherland:0 "§RFor The Motherland"
 
  SOV_iron_curtain:0 "The Iron Curtain"
  SOV_iron_curtain_desc:0 "Our sphere of influence is reaching deep into Europe. To ensure the security of newly established communist regimes in our client states, we will apply strong and direct rule from Moscow, while opening their eyes on the horrific workers oppression conducted by the Western Powers."
@@ -246,6 +247,7 @@
  SOV_invite_romania:0 "Invite Romania"
  SOV_invite_romania_desc:0 "Romania must be join the rank of the nations fighting for the workers of the world!"
 
+ #traits??
  socialism_in_one_country:0 "Socialism in One Country"
  socialism_in_one_country_desc:0 "[SOV.GetLeader] believes that only when the Soviet Union is strong, should it spread Marxist revolution abroad."
  world_trotskyite_revolution:0 "World Trotskyite Revolution"
@@ -280,7 +282,7 @@
  SOV_civil_war_ignited:0 "[ROOT.GetAdjective] Matter"
  SOV_civil_war_ignited_desc:0 "Even though the conflict was ignited from outside, the government of [ROOT.GetLeader] believes that it is only [ROOT.GetAdjective] matter and any foreign intervention will bring destruction to the country."
  
- ### TRANCY'S ADDITIONS ###
+ ### ALT ADDITIONS ###
  
  SOV_reinstitute_okhrana:0 "Reinstate Okhrana"
  SOV_reinstitute_okhrana_desc:0 "In our efforts to topple the Soviet regime, we must ensure that the territory we control be firmly under our grasp - and, indeed, consider sending agents into Soviet territory to undermine them in any way possible. It is time to bring back the Okhrana, only now modern, and more effective."
@@ -291,6 +293,9 @@
  SOV_russia_okhrana_idea:0 "Okhrana Reinstated"
  SOV_consolidate_power_tt_2:0 "Remove ideas §Y$SOV_the_true_tsars_idea$§!, §Y$SOV_fascist_womens_movement_idea$§!, §Y$SOV_siberian_forest_soldiers_idea$§!"
 
+ SOV_reinforce_caspian_naval_bases:0 "Reinforce Caspian Naval Bases"
+ SOV_reinforce_caspian_naval_bases_desc:0 "Though not as important as our other naval strategic regions, it is important that we maintain a strong presence in the area to ensure that advances made by the [PER.GetAdjective] or other foreign nations are kept in check to protect our interests there."
+
  VOLGA_DON_CANAL:0 "Volga-Don Canal"
  Volga_don_blocked_tt:0 "§RVolga-Don Canal is not built or is blocked§!"
 
@@ -299,8 +304,7 @@
  VOLGA_DON_BUILT_tt:0 "§YThe Volga-Don Canal will allow ships to cross§!."
  VOLGA_DON_NOT_BUILT:0 "The Volga-Don Canal has not been built"
  
- 
- ####
+ ### 
 
  SOV_transformation_of_nature_idea:0 "Transformation of Nature"
  #communist_menace:0 "Communist Menace"
@@ -325,7 +329,6 @@
  a_higher_standard_of_living_desc: ""
  mobile_construction_brigades: "Mobile Construction Brigades"
  mobile_construction_brigades_desc: ""
- peace_before_war: "Peace before War"
  
  SOV_Russian_Empire:0 "Russian Empire"
  SOV_demo:0 "Russian Federation"
@@ -379,25 +382,11 @@
  soviet.105.t:0 "Enrique Líster Requests Asylum"
  soviet.105.d:0 "After the defeat of our allies in Spain, Enrique Líster, Spanish commander and a graduate of the Frunze Military Academy, has requested asylum and offered to serve in our army"
 
- soviet.107.t:0 "England wants to merge military assets"
- soviet.107.d:0 "An offer has been put forth from the Communist Party of Britain. They would like to merge miliary funding and assets to grow our military's exponentially"
- soviet.107.a:0 "We agree to merge military funding"
- soviet.107.b:0 "We cannot spare expenses for others"
-
-
  stalin_dead:0 "Stalin has Passed Away"
  purge_beria:0 "Beria has been purged"
 
  SOV_grieve_stalin:0 "Grieve Stalin"
  SOV_grieve_stalin_desc:0 "The Politburo has announced the death of Iosif Vissarionivitch Stalin. While the country grieves the dead of the our beloved leaders, his shameful drowning in his vomit has been kept secret. Without an assured leadership, various members of the Politburo are ready to do anything to eliminate their competitors."
-
- SOV_khruschev_takes_the_lead:0 "Khrushchev Takes the Lead"
- SOV_khruschev_takes_the_lead_desc:0 "Efficient arm of Stalin's will in Ukraine, Nikita Khrushchev has the talent to eliminate the threat of a new great purge lead by Beria and gather enough support around him to become the new General Secretary of the CPSU of the USSR."
-
- SOV_consolidate_malenkovs_position:0 "Consolidate Malenkov's Position"
- SOV_consolidate_malenkovs_position_desc:0 "The Chairman of the Council of Ministers of the Soviet Union Georgui Maksimilianovitch Malenkov, must gather enough support around him to not be sidelines by reckless individuals like Beria."
- SOV_berias_goons_strike:0 "Beria's Goons Strike"
- SOV_berias_goons_strike_desc:0 "As the agent of Stalin, Beria did his best to achieve the worst. Purging the Union of "unreliable elements". Like during the Great Purge this behavior is one against striking members of the Politburo, ensuring the Beria's rule stays uncontested."
  
  SOV_comecon_give_puppet_idea:0 "Integrate [FROM.GetNameDef] into the [GetComeconName]"
  SOV_factionalism_removed_tt:0 "Removes §YFactionalism§!"
@@ -413,18 +402,12 @@
  SOV_order_fighters_in_ENG:0 "Order [ENG.GetAdjective] Fighters"
  SOV_order_bombers_in_ENG:0 "Order [ENG.GetAdjective] Bombers"
 
-
-###commie Japan events
- soviet.106.t:0 "Japan provides us an offer"
- soviet.106.d:0 "Japan has offered manchuria in return for some mutual investment"
- soviet.106.a:0 "We will refuse such an offer, give them nothing"
- soviet.106.b:0 "Let us help our communist brothers, they have given us a good offer in return"
- soviet.107.t:0 "England wants to merge military assets"
- soviet.107.d:0 "An offer has been put forth from the Communist Party of Britain. They would like to merge miliary funding and assets to grow our military's exponentially"
- soviet.107.a:0 "We agree to merge military funding"
- soviet.107.b:0 "We cannot spare expenses for others"
-
-SOV_defenders_of_democracy:0 "Defenders of Democracy"
-SOV_defenders_of_democracy_desc:0 "As the new bastion of democracy in europe, Russia stands as the new bulwark of democracy on the European and Eurasian continent."
-
-SOV_counter_attack_through_manchuria:0 "Counter-attack Through Manchuria"
+# LAST STAND SOVIET IDEAS - ADAMSKI (ORGANIZE EVERYTHING RAAAAAAAAAAH)
+SOV_for_the_motherland:0 "For The Motherland"
+SOV_for_the_motherland_desc:0 "The Fascists are at Moscow's doorstep, only the willpower of the motherland and her red army can save us now!"
+SOV_unleashing_the_bears_prosperity_desc:0 "As the end of the five-year plan approaches, the Russian Economic Spirit focus marks a critical turning point. It signifies our commitment to revitalizing the Soviet economy, casting aside stagnation and embracing innovation. Under the emblem of the iconic bear and the Soviet flag, we embark on a journey to diversify production, embrace cutting-edge technologies, and expand our markets."
+SOV_unleashing_the_bears_prosperity:0 "Unleashing the Bear's Prosperity"
+ SOV_under_the_bear_desc:0 "This embodies our determination to prove that socialism not only drives political change but can also usher in a resurgent, thriving economy. The future beckons, and with this, we are poised to seize it."
+ SOV_under_the_bear:0 "Under The Bear"
+SOV_tajikstan_tungsten:0 "Strategic Tungsten Extraction"
+SOV_tajikstan_tungsten_desc:0 "We have discovered significant tungsten deposits found in the Gissar Range; we, the government, will harness these resources to bolster our industrial and military capabilities, ensuring technological superiority and economic strength. Our strategic extraction operations will transform Tajikistan into a key resource hub, vital for our nation’s advancement and security."

@@ -1,7 +1,6 @@
 ideas = {
 
 	country = {
-
 		HUN_treaty_of_triannon = {
 
 			available = {

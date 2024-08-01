@@ -1,5 +1,4 @@
-﻿# STI adds 139 army
-army = {
+﻿army = {
 	gfx = GFX_theatre_army_shield
 	
 	icon = {
@@ -37,6 +36,95 @@ army = {
 	}
 	icon = {
 	}
+###	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}	
+###	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}	
+###	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}	
+	
+###	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+
+
+
+	
 	icon = {
 		color_override = no
 		name = "4. Armee"
@@ -612,296 +700,71 @@ army = {
 			tag = SOV
 		}
 	}
-    ## 74 above
-    #####START OF 30 #######
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    #####END OF 30 #######
-    #####START OF 30 #######
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    #####END OF 30 #######
-    #####START OF 30 #######
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    #####END OF 30 #######
-    #####START OF 30 #######
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    #####END OF 30 #######
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
-    icon = {
-    }
+	icon = {
+		color_override = no
+		name = "Turkish 1"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = TUR
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Turkish 2"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = TUR
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 1"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = GRE
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 2"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = GRE
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 3"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = GRE
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Bulgarian 1"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = BUL
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Bulgarian 2"
+		available = 
+		{
+			has_dlc = "Battle for the Bosporus"
+			tag = BUL
+		}
+	}
 }
 
-# STI adds 73 NEW AG
 army_group = {
 	gfx = GFX_theatre_army_group_shield
 	
@@ -944,168 +807,6 @@ army_group = {
 		{
 			has_dlc = "Waking the Tiger"
 		}
-	}
-    # 6 above 
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
-	}
-    ####END OF 10####    
-    ####START OF 10####
-    icon = {
-	}
-    icon = {
-	}
-    icon = {
 	}
 }
 
@@ -1174,216 +875,6 @@ fleet = {
 	}
 	icon = {
 	}
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
 }
 
 task_force = {
@@ -1451,216 +942,6 @@ task_force = {
 	}
 	icon = {
 	}
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############
-    ############### start of 20 ###############
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-	icon = {
-	}
-    ############### end of 20 ###############    
 }
 
 naval_equipment_role = {
@@ -1786,6 +1067,7 @@ air_group = {
 	}
 	icon = {
 	}
+	
 }
 
 air_niche = {
@@ -1806,5 +1088,5 @@ air_niche = {
 	icon = {
 	}
 	icon = {
-	}
+	}	
 }

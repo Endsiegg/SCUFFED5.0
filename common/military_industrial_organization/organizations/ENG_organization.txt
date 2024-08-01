@@ -53,7 +53,7 @@ ENG_vickers_armstrong_eng_organization = {
 				FROM = { original_tag = URG }				  
 			}
 			FROM = {
-				
+				has_completed_focus = URG_invite_vickers
 			}
 		}
 
@@ -64,14 +64,9 @@ ENG_vickers_armstrong_eng_organization = {
 					FROM = { original_tag = ETH }
 				}  
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vickers_mio_flag 
-				}
-			}
+
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = {
 				OR = {
@@ -79,7 +74,6 @@ ENG_vickers_armstrong_eng_organization = {
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 	}
@@ -155,11 +149,15 @@ ENG_vauxhall_organization = {
 				has_dlc = "By Blood Alone"
 			}
 			tag = EGY
+			AND = {
+				tag = BRA 
+				has_dlc = "Trial of Allegiance"
+			}
 		}
 	}
 
 	visible = {
-		IF = { 
+		if = { 
 			limit = {
 				FROM = { original_tag = POL }
 			}
@@ -168,15 +166,15 @@ ENG_vauxhall_organization = {
 				NOT = { has_completed_focus = POL_adaptive_designs }
 			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = ETH } }
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = EGY } }
 			FROM = { is_subject_of = ENG }
 		}
@@ -184,28 +182,22 @@ ENG_vauxhall_organization = {
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
+		if = {
 			limit = {
 				FROM = { NOT = { original_tag = ENG } }
 			}
 			FROM = { NOT = { has_war_with = ENG } }
 		}
 
-		IF = {
+		if = {
 			limit = { 
 				OR = { 
 					FROM = { original_tag = BUL }
 					FROM = { original_tag = ETH }
 				}  
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vauxhall_mio_flag 
-				}
-			}
 		}
-		IF = {
+		if = {
 			limit = { FROM = { original_tag = BUL } } 
 			FROM = {
 				OR = {
@@ -213,13 +205,16 @@ ENG_vauxhall_organization = {
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 		IF = {
-			limit = { FROM = { original_tag = BUL } } 
-			FROM = {
-				has_completed_focus = EGY_study_british_armor
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_vauxhall_mio_flag
+				}
 			}
 		}
 	}
@@ -230,6 +225,7 @@ ENG_vauxhall_organization = {
 		}
 	}
 }
+
 
  ######  ##     ## #### ########   ######  
 ##    ## ##     ##  ##  ##     ## ##    ## 
@@ -286,8 +282,8 @@ ENG_harland_wolff_organization = {
 					tag = IRE
 				}
 				controls_state = 119
-			} 
-		}
+			}						
+		}		
 	}
 
 	
@@ -353,7 +349,11 @@ ENG_cammell_laird_organization = {
 			original_tag = ENG
 			original_tag = sco
 			original_tag = NIR
-			original_tag = IRE			
+			original_tag = IRE
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}			
 		}
 		has_dlc = "Arms Against Tyranny"
 	}
@@ -378,6 +378,16 @@ ENG_cammell_laird_organization = {
 					is_core_of = PREV
 				}
 			}			
+		}
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_cammell_laird_mio_flag
+				}
+			}
 		}
 	}
 	visible = {
@@ -451,7 +461,7 @@ ENG_yarrow_shipbuilders_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = ENG 
+			tag = ENG
 			tag = sco
 			AND = {
 				tag = BUL
@@ -471,19 +481,12 @@ ENG_yarrow_shipbuilders_organization = {
 
 		if = {
 			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_yarrow_mio_flag 
-				}
-			}
 			FROM = {
 				OR = {
 					is_subject = no
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 	}
@@ -595,7 +598,7 @@ ENG_supermarine_organization = {
 
 	research_categories = {	
 		mio_cat_all_light_fighter_and_modules 
-		#mio_cat_all_naval_bomber_and_modules 
+#		mio_cat_all_naval_bomber_and_modules 
 			#Could be used to allow Supermarine to research naval bombs, but this could overpower English fighter MIO trait gain early on.
 	}
 
@@ -652,8 +655,7 @@ ENG_supermarine_organization = {
 		any_parent = { generic_mio_trait_cantilever_wing_structure }
 
 		equipment_bonus = {
-			air_defence = 0.1
-			build_cost_ic = 0.05
+			air_defence = 0.1	
 		}
 	}
 
@@ -669,8 +671,7 @@ ENG_supermarine_organization = {
 		all_parents = { generic_mio_trait_fuel_injection_engines generic_mio_trait_high_octane_fuels }
 
 		equipment_bonus = {
-			air_defence = 0.1
-			build_cost_ic = 0.05
+			air_defence = 0.1	
 		}
 	}
 }
@@ -681,9 +682,9 @@ ENG_hawker_organization = {
 	allowed = {	
 		OR = {
 			AND = {
-		tag = ENG
-		has_dlc = "Arms Against Tyranny"
-	}
+				tag = ENG
+				has_dlc = "Arms Against Tyranny"
+			}
 			AND = {
 				tag = AFG
 				has_dlc = "Arms Against Tyranny"
@@ -789,19 +790,12 @@ ENG_fairey_aviation_organization = {
 
 		if = {
 			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_fairey_aviation_mio_flag 
-				}
-			}
 			FROM = {
 				OR = {
 					is_subject = no
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 	}
@@ -822,7 +816,31 @@ ENG_avro_organization = {
 	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_avro
 	allowed = {	
-		tag = ENG
+		OR = {
+			tag = ENG
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
+	}
+	available = {
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ENG } }
+			}
+			FROM = { NOT = { has_war_with = ENG } }
+		}
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_completed_focus = BRA_invite_foreign_companies
+					has_country_flag = has_avro_mio_flag
+				}
+			}
+		}
 	}
 	initial_trait = {
 		name = generic_mio_initial_trait_heavy_aircraft_designer
@@ -971,10 +989,6 @@ ENG_vauxhall_automotive_organization = {
 			tag = ENG
 			tag = POL # If Poland sets up a local one
 			AND = {
-				tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
@@ -1017,12 +1031,6 @@ ENG_vauxhall_automotive_organization = {
 					FROM = { original_tag = ETH }
 				}  
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_vauxhall_mio_flag 
-				}
-			}
 		}
 		if = {
 			limit = { FROM = { original_tag = BUL } }
@@ -1032,7 +1040,6 @@ ENG_vauxhall_automotive_organization = {
 					is_subject_of = ENG
 				}
 				#is_in_faction_with = ENG
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 		if = {

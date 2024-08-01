@@ -1072,23 +1072,21 @@ JUNO_create_osmar_hellmuth_operative = { #INITIAL
 BRA_remove_economy_modifier = {
 	IF = {
 		limit = {
-			AND = {
-				has_dynamic_modifier = { modifier = BRA_undiversified_economy_modifier }
-				check_variable = {
-					var = BRA_economy_industrial_capacity_factor
-					value = -0.1
-					compare = greater_than
-				}
-				check_variable = {
-					var = BRA_economy_production_efficiency_gain_factor
-					value = -0.1
-					compare = greater_than
-				}
-				check_variable = {
-					var = BRA_economy_production_max_efficiency_factor
-					value = -0.1
-					compare = greater_than
-				}				 						
+			has_dynamic_modifier = { modifier = BRA_undiversified_economy_modifier }
+			check_variable = {
+				var = BRA_economy_industrial_capacity_factor
+				value = -0.1
+				compare = greater_than
+			}
+			check_variable = {
+				var = BRA_economy_production_efficiency_gain_factor
+				value = -0.1
+				compare = greater_than
+			}
+			check_variable = {
+				var = BRA_economy_production_max_efficiency_factor
+				value = -0.1
+				compare = greater_than
 			}
 		}
 		remove_dynamic_modifier = { modifier = BRA_undiversified_economy_modifier }
@@ -1155,17 +1153,15 @@ BRA_mio_military_factory = {
 			NOT = {
 				has_dynamic_modifier = {
 					modifier = BRA_neglected_state_dynamic_modifier
-				} 
-				OR = {
-					state = 961
-					state = 962
-					state = 963
-					state = 964
-					state = 965
-					state = 966
-					state = 967
-					state = 968
 				}
+				state = 961
+				state = 962
+				state = 963
+				state = 964
+				state = 965
+				state = 966
+				state = 967
+				state = 968
 			}
 		}
 		add_extra_state_shared_building_slots = 1
@@ -1309,48 +1305,40 @@ BRA_select_leader_flag = {
 		set_country_flag = BRA_adso_president_flag
 	}
 	ELSE_IF = {
-		IF = {
-			limit = {
-				has_country_leader = {
-					ruling_only = yes
-					character = BRA_anisio_teixeira
-				}
+		limit = {
+			has_country_leader = {
+				ruling_only = yes
+				character = BRA_anisio_teixeira
 			}
-			set_country_flag = BRA_ansio_president_flag
 		}
+		set_country_flag = BRA_ansio_president_flag
 	}
 	ELSE_IF = {
-		IF = {
-			limit = {
-				has_country_leader = {
-					ruling_only = yes
-					character = BRA_minervino_de_oliveira
-				}
+		limit = {
+			has_country_leader = {
+				ruling_only = yes
+				character = BRA_minervino_de_oliveira
 			}
-			set_country_flag = BRA_mdo_president_flag
 		}
+		set_country_flag = BRA_mdo_president_flag
 	}
 	ELSE_IF = {
-		IF = {
-			limit = {
-				has_country_leader = {
-					ruling_only = yes
-					character = BRA_lindolfo_collor
-				}
+		limit = {
+			has_country_leader = {
+				ruling_only = yes
+				character = BRA_lindolfo_collor
 			}
-			set_country_flag = BRA_collor_president_flag
 		}
+		set_country_flag = BRA_collor_president_flag
 	}
 	ELSE_IF = {
-		IF = {
-			limit = {
-				has_country_leader = {
-					ruling_only = yes
-					character = BRA_eurico_gaspar_dutra
-				}
+		limit = {
+			has_country_leader = {
+				ruling_only = yes
+				character = BRA_eurico_gaspar_dutra
 			}
-			set_country_flag = BRA_dutra_president_flag
 		}
+		set_country_flag = BRA_dutra_president_flag
 	}
 }
 

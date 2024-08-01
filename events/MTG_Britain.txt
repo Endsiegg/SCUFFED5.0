@@ -2087,7 +2087,7 @@ country_event = {
 					name = "Loyalist Brigade"
 					priority = 1
 					division_names_group = ENG_DEM_01
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -2124,7 +2124,7 @@ country_event = {
 			name = "Blackshirt Brigade"
 			priority = 1
 			division_names_group = ENG_FAS_01
-			is_locked = yes
+			is_locked = no
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }
@@ -6518,7 +6518,7 @@ country_event = {
 #					name = "Pakistani Liberation Army"
 #					priority = 1
 #					division_names_group = RAJ_INF_01
-#					is_locked = yes
+#					is_locked = no
 #					regiments = {
 #						infantry = { x = 0 y = 0 }
 #						infantry = { x = 0 y = 1 }
@@ -6691,7 +6691,7 @@ country_event = {
 #					name = "Hindu Militia"
 #					priority = 1
 #					division_names_group = RAJ_INF_01
-#					is_locked = yes
+#					is_locked = no
 #					regiments = {
 #						infantry = { x = 0 y = 0 }
 #						infantry = { x = 0 y = 1 }
@@ -7188,7 +7188,7 @@ country_event = {
 #					name = "Bangladeshi Liberation Army"
 #					priority = 1
 #					division_names_group = RAJ_INF_01
-#					is_locked = yes
+#					is_locked = no
 #					regiments = {
 #						infantry = { x = 0 y = 0 }
 #						infantry = { x = 0 y = 1 }

@@ -21,7 +21,6 @@ if = {
 		set_naval_oob = "FRA_1936_naval_legacy"
 	}
 }
-
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "FRA_1936_air_bba"
@@ -149,6 +148,8 @@ recruit_character = FRA_eugene_bridoux
 set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.1
+
+country_event = { id = france.103 days = 15 random_days = 5 }		#deflation starts
 
 if = {
 	limit = {

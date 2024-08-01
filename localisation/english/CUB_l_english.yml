@@ -542,6 +542,8 @@
  CUB_batistas_influence_reduced_communist:0 "Batista's Influence"
  CUB_cuban_politburo:0 "[ROOT.GetAdjective] Politburo"
 
+CUB_invite_NKVD_officers:0 "Invite NKVD Officers"
+EGY_invite_NKVD_officers:0 "Invite NKVD Officers"
  #Decisions
 
  CUB_guantanamo_operations_category:0 "[1050.GetName] Operations"

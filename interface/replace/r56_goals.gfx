@@ -9201,9 +9201,301 @@ spriteType = {
 		name = "GFX_goal_IRQ_Babil"
 		textureFile = "gfx/interface/goals/irq/r56_goal_babil.dds"
 	}
+	#### COUNTRY FLAGS ####
+
+SpriteType = {
+	name = "GFX_focus_TBE_flag_australia"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_australia.dds"
 }
 
+SpriteType = {
+	name = "GFX_focus_TBE_flag_british_raj"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_british_raj.dds"
+}
 
+SpriteType = {
+	name = "GFX_focus_TBE_flag_canada"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_canada.dds"
+}
 
+SpriteType = {
+	name = "GFX_focus_TBE_flag_new_zealand"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_new_zealand.dds"
+}
+SpriteType = {
+	name = "GFX_focus_TBE_flag_south_africa"
+	texturefile = "gfx/interface/goals/eng/TBE_flag_south_africa.dds"
+}
+SpriteType = {
+	name = "GFX_focus_ENG_colonial_institutions"
+	texturefile = "gfx/interface/goals/eng/GBR_colonial_institutions.dds"
+}
+SpriteType = { 
+    	name = "GFX_GER_ukraine"
+		texturefile = "gfx/interface/goals/ger/LS_goal_war_ukraine.dds"
+	}
+	SpriteType = { 
+    	name = "GFX_GER_ukraine_shine"
+		texturefile = "gfx/interface/goals/ger/LS_goal_war_ukraine_shine.dds"
+	}
+SpriteType = { 
+    	name = "GFX_GER_moscow"
+		texturefile = "gfx/interface/goals/GER_moscow.dds"
+	}
+SpriteType = { 
+	name = "GFX_GER_barbarossa"
+	texturefile = "gfx/interface/goals/GER_barbarossa.dds"
+	}
+SpriteType = { 
+		name = "GFX_GER_stalingrad"
+		texturefile = "gfx/interface/goals/GER_stalingrad.dds"
+	}
+###GERMANY START
+spriteType = {
+	name = "GFX_goal_obst_commando_focus"
+	textureFile = "gfx/interface/goals/ger/obst_commando_focus.dds"
+}
+spriteType = {
+	name = "GFX_goal_hand_taking"
+	textureFile = "gfx/interface/goals/ger/hand_plunder.dds"
+}
+spriteType = {
+	name = "GFX_goal_blitzkrieg"
+	textureFile = "gfx/interface/goals/ger/ger_achtung_panzer.tga"
+}
+spriteType = {
+	name = "GFX_mobile_shocktroops"
+	textureFile = "gfx/interface/goals/ger/mobile_shocktroops.dds"
+}
+spriteType = {
+	name = "GFX_fortbreakers"
+	textureFile = "gfx/interface/goals/ger/fortbreakers.dds"
+}
+spriteType = {
+	name = "GFX_GER_total_war"
+	textureFile = "gfx/interface/goals/ger/GER_total_war.tga"
+}
+spriteType = {
+	name = "GFX_GER_new_weapons"
+	textureFile = "gfx/interface/goals/ger/GER_new_weapons.tga"
+}
+spriteType = {
+	name = "GFX_GER_summon_fritz_todt"
+	textureFile = "gfx/interface/goals/ger/GER_summon_fritz_todt.tga"
+}
+spriteType = {
+	name = "GFX_goal_german_defence_ministry"
+	textureFile = "gfx/interface/goals/ger/goal_defence_economy_and_armament_office.dds"
+}
+spriteType = {
+	name = "GFX_goal_air_land_cordination"
+	textureFile = "gfx/interface/goals/ger/GER_aces.tga"
+}
+spriteType = {
+	name = "GFX_goal_mechanized_army_2"
+	textureFile = "gfx/interface/goals/ger/GER_mechanized_2.tga"
+}
+spriteType = {
+	name = "GFX_goal_mechanized_army"
+	textureFile = "gfx/interface/goals/ger/GER_mechanized.tga"
+}
+spriteType = {
+	name = "GFX_goal_german_worker_program"
+	textureFile = "gfx/interface/goals/ger/GER_workerprogram_focus_2.dds"
+}
+spriteType = {
+	name = "GFX_goal_german_worker_program_expanded"
+	textureFile = "gfx/interface/goals/ger/GER_workerprogram_focus.dds"
+}
+spriteType = {
+	name = "GFX_goal_volkprograme"
+	textureFile = "gfx/interface/goals/ger/GER_volkdeutsche.dds"
+}
+spriteType = {
+	name = "GFX_goal_german_sythetics"
+	textureFile = "gfx/interface/goals/ger/GER_synthetic_factory_focus.dds"
+}
+spriteType = {
+	name = "GFX_goal_german_salute"
+	textureFile = "gfx/interface/goals/ger/GER_soldiers_salute.dds"
+}
+spriteType = {
+	name = "GFX_goal_soldiers_focus"
+	textureFile = "gfx/interface/goals/ger/GER_soldiers_march_focus.tga"
+}
+spriteType = {
+	name = "GFX_goal_nebelwerfer_focus"
+	textureFile = "gfx/interface/goals/ger/GER_nebelwerfer_focus.dds"
+}
+spriteType = {
+	name = "GFX_goal_german_fyp"
+	textureFile = "gfx/interface/goals/ger/GER_fyp_focus.dds"
+}
+spriteType = {
+	name = "GFX_goal_german_autarky"
+	textureFile = "gfx/interface/goals/ger/GER_autarky_focus.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_Organisation_Todt"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_Organisation_Todt.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_rhineland2"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_rhineland2.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_kpd"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_kpd.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_nva"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_nva.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_influence_brazil"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_influence_brazil.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_fate_of_czech"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_fate_of_czech.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_panzers"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_panzers.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_panzer_4"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_panzer4.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_kill_hitler"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_kill_hitler.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_anschluss"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_anschluss.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_prepare_to_invade_poland"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_prepare_to_invade_poland.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_claim_alsace_lorraine"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_claim_alsace_lorraine.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_case_anton"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_case_anton.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_deutsche_arbeitsfront"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_deutsche_arbeitsfront.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_volkswagen"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_volkswagen.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_dominate_turkey"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_dominate_turkey.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_take_advantage_of_political_turmoil"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_take_advantage_of_political_turmoil.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_restore_weimar"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_restore_weimar.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_open_the_german_political_sphere"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_open_the_german_political_sphere.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_two_sided_economics"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_two_sided_economics.dds"
+}
+SpriteType = {
+	name = "GFX_goal_ger_not_nazi_africa"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_not_nazi_africa.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_european_reich"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_european_reich.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_flag_german_empire"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_flag_german_empire.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_flag_germany_democratic"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_flag_germany_democratic.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_great_black_menace"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_great_black_menace.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_luftwaffe"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_luftwaffe.dds"
+}
+spriteType = {
+	name = "GFX_goal_GER_nationalize_aviation_industry"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_nationalize_aviation_industry.dds"
+}
+# Was removed I think
+#SpriteType = {
+#	name = "GFX_goal_munich_agreement"
+#	texturefile = "gfx/interface/goals/ger/r56_goal_GER_munich_agreement.dds"
+#}
+SpriteType = {
+	name = "GFX_goal_operation_sealion"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_operation_sealion.dds"
+}
+SpriteType = {
+	name = "GFX_goal_annexiceland"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_annexiceland.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_danzig_or_war"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_danzig_or_war.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_democratic_anschluss"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_democratic_referendum.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_boost_germanism_in_austria"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_democratic_unity.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_anti_bolshevist_bloc"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_antibolshevikbloc.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_legacy_of_stresemann"
+	texturefile = "gfx/interface/goals/ger/r56_goal_ger_legacy_of_stresemann.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_central_powers"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_central_powers.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_prep_east"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_prep_east.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_prep_west"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_prep_west.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_prep_south"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_prep_south.dds"
+}
+SpriteType = {
+	name = "GFX_goal_GER_pocket_liquidation"
+	texturefile = "gfx/interface/goals/ger/r56_goal_GER_pocket_liquidation.dds"
+}
 
+}
 #####---------------------------------------------------------------------> End

@@ -60,6 +60,57 @@ ideas = {
 			}
 		}
 
+		SPA_anti_major_cuck_idea = {
+
+			picture = CZE_planning_bonus
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.15
+				cas_damage_reduction = 0.15
+				pocket_penalty = -0.15
+				experience_loss_factor = -0.15
+			}
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.30
+				defense_bonus_against = 0.60
+			}
+		}
+
 		SPA_anti_anarchist_offensive = {
 
 			picture = SPR_nationalist_remnants

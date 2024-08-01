@@ -59,7 +59,7 @@ dieselisation = {
     }
  
     happened = {
-		has_tech = r56_postwar_train
+		has_tech = armored_train
     }
 
     ribbon = {
@@ -141,35 +141,35 @@ a_nations_characters = {
         tooltip = a_nations_characters_tt
             AND = {
                 OR = {
-                    has_idea = r56i_laws_gender_equality
-                    has_idea = r56i_laws_gender_patriarchy
-                    has_idea = r56i_laws_gender_limited
-                    has_idea = r56i_laws_gender_traditional
+                    #has_idea = r56i_laws_gender_equality
+                    #has_idea = r56i_laws_gender_patriarchy
+                    #has_idea = r56i_laws_gender_limited
+                    #has_idea = r56i_laws_gender_traditional
                 }
                 OR = {
-                    has_idea = r56i_laws_leadership_cult
-                    has_idea = r56i_laws_leadership_secular
-                    has_idea = r56i_laws_leadership_divine
-                    has_idea = r56i_laws_leadership_people
-                    has_idea = r56i_laws_leadership_communal_decision_making 
+                    #has_idea = r56i_laws_leadership_cult
+                    #has_idea = r56i_laws_leadership_secular
+                    #has_idea = r56i_laws_leadership_divine
+                    #has_idea = r56i_laws_leadership_people
+                    #has_idea = r56i_laws_leadership_communal_decision_making 
                 }
                 OR = {
-                    has_idea = r56i_laws_security_balanced
-                    has_idea = r56i_laws_security_order
-                    has_idea = r56i_laws_security_rights
+                    #has_idea = r56i_laws_security_balanced
+                    #has_idea = r56i_laws_security_order
+                    #has_idea = r56i_laws_security_rights
                 }
                 OR = {
-                    has_idea = r56i_laws_social_normal
-                    has_idea = r56i_laws_social_hierarchy
-                    has_idea = r56i_laws_social_revolutionary
-                    has_idea = r56i_laws_social_diversity
-                    has_idea = r56i_laws_social_unity
+                    #has_idea = r56i_laws_social_normal
+                    #has_idea = r56i_laws_social_hierarchy
+                    #has_idea = r56i_laws_social_revolutionary
+                    #has_idea = r56i_laws_social_diversity
+                    #has_idea = r56i_laws_social_unity
                 }
                 OR = {
-                    has_idea = r56i_laws_war_historical
-                    has_idea = r56i_laws_war_ideological
-                    has_idea = r56i_laws_war_brinkmanship
-                    has_idea = r56i_laws_war_diplomacy
+                    #has_idea = r56i_laws_war_historical
+                    #has_idea = r56i_laws_war_ideological
+                    #has_idea = r56i_laws_war_brinkmanship
+                    #has_idea = r56i_laws_war_diplomacy
                 }
 
             }

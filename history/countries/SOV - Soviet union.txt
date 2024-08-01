@@ -673,9 +673,9 @@ set_variable = { SOV_academies_required_for_atomic_bomb_project = 7 } #Number of
 #THIRD FIVE YEAR PLAN FACTORY REQUIREMENTS
 set_variable = { SOV_fyp_factory_requirement_tier_1 = 100 }
 set_variable = { SOV_fyp_factory_requirement_tier_2 = 120 }
-set_variable = { SOV_fyp_factory_requirement_tier_3 = 130 }
-set_variable = { SOV_fyp_factory_requirement_tier_4 = 150 }
-set_variable = { SOV_fyp_factory_requirement_tier_5 = 200 }
+set_variable = { SOV_fyp_factory_requirement_tier_3 = 140 }
+set_variable = { SOV_fyp_factory_requirement_tier_4 = 160 }
+set_variable = { SOV_fyp_factory_requirement_tier_5 = 180 }
 
 #THIRD FIVE YEAR PLAN NATIONAL SPIRIT VARS
 set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.15 }
@@ -849,10 +849,10 @@ set_variable = { SOV_operation_countenance_mission_days = 30 }
 set_variable = { SOV_permanent_revolution_uprising_days = 90 }
 
 #PLANNED ECONOMY VARS
-set_variable = { SOV_planned_economy_industrial_capacity_factory_initial = 0.01 } #+0.01% per puppet (max 0.1%)
-set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_initial = -0.01 } #-0.01% per puppet (max -0.01%)
-set_variable = { SOV_planned_economy_industrial_capacity_factory_extra = 0.01 } #+0.01% per puppet (max 0.1%)
-set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_extra = -0.01 } #-0.01% per puppet (max -0.01%)
+set_variable = { SOV_planned_economy_industrial_capacity_factory_initial = 0.02 } #+0.01% per puppet (max 0.1%)
+set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_initial = -0.02 } #-0.01% per puppet (max -0.01%)
+set_variable = { SOV_planned_economy_industrial_capacity_factory_extra = 0.02 } #+0.01% per puppet (max 0.1%)
+set_variable = { SOV_planned_economy_production_lack_of_resource_penalty_factor_extra = -0.02 } #-0.01% per puppet (max -0.01%)
 
 set_variable = { SOV_planned_economy_party_popularity_stability_factor = 0 } #Victory Over Devastation
 set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0 } #Victory Over Devastation
@@ -989,6 +989,7 @@ set_technology = {
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
+	interwar_antiair = 1
 	#basic_heavy_tank = 1  # PLACEHOLDER
 	#basic_medium_tank = 1 # PLACEHOLDER
 

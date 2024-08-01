@@ -833,6 +833,8 @@ focus_tree = {
 			}
 		}
 
+		continue_if_invalid = yes	#so you dont need to extend wars
+
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -1498,6 +1500,7 @@ focus_tree = {
 				idea = BRA_rail_investment
 				days = 730
 			}
+			custom_effect_tooltip = BRA_cfsp_organization_unlock_tt
 			IF = {
 				limit = {
 					495 = { is_owned_and_controlled_by = ROOT }
@@ -2315,7 +2318,7 @@ focus_tree = {
 			division_template = {
 				name = "Legião Estrangeira"
 				#division_names_group = BRA_FL_01
-				is_locked = yes
+				is_locked = no
 				force_allow_recruiting = yes
 				#division_cap = 6
 				template_counter = 03
@@ -4417,6 +4420,7 @@ focus_tree = {
 		will_lead_to_war_with = VEN
 		will_lead_to_war_with = PRU
 		will_lead_to_war_with = PAN
+		will_lead_to_war_with = COL #r56, how else do you get to Panama
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -4432,64 +4436,25 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			IF = {
+			every_other_country = {
 				limit = {
-					ECU = {
-						exists = yes
-						NOT = {
-							is_in_faction_with = ROOT
-						}
+					NOT = {
+						is_in_faction_with = ROOT
+					}
+					OR = {	#r56, added COL and used original_tag so you can attack civil wars as well
+						original_tag = ECU
+						original_tag = VEN
+						original_tag = PRU
+						original_tag = PAN
+						original_tag = COL
 					}
 				}
-				create_wargoal = {
-					target = ECU
-					type = annex_everything
-					expire = 0
-				}
-			}
-			IF = {
-				limit = {
-					VEN = {
-						exists = yes
-						NOT = {
-							is_in_faction_with = ROOT
-						}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+						expire = 0
 					}
-				}
-				create_wargoal = {
-					target = VEN
-					type = annex_everything
-					expire = 0
-				}
-			}
-			IF = {
-				limit = {
-					PRU = {
-						exists = yes
-						NOT = {
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					target = PRU
-					type = annex_everything
-					expire = 0
-				}
-			}
-			IF = {
-				limit = {
-					PAN = {
-						exists = yes
-						NOT = {
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					target = PAN
-					type = annex_everything
-					expire = 0
 				}
 			}
 			add_timed_idea = { 
@@ -7228,7 +7193,7 @@ focus_tree = {
 				division_template = {
 					name = "Batalhões de Presos"
 					#division_names_group = 
-					is_locked = yes
+					is_locked = no
 					force_allow_recruiting = yes
 					override_model = BRA_militia_alt_0_entity
 					division_cap = 6

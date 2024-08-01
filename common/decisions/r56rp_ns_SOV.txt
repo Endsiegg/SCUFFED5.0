@@ -2,7 +2,7 @@
 economy_decisions = {
 	r56rp_SOV_ask_for_nep = { #right opposition russia, ask for new economic policy
 
-		cost = 25
+		cost = 250
 
 		fire_only_once = no
 
@@ -23,6 +23,7 @@ economy_decisions = {
 			}
 			ROOT = {
 				has_government = communism
+				is_in_faction_with = SOV
 				NOT = {
 					has_idea = new_economic_policy
 					has_idea = new_economic_policy_2

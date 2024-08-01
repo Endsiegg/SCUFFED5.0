@@ -1,12 +1,12 @@
-#####-----> Country Boosts <><> <><> <><> <><> <><>
 
-difficulty_settings = {	
+
+#ik someone else was going to do it but its so easy and i got bored - pizza
+difficulty_settings = {
 	difficulty_setting = {
-		key = "custom_diff_strong_zim"
+		key = "Iceland"
 		modifier = diff_strong_ai_generic
-		countries = { ZIM }
-		multiplier = 2.0
-	}	
+		countries = { ICE }
+		multiplier = 0.0
+	}
 }
 
-#####-----> End of File <><> <><> <><> <><> <><>

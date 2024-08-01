@@ -1,8 +1,7 @@
 ﻿capital = 100
 
 oob = "ICE_1936"
-load_focus_tree = { tree = iceland_tree keep_completed = no }
-set_global_flag = ICE_use_DLC_tree
+
 set_technology = {
 	etax_doctrine = 1
 	camo = 1
@@ -35,12 +34,8 @@ if = {
 }
 
 add_ideas = {
-	isolation
-	ICE_christian_x
-}
-
-add_dynamic_modifier = {
-	modifier = ICE_the_icelandic_economy_modifier
+	ICE_icelandic_neutrality
+	ICE_christian_x_r56
 }
 
 # The Icelandic Economy
@@ -121,6 +116,7 @@ IF = {	#note: these characters were lacking allowed statements, I added these, b
 	#recruit_character = ICE_bjorn_sveinsson_bjornsson		#note: name difference with R56, same guy
 	recruit_character = ICE_king_knud						#empty character, harmless to R56 tree
 	recruit_character = ICE_werner_gerlach					#fairly weak advisor, should be harmless to R56 tree, made availability check tree-dependent
+	recruit_character = ICE_Reinhard_Heydrich  				# Ligma
 }
 
 set_politics = {

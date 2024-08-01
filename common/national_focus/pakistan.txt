@@ -335,7 +335,7 @@ focus_tree = {
         x = 6
         y = 3
 		bypass = {
-			has_idea = r56i_laws_leadership_secular
+			#has_idea = r56i_laws_leadership_secular
 		}
         relative_position_id = PAK_General_Election
         ai_will_do = { factor = 20 }
@@ -961,7 +961,16 @@ focus_tree = {
         icon = GFX_focus_generic_manpower
         cost = 10.00
 		allow_branch = {
-	
+            OR = {
+                has_game_rule = {
+                    rule = SOV_FRAGMENTATION_STATUS
+                    option = SOV_FRAGMENTED
+                }
+                has_game_rule = {
+                    rule = SOV_FRAGMENTATION_STATUS
+                    option = SOV_UTTERLY_FRAGMENTED
+                }
+            }		
 		}
 		available = {
 			surrender_progress < 0.1
@@ -2161,7 +2170,7 @@ focus_tree = {
 			 random_owned_state = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
-                    type = synthetic_refinery
+                    type = rubber_refinery 
                     level = 1
                     instant_build = yes
                 }

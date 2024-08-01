@@ -1,11 +1,6 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
 ideas = {
 
-	country = { 
-
+	country = {
 		GRE_agrarian_society = {
 				
 			allowed = {
@@ -41,7 +36,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.15	
 				stability_factor = 0.1
 				political_power_factor = 0.05
 				conscription_factor = -0.15
@@ -83,7 +78,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = -0.15	
+				consumer_goods_factor = -0.15		
 				conscription_factor = -0.07				
 			}
 		}
@@ -202,7 +197,7 @@ ideas = {
 				
 			modifier = {
 				stability_factor = -0.1	
-				consumer_goods_factor = 0.30	
+				consumer_goods_factor = 0.3	
 			}
 		}
 
@@ -227,7 +222,7 @@ ideas = {
 				
 			modifier = {
 				stability_factor = -0.1	
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -252,7 +247,7 @@ ideas = {
 				
 			modifier = {
 				stability_factor = -0.1	
-				consumer_goods_factor = 0.10	
+				consumer_goods_factor = 0.05	
 			}
 		}
 
@@ -326,7 +321,7 @@ ideas = {
 				
 			modifier = {
 				stability_factor = 0.1
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.15	
 				political_power_factor	= 0.05				
 			}
 		}
@@ -343,8 +338,6 @@ ideas = {
 			}
 			
 			picture = generic_research_bonus
-
-			removal_cost = -1
 			
 			modifier = {
 				political_power_factor	= 0.05
@@ -770,7 +763,7 @@ ideas = {
 			modifier = {
 				trade_laws_cost_factor = 0.75
 				economy_cost_factor	= 0.25
-				consumer_goods_factor = 0.20
+				consumer_goods_factor = 0.2
 				trade_opinion_factor = 0.25
 			}
 		}
@@ -792,7 +785,7 @@ ideas = {
 			modifier = {
 				trade_laws_cost_factor = 0.75
 				economy_cost_factor	= 0.25
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.1
 				trade_opinion_factor = 0.25
 			}
 		}
@@ -1803,7 +1796,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.10		
+				consumer_goods_factor = 0.1		
 				min_export = 0.1			
 			}
 		}
@@ -1823,7 +1816,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.30	
+				consumer_goods_factor = 0.3		
 				min_export = 0.25			
 			}
 		}
@@ -1862,7 +1855,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.20	
+				consumer_goods_factor = 0.2
 			}
 		}
 
@@ -1883,7 +1876,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.1
 			}
 		}
 
@@ -1982,7 +1975,7 @@ ideas = {
 			picture = great_depression
 
 			modifier = {
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.2
 				production_speed_buildings_factor = -0.1
 				stability_factor = -0.10
 			}
@@ -2215,7 +2208,7 @@ ideas = {
                     instant = yes
                 }
 
-                 heavy_cruiser = {
+                capital_ship = {
                     build_cost_ic = -0.10
                     instant = yes
                 }
@@ -3106,7 +3099,69 @@ ideas = {
 			modifier = {
 			political_power_gain = -0.15
 			}
-  	}
+  	 }
+
+	   GRE_Alexander_Legacy = {
+
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			stability_factor = 0.15
+			army_speed_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+	
+		}
+	
+		GRE_Honoring_the_gods = {
+	
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			army_morale_factor = 0.05
+		}
+	
+		}
+	
+		GRE_Alexander_Tactics = {
+	
+		allowed = {
+			always = no
+		}
+		
+		removal_cost = -1
+		
+		modifier = {
+			planning_speed = 0.10
+			max_planning_factor = 0.05
+		}
+	
+		}	
+	
+		GRE_Money_achieved_from_the_east = {
+	
+		allowed = {
+			always = no
+		}
+	
+		removal_cost = -1
+	
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			stability_factor = 0.1
+			political_power_factor = 0.05
+			consumer_goods_factor = -0.15
+		}
+	
+		}	
 
 	GRE_klaras_army_grip = {
 		picture = generic_war_preparation
@@ -3175,7 +3230,7 @@ ideas = {
 		}
 	}
 
-GRE_securing_the_government_fascism = {
+	GRE_securing_the_government_fascism = {
 	picture = generic_disjointed_gov
 	allowed = {
 		always = no
@@ -3203,9 +3258,9 @@ GRE_securing_the_government_fascism = {
 	democratic_drift = -0.1
 	communism_drift = -0.1
 	}
-}
+	}
 
-GRE_victory_of_the_people = {
+	GRE_victory_of_the_people = {
 	picture = GRE_communist_victory
 	allowed = {
 		always = no
@@ -3233,9 +3288,9 @@ GRE_victory_of_the_people = {
 	communism_drift = 0.1
 	political_power_gain = 0.10
 	}
-}
+	}
 
-GRE_restaffed_army = {
+	GRE_restaffed_army = {
 	picture = general_staff
 	allowed = {
 		always = no
@@ -3251,9 +3306,9 @@ GRE_restaffed_army = {
   command_power_gain_mult = 0.1
 	max_command_power = 10
 	}
-}
+	}
 
-GRE_strengthened_klaras = {
+	GRE_strengthened_klaras = {
 	picture = generic_disjointed_gov
 	allowed = {
 		always = no
@@ -3270,9 +3325,9 @@ GRE_strengthened_klaras = {
 	conscription = -0.004
 
 	}
-}
+	}
 
-GRE_volunteer_corps = {
+	GRE_volunteer_corps = {
 
 	allowed = {
 		always = no
@@ -3291,11 +3346,11 @@ GRE_volunteer_corps = {
 		send_volunteer_divisions_required = -0.75
 		send_volunteer_size = 3
 	}
-}
+	}
 
 
 
-GRE_politophylaki = {
+	GRE_politophylaki = {
 	picture = generic_communist_army
 	allowed = {
 		always = no
@@ -3310,9 +3365,9 @@ GRE_politophylaki = {
 	modifier = {
   	conscription = 0.03
 	}
-}
+	}
 
-GRE_opla = {
+	GRE_opla = {
 	picture = gre_opla
 	allowed = {
 		always = no
@@ -3596,9 +3651,12 @@ GRE_opla = {
 		drift_defence_factor = 0.1
 		opinion_gain_monthly_factor = 0.20
     improve_relations_maintain_cost_factor = -0.50
-   }
- }
+  			 }
+ 		}
+	}
+
 }
+
 
 ###---> Companies <><> <><> <><>
 
@@ -3607,7 +3665,20 @@ GRE_opla = {
 	tank_manufacturer = {
 		designer = yes
 
-	
+		spap = {
+			allowed = { original_tag = GRE }
+			available = { has_completed_focus = GRE_armor_effort}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			traits = { small_tank_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.15
+			}
+		}
 		GRE_biamax = {
 			
 			picture = gre_biamax
@@ -3726,7 +3797,7 @@ GRE_opla = {
 			allowed = { original_tag = GRE }
 			available = { 
 				OR = {
-					
+					has_completed_focus = GRE_infantry_weapons
 					has_completed_focus = GRE_the_backbone_of_our_army
 				}
 			}
@@ -3742,8 +3813,34 @@ GRE_opla = {
 			}
 		}
 
-		
-		
+		tangalakis_temax = {
+			allowed = { original_tag = GRE }
+			available = { has_completed_focus = GRE_motorization_effort}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			traits = { motorised_equipment_producer_offense_0 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+		}
+		Biamax = {
+			allowed = { original_tag = GRE }
+			available = { has_completed_focus = GRE_motorization_effort}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			traits = { motorised_equipment_producer_mass_0 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+		}
 		GRE_pyrkal = {
 
 			picture = gre_pyrkal
@@ -3886,6 +3983,7 @@ GRE_opla = {
 	}
 
 
+
 #-> Air Manufacturer <><>
 
 	aircraft_manufacturer = {
@@ -3911,7 +4009,20 @@ GRE_opla = {
 				factor = 1
 			}
 		}
-		
+		aekkea_raab = {
+			allowed = { original_tag = GRE }
+			available = { has_completed_focus = GRE_bomber_focus}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			traits = { bomber_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+		}
 		GRE_phaliron_aircraft = {
 			
 			picture = gre_phaliron_aircraft
@@ -3931,15 +4042,42 @@ GRE_opla = {
 				factor = 1
 			}
 		}
-		
+		kea = {
+			allowed = { original_tag = GRE }
+			available = { has_completed_focus = GRE_cas_focus}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			traits = { nav_cas_producer_mass_0 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.15
+			}
+		}
 	}
 
 #-> Naval Manufacturer <><>
 
 	naval_manufacturer = {
 		designer = yes
-		
-
+		royal_hellenic_naval_shipyard = {
+			allowed = {
+				original_tag = GRE
+			}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			available = { has_completed_focus = GRE_fund_the_navy }
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { cruiser_producer_mass_1
+			}
+		}
 		GRE_royal_hellenic_naval_shipyard = {
 			
 			picture = gre_royal_hellenic_naval_shipyard
@@ -3973,7 +4111,27 @@ GRE_opla = {
 			
 			traits = { coastal_defence_naval_manufacturer }
 		}		
-		
+		Neorion = {
+
+			allowed = {
+				original_tag = GRE
+			}
+
+  			available = {
+				has_completed_focus = GRE_civilian_shipbuilders
+			}
+			visible = {
+				NOT = {
+					has_global_flag = gre_bftb_focus_tree
+				}
+			}
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			traits = { 
+				trade_specialization
+			}
+		}
 		GRE_basileiades = {
 			
 			picture = gre_basileiades
@@ -4024,7 +4182,7 @@ GRE_opla = {
 	industrial_concern = {
 		oasa = {
 			allowed = { original_tag = GRE }
-			
+			available = { has_completed_focus = GRE_infrastructure_effort}
 			visible = {
 				NOT = {
 					has_global_flag = gre_bftb_focus_tree
@@ -4042,7 +4200,7 @@ GRE_opla = {
 		}
 		ntua = {
 			allowed = { original_tag = GRE }
-			
+			available = { has_completed_focus = GRE_industrial_effort_2}
 			visible = {
 				NOT = {
 					has_global_flag = gre_bftb_focus_tree
@@ -4060,7 +4218,7 @@ GRE_opla = {
 
 		chropei = {
 			allowed = { original_tag = GRE }
-			
+			available = { has_completed_focus = GRE_polymer_effort}
 			visible = {
 				NOT = {
 					has_global_flag = gre_bftb_focus_tree
@@ -4176,7 +4334,7 @@ GRE_opla = {
 			traits = { electronics_developer }
 			
 			modifier = {
-				consumer_goods_factor = -0.20
+				consumer_goods_factor = -0.2
 			}
 		}
 
@@ -4228,9 +4386,8 @@ GRE_opla = {
 			}
 		}		
 	}
-
 	hidden_ideas = {
-
+		
 		GRE_loyal_monarchists = {
 
 			allowed = {
@@ -4265,6 +4422,7 @@ GRE_opla = {
 				stability_factor = 0.05
 				conscription_factor = 0.15
 			}
+
 		}
 
 		GRE_hostile_monarchists = {
@@ -4285,6 +4443,7 @@ GRE_opla = {
 			modifier = {
 				stability_factor = -0.15
 			}
+
 		}
 
 		GRE_loyal_republicans = {
@@ -4321,6 +4480,7 @@ GRE_opla = {
 				stability_factor = 0.05
 				conscription_factor = 0.15
 			}
+
 		}
 
 		GRE_hostile_republicans = {
@@ -4341,6 +4501,7 @@ GRE_opla = {
 			modifier = {
 				stability_factor = -0.15
 			}
+
 		}
 
 		GRE_loyal_communists = {
@@ -4361,6 +4522,7 @@ GRE_opla = {
 			}
 		}
 
+
 		GRE_friendly_communists = {
 
 			allowed = {
@@ -4377,6 +4539,7 @@ GRE_opla = {
 				stability_factor = 0.05
 				conscription_factor = 0.15
 			}
+
 		}
 
 		GRE_hostile_communists = {
@@ -4397,6 +4560,7 @@ GRE_opla = {
 			modifier = {
 				stability_factor = -0.15
 			}
+
 		}
 
 		GRE_loyal_fascists = {
@@ -4433,6 +4597,7 @@ GRE_opla = {
 				stability_factor = 0.05
 				conscription_factor = 0.15
 			}
+
 		}
 
 		GRE_hostile_fascists = {
@@ -4453,7 +4618,9 @@ GRE_opla = {
 			modifier = {
 				stability_factor = -0.15
 			}
+
 		}
 
-	}
+ }		
+
 }

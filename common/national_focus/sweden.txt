@@ -5322,7 +5322,7 @@ focus_tree = {
 				regiments = {
 					bus = { x = 0 y = 0 }
 				}
-				is_locked = yes
+				is_locked = no
 				override_model = SWE_bus_vehicle_entity
 			}
 
@@ -5877,7 +5877,7 @@ focus_tree = {
 			unlock_decision_tooltip = SWE_activate_home_guard
 			division_template = {
 				name = "Hemvärn"
-				is_locked = yes
+				is_locked = no
 				priority = 1
 				regiments = {
 					infantry = { x = 0 y = 0 }
@@ -6392,7 +6392,7 @@ focus_tree = {
 				division_template = {
 					name = "Stormtrupper"		
 					division_names_group = SWE_BS_01
-					is_locked = yes
+					is_locked = no
 					#force_allow_recruiting = yes
 					template_counter = 20
 					# Note: Represents brownshirts
@@ -8620,7 +8620,10 @@ focus_tree = {
 					limit = { NOT = { has_tech = night_vision }}
 					set_technology = { night_vision = 1 }
 				}
-					
+				ELSE_IF = {
+					limit = { NOT = { has_tech = night_vision2 }}
+					set_technology = { night_vision2 = 1 }
+				}		
 				army_experience = 50
 			}
 			ELSE_IF = {

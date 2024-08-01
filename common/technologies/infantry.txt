@@ -124,15 +124,11 @@ technologies = {
 	r56_anti_tank_kit = {
 
 		category_all_infantry = {
-			hard_attack = 0.25
+			hard_attack = 0.10
 		}
 
 		category_light_infantry = {
-			ap_attack = 0.5
-		}
-
-		militia = {
-			hard_attack = 0.1
+			ap_attack = 0.10
 		}
 		
 		research_cost = 1.75
@@ -312,8 +308,8 @@ technologies = {
 	infantry_at = {
 
 		category_all_infantry = {
-			hard_attack = 0.25
-			ap_attack = 1
+			hard_attack = 0.10
+			ap_attack = 0.10
 		}
 		
 		path = {
@@ -357,8 +353,8 @@ technologies = {
 	infantry_at2 = {
 
 		category_all_infantry = {
-			hard_attack = 0.25
-			ap_attack = 1
+			hard_attack = 0.10
+			ap_attack = 0.10
 		}
 		
 		path = {
@@ -1275,7 +1271,7 @@ technologies = {
 			breakthrough = 0.03
 		}
 
-		category_special_forces = {
+		category_all_infantry {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1353,7 +1349,7 @@ technologies = {
 			breakthrough = 0.03
 		}
 
-		category_special_forces = {
+		category_all_infantry = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1437,7 +1433,7 @@ technologies = {
 			breakthrough = 0.03
 		}
 
-		category_special_forces = {
+		category_all_infantry = {
 			defense = 0.03
 			breakthrough = 0.03
 		}
@@ -1511,7 +1507,7 @@ technologies = {
 			breakthrough = 0.03
 		}
 
-		category_special_forces = {
+		category_all_infantry = {
 			defense = 0.03
 			breakthrough = 0.03
 		}

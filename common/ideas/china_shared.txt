@@ -1,14 +1,10 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
 ideas = {
 	#see history/general/china_shared_advisors for characters
 	country = {
 		CHI_wargaming_division = {
 
 			picture = chi_wargaming_division
-			
+
 			allowed = {
 				always = no
 			}
@@ -18,7 +14,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				max_command_power = 5
 			}
@@ -27,7 +23,7 @@ ideas = {
 		CHI_chinese_general_staff = {
 
 			picture = general_staff
-			
+
 			allowed = {
 				always = no
 			}
@@ -37,16 +33,16 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_leader_start_planning_level = 1
 			}
 		}
-	
+
 		CHI_elite_mountaineers = {
 
 			picture = ast_volunteer_defence_corps
-			
+
 			allowed = {
 				always = no
 			}
@@ -56,7 +52,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				special_forces_cap = 0.02
 			}
@@ -65,7 +61,7 @@ ideas = {
 		CHI_french_drill = {
 
 			picture = generic_intel_bonus
-			
+
 			allowed = {
 				always = no
 			}
@@ -75,7 +71,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_leader_start_defense_level = 1
 			}
@@ -84,7 +80,7 @@ ideas = {
 		CHI_modern_logistics = {
 
 			picture = FRA_motorized_focus
-			
+
 			allowed = {
 				always = no
 			}
@@ -94,7 +90,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				army_leader_start_logistics_level = 1
 			}
@@ -103,7 +99,7 @@ ideas = {
 		CHI_construction_battalions = {
 
 			picture = ast_all_in
-			
+
 			allowed = {
 				always = no
 			}
@@ -113,7 +109,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				max_dig_in = 5
 			}
@@ -122,7 +118,7 @@ ideas = {
 		CHI_chinese_support = {
 
 			picture = chi_chinese_support
-			
+
 			allowed = {
 				always = no
 			}
@@ -132,7 +128,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				autonomy_gain = 0.5
 			}
@@ -141,7 +137,7 @@ ideas = {
 		CHI_train_marines = {
 
 			picture = generic_infantry_bonus
-			
+
 			allowed = {
 				always = no
 			}
@@ -151,7 +147,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			
+
 			modifier = {
 				special_forces_cap = 0.02
 			}
@@ -162,11 +158,11 @@ ideas = {
 	naval_manufacturer = {
 
 		designer = yes
-		
+
 		jiangnan_shipyard_group = {
 			picture = generic_naval_manufacturer_3
 
-			
+
 			allowed = {
 				OR = {
 					is_literally_china = yes
@@ -180,22 +176,21 @@ ideas = {
 				controls_state = 613
 				has_completed_focus = KMT_revive_jiangnan_shipyard
 			}
-			
+
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+
 			# riverine warfare weak on open waters
-						
+
 			traits = { coastal_defence_naval_manufacturer }
-			
+
 		}
 
 		dagu_shipyard = {
-			picture = generic_naval_manufacturer_2
+			picture = generic_naval_manufacturer_3
 
 
-			
 			allowed = {
 				OR = {
 					is_literally_china = yes
@@ -208,20 +203,20 @@ ideas = {
 			available = {
 				controls_state = 608
 			}
-			
+
 			research_bonus = {
 				naval_equipment = 0.15
 			}
-			
+
 			# riverine warfare weak on open waters
-						
+
 			traits = { raiding_fleet_naval_manufacturer }
-			
+
 		}
 	}
 
-	materiel_manufacturer = { 
-		
+	materiel_manufacturer = {
+
 		designer = yes
 
 		CHI_taiyuan_arsenal = {	#we had them also without a DLC, so merged together
@@ -238,18 +233,13 @@ ideas = {
 					has_completed_focus = KMT_the_big_rear_concept
 					controls_state = 615
 				}
-				NOT = {
-					any_other_country = {
-						has_idea = CHI_taiyuan_arsenal
-					}
-				}
 			}
 
 			cost = 150
 			removal_cost = 10
 
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.05
 			}
 
 			traits = { taiyuan_artillery }
@@ -266,11 +256,6 @@ ideas = {
 				OR = {
 					has_completed_focus = KMT_revive_hanyang_armory
 					controls_state = 620
-				}
-				NOT = {
-					any_other_country = {
-						has_idea = CHI_hanyang_arsenal
-					}
 				}
 			}
 
@@ -301,11 +286,6 @@ ideas = {
 				OR = {
 					controls_state = 716
 					has_completed_focus = PRC_revive_arsenals
-				}
-				NOT = {
-					any_other_country = {
-						has_idea = CHI_mukden_arsenal
-					}
 				}
 			}
 
@@ -500,15 +480,15 @@ ideas = {
 					}
 				}
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-			
+
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -543,7 +523,7 @@ ideas = {
 					}
 				}
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
@@ -554,11 +534,11 @@ ideas = {
 					air_attack = 0.1
 				}
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-			
+
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -603,15 +583,15 @@ ideas = {
 					air_ground_attack = 0.1
 				}
 			}
-			
+
 			research_bonus = {
 				air_equipment = 0.15
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-			
+
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -661,24 +641,24 @@ ideas = {
 					is_literally_china = yes
 				}
 			}
-			
+
 			research_bonus = {
 				industry = 0.1
 				synth_resources = 0.15
 			}
-			
+
 			traits = { refinery_concern }
-			
+
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
-						
+
 			ai_will_do = {
 				factor = 1
 			}
 
 		}
-		
+
 		sino_soviet_resource_surveyors = {
-		
+
 			picture = stalingrad_tractor_factory
 
 			available = {
@@ -711,9 +691,9 @@ ideas = {
 			}
 
 		}
-		
+
 		shanghai_electronics = {
-		
+
 			picture = generic_electronics_concern_1
 
 			available = {
@@ -727,16 +707,16 @@ ideas = {
 					is_literally_china = yes
 				}
 			}
-			
+
 			research_bonus = {
 				electronics = 0.15
 			}
-			
+
 			traits = { electronics_concern }
-			
+
 			ai_will_do = {
 				factor = 1
-				
+
 				modifier = { # AI is likely to lose access to this state and waste the PP
 					factor = 0
 					OR = {

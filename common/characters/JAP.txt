@@ -387,7 +387,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage }
+			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage commando}
 			skill=3
 			attack_skill=3
 			defense_skill=3

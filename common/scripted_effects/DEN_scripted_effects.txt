@@ -2194,7 +2194,7 @@ DEN_upgrade_resistance_militia = { #this is meant to upgrade the militia divisio
 		}
 		division_template = {
 			name = "Modstandsbevægelsen Militia"
-			is_locked = yes
+			is_locked = no
 			#force_allow_recruiting = yes
 			priority = 1
 			template_counter = 60

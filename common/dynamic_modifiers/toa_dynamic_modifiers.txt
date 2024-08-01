@@ -574,9 +574,6 @@ BRA_neglected_state_dynamic_modifier = { #STATE MODIFIER
 	# Later
 	local_factories = BRA_state_development_local_factories
 	state_resources_factor = BRA_state_development_state_resources_factor
-	remove_trigger = {
-		NOT = { OWNER = { original_tag = BRA } }
-	}
 }
 
 BRA_growing_state_dynamic_modifier = {
@@ -620,9 +617,9 @@ CHL_deeper_mines_modifier = {
 	enable = { always = yes }
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense
 
-	state_resources_factor = 0.15
-	state_production_speed_infrastructure_factor = 0.15
-	state_production_speed_buildings_factor = -0.1
+	local_resources_factor = 0.15
+	production_speed_infrastructure_factor = 0.15
+	production_speed_buildings_factor = -0.1
 }
 
 
@@ -643,9 +640,6 @@ BRA_cangaceiro_state = {
 	state_production_speed_infrastructure_factor = -0.1
 	state_production_speed_buildings_factor = -0.1
 	local_manpower = -0.2
-	remove_trigger = {
-		NOT = { OWNER = { original_tag = BRA } }
-	}
 }
 
 ARG_federal_intervention_modifier = {
@@ -680,18 +674,15 @@ JUNO_immigration_promoted = {
 }
 
 
-idea_PAR_river_navy = { #STATE MODIFIER
+idea_PAR_river_navy = { #STATE MODIFIER							made less OP - 50% resistance target is out of reasoning - Fantom
 	remove_trigger = { 
 		PAR = { has_capitulated = yes } 
-
 	}
 	icon = GFX_MODIFIER_NAVAL_INVASION_CAPACITY
-	army_core_defence_factor = 0.2
-	resistance_target = 0.5
-	resistance_growth_on_our_occupied_states = 0.25
+	army_core_defence_factor = 0.15
+	resistance_target = 0.1
 	resistance_activity = 1
-	resistance_damage_to_garrison_on_our_occupied_states = 1
-	resistance_garrison_penetration_chance = 1
+	resistance_damage_to_garrison_on_our_occupied_states = 0.5
 }
 
 idea_URG_ruralism_good = { #STATE MODIFIER

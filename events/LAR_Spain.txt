@@ -264,7 +264,7 @@ country_event = {
 					if = {
 						limit = {
 							has_game_rule = {
-
+								rule = spr_fragmentation_status
 								option = SPR_EU4
 							}
 						}
@@ -303,7 +303,7 @@ country_event = {
 				if = {
 					limit = {
 						has_game_rule = {
-
+							rule = spr_fragmentation_status
 							option = SPR_EU4
 						}
 					}
@@ -337,7 +337,7 @@ country_event = {
 				# Add Nationalist and Republican Garrison division templates
 				division_template = {
 					name = "Guarnición Nacionalista"
-					is_locked = yes
+					is_locked = no
 					division_names_group = SPR_INF_02
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -349,7 +349,7 @@ country_event = {
 					save_event_target_as = republican_spain_target
 					division_template = {
 						name = "Guarnición Republicana"
-						is_locked = yes
+						is_locked = no
 						division_names_group = SPD_INF_01
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -826,7 +826,7 @@ country_event = {
 					create_corps_commander = {
 						name = "Luis Orgaz Yoldi"
 						portrait_path = "gfx/leaders/SPR/r56_portrait_SPR_Luis_Orgaz_Yoldi.dds"
-						traits = { decided_planner trait_SPA_nationalist_sympathies }
+						traits = { trait_SPA_nationalist_sympathies }
 						skill = 2
 						attack_skill = 1
 						defense_skill = 2
@@ -919,7 +919,7 @@ country_event = {
 					division_template = {
 						name = "Requeté Carlista"
 						division_names_group = SPR_INF_03
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -943,7 +943,7 @@ country_event = {
 					division_template = {
 						name = "División de la Guardia de Asalto"
 						division_names_group = SPR_INF_05
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -1015,7 +1015,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de la Guardia Civil"
 							division_names_group = SPR_INF_04
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -1400,7 +1400,7 @@ country_event = {
 					division_template = {
 						name = "Brigada de la Guardia Civil"
 						division_names_group = SPR_INF_04
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -1529,7 +1529,7 @@ country_event = {
 						division_template = {
 							name = "División de la Guardia de Asalto"
 							division_names_group = SPR_INF_05
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -1733,7 +1733,7 @@ country_event = {
 					division_template = {
 						name = "División de la Guardia de Asalto"
 						division_names_group = SPR_INF_05
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -1746,7 +1746,7 @@ country_event = {
 					division_template = {
 						name = "Brigada de la Guardia Civil"
 						division_names_group = SPR_INF_04
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							infantry = { x = 0 y = 0 }
 							infantry = { x = 0 y = 1 }
@@ -1943,7 +1943,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de Juventudes Sindicales"
 							division_names_group = SPD_INF_02
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -2216,7 +2216,7 @@ country_event = {
 						division_template = {
 							name = "Brigada Popular"
 							division_names_group = SPD_INF_03
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -2557,7 +2557,7 @@ country_event = {
 				if = {
 					limit = {
 						has_game_rule = {
-
+							rule = spr_fragmentation_status
 							option = SPR_EU4
 						}
 					}
@@ -2632,7 +2632,7 @@ country_event = {
 				}
 				division_template = {
 					name = "Guarnición Republicana"
-					is_locked = yes
+					is_locked = no
 					division_names_group = SPD_INF_01
 					regiments = {
 						infantry = { x = 0 y = 0 }
@@ -2644,7 +2644,7 @@ country_event = {
 					save_event_target_as = nationalist_spain_target
 					division_template = {
 						name = "Guarnición Nacionalista"
-						is_locked = yes
+						is_locked = no
 						division_names_group = SPR_INF_02
 						regiments = {
 							infantry = { x = 0 y = 0 }
@@ -3062,7 +3062,7 @@ country_event = {
 						division_template = {
 							name = "Requeté Carlista"
 							division_names_group = SPR_INF_03
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3101,7 +3101,7 @@ country_event = {
 						division_template = {
 							name = "División de la Guardia de Asalto"
 							division_names_group = SPR_INF_05
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3174,7 +3174,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de la Guardia Civil"
 							division_names_group = SPR_INF_04
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3569,7 +3569,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de la Guardia Civil"
 							division_names_group = SPR_INF_04
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3699,7 +3699,7 @@ country_event = {
 						division_template = {
 							name = "División de la Guardia de Asalto"
 							division_names_group = SPR_INF_05
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3904,7 +3904,7 @@ country_event = {
 						division_template = {
 							name = "División de la Guardia de Asalto"
 							division_names_group = SPR_INF_05
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -3917,7 +3917,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de la Guardia Civil"
 							division_names_group = SPR_INF_04
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -4114,7 +4114,7 @@ country_event = {
 						division_template = {
 							name = "Brigada de Juventudes Sindicales"
 							division_names_group = SPD_INF_02
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -4316,7 +4316,7 @@ country_event = {
 						division_template = {
 							name = "Brigada Popular"
 							division_names_group = SPD_INF_03
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								infantry = { x = 0 y = 0 }
 								infantry = { x = 0 y = 1 }
@@ -6082,7 +6082,7 @@ country_event = {
 					template_counter = 8
 					priority = 1
 					division_names_group = SPR_INF_03
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -6454,7 +6454,7 @@ country_event = {
 				if = {
 					limit = {
 						has_game_rule = {
-
+							rule = spr_fragmentation_status
 							option = SPR_EU4
 						}
 					}
@@ -6470,7 +6470,7 @@ country_event = {
 			if = {
 				limit = {
 					has_game_rule = {
-
+						rule = spr_fragmentation_status
 						option = SPR_EU4
 					}
 				}
@@ -7250,7 +7250,7 @@ country_event = {
 					name = "Brigada Anarquista"
 					priority = 1
 					division_names_group = SPD_INF_04
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -7793,7 +7793,7 @@ country_event = {
 				if = {
 					limit = {
 						has_game_rule = {
-						
+							rule = spr_fragmentation_status
 							option = SPR_EU4
 						}
 					}
@@ -7809,7 +7809,7 @@ country_event = {
 			if = {
 				limit = {
 					has_game_rule = {
-
+						rule = spr_fragmentation_status
 						option = SPR_EU4
 					}
 				}
@@ -11452,7 +11452,7 @@ country_event = {
 			name = "Spanish Loyalist Division"
 			priority = 1
 			division_names_group = SOV_INF_01
-			is_locked = yes
+			is_locked = no
 			regiments = {
 				infantry = { x = 0 y = 0 }
 				infantry = { x = 0 y = 1 }

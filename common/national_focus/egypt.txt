@@ -3476,10 +3476,10 @@ focus_tree = {
             if = {
 				limit = {
 					NOT = {
-						has_idea = r56i_laws_gender_traditional
-						has_idea = r56i_laws_gender_limited
-						has_idea = r56i_laws_gender_patriarchy
-						has_idea = r56i_laws_gender_equality
+						#has_idea = r56i_laws_gender_traditional
+						#has_idea = r56i_laws_gender_limited
+						#has_idea = r56i_laws_gender_patriarchy
+						#has_idea = r56i_laws_gender_equality
 					}
 					NOT = {
 						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
@@ -3488,7 +3488,7 @@ focus_tree = {
 				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_gender_social
 				show_ideas_tooltip = r56i_laws_gender_equality
 				hidden_effect = {
-					add_ideas = r56i_laws_gender_equality
+					#add_ideas = r56i_laws_gender_equality
 				}
 			}
             custom_effect_tooltip = available_political_advisor
@@ -7292,7 +7292,7 @@ focus_tree = {
             air_experience = 25
             add_manpower = 1000
             add_equipment_to_stockpile = {
-                type = fighter_equipment
+                type = small_plane_airframe
                 amount = 50
                 producer = EGY
             }
@@ -8522,7 +8522,7 @@ focus_tree = {
 			}
 			else = {
                 add_equipment_to_stockpile = {
-                    type = fighter_equipment
+                    type = small_plane_airframe
                     amount = 40
                     producer = ENG
                 }

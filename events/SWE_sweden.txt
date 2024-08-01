@@ -25,7 +25,7 @@ country_event = {
 			factor = 35 
 		}
 		set_country_flag = SWE_the_swedish_german_trade_situation_start
-		#unlock_decision_category_tooltip = SWE_the_swedish_german_trade_situation_category
+		unlock_decision_category_tooltip = SWE_the_swedish_german_trade_situation_category
 	}
 }
 ################Demand Åland
@@ -773,7 +773,10 @@ country_event = {
 
 	option = {
 		name = sweden_soviet.40.a
-		
+		swap_ideas = {
+			remove_idea = SWE_kungen_gustaf_v_idea
+			add_idea = SWE_royal_sabotage
+		}
 		add_ideas = SWE_secure_revolution_home
 	
 		start_civil_war = {
@@ -1207,26 +1210,7 @@ country_event = {
 		name = sweden_sca_unite.1.a
 
 		ai_chance = {
-			base = 2
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = SWE
-					value > 50
-				}
-			}
-			modifier = {
-				factor = 2
-				is_in_faction_with = SWE
-			}
-			modifier = {
-				factor = 2
-				has_government = FROM
-			}
-			modifier = {
-				factor = 10
-				is_subject_of = SWE
-			}						
+			base = 2					
 		}
 		custom_effect_tooltip = GAME_OVER_TT
 		effect_tooltip = {
@@ -1249,18 +1233,7 @@ country_event = {
 		name = sweden_sca_unite.1.b
 
 		ai_chance = {
-			base = 4
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = SWE
-					value < 50
-				}
-			}
-			modifier = {
-				factor = 2
-				NOT = { is_in_faction_with = SWE }
-			}			
+			base = 0		
 		}
 		SWE = { country_event = { id = sweden_sca_unite.3 } }				
 	}	

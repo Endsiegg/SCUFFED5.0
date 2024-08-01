@@ -1,6 +1,183 @@
 ideas = {
 
 	country = {
+			JAP_cultural_dominance_idea = {
+				picture = state_shintoism
+				removal_cost = -1
+	
+				modifier = {
+					consumer_goods_factor = -0.15
+					stability_factor = -0.1
+				}
+			}
+			JAP_investment = {
+				picture = generic_constitutional_guarantees
+				removal_cost = -1
+	
+				modifier = {
+					political_power_factor = -0.05
+					consumer_goods_factor = 0.15
+				}
+			}
+			JAP_prepare_to_strike_north_2 = {
+			
+				removal_cost = -1
+		
+				picture = generic_japanese_conflict
+	
+				targeted_modifier = {
+					tag = SOV
+					attack_bonus_against = 0.1
+					defense_bonus_against = 0.1
+				}
+				targeted_modifier = {
+					tag = TAN
+					attack_bonus_against = 0.1
+					defense_bonus_against = 0.1
+				}
+				targeted_modifier = {
+					tag = MON
+					attack_bonus_against = 0.1
+					defense_bonus_against = 0.1
+				}
+				
+				modifier = {
+					army_speed_factor = 0.2
+					supply_factor = 0.25
+				}
+			}
+			JAP_prepare_to_strike_north_1 = {
+			
+			removal_cost = -1
+	
+			picture = FRA_motorized_focus
+			
+			modifier = {
+				production_speed_supply_node_factor = 0.30
+				production_speed_rail_way_factor = 0.30
+				}
+			}
+	
+			JAP_gov_support_invasion = {		
+	
+				name = JAP_gov_support_invasion
+				
+				removal_cost = -1
+	
+				picture = jap_ichi_go
+				
+				targeted_modifier = {
+					tag = CHI
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = PRC
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = SHX
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = XSM
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = YUN
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = GXC
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = SIK
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				targeted_modifier = {
+					tag = TNG
+					attack_bonus_against = 0.075
+					defense_bonus_against = 0.075
+				}
+	
+				modifier = {
+					supply_consumption_factor = -0.15
+				}
+			}
+			JAP_emperors_untiversity = {
+				picture = generic_research_bonus
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					research_speed_factor = 0.075
+				}
+			}
+			JAP_emperors_army = {
+				picture = imperial_glory_idea
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					conscription = 0.02
+					army_morale_factor = 0.1
+				}
+			}
+			JAP_break_Mitsui = {
+				picture = generic_deal_with_the_devil
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					production_speed_arms_factory_factor = 0.1
+				}
+	
+			}
+			JAP_break_Yasuda = {
+				picture = generic_deal_with_the_devil
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					consumer_goods_factor = -0.20
+				}
+	
+			}
+			JAP_break_Mitsubishi = {
+				picture = generic_deal_with_the_devil
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					production_speed_industrial_complex_factor = 0.1
+				}
+	
+			}
+		
+			
+			JAP_break_Sumitomo = {
+				picture = generic_deal_with_the_devil
+				allowed = {
+					always = yes
+				}
+				modifier = {
+					local_resources_factor = 0.15
+				}
+			}
 		JAP_imperial_ambitions_met_2 = {
 			picture = JAP_imperial_ambition
 			allowed = {
@@ -270,7 +447,7 @@ ideas = {
 				stability_factor = 0.05
 				conscription_factor = -0.10
 				production_factory_efficiency_gain_factor = 0.05
-				production_factory_max_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.1
 				production_factory_start_efficiency_factor = 0.05
 			}
 		}
@@ -364,7 +541,8 @@ ideas = {
 			picture = generic_fortify_the_borders
 
 			modifier = {
-				political_power_gain = 0.25
+				political_power_gain = 0.15
+				army_defence_factor = 0.05
 				army_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
@@ -491,7 +669,7 @@ ideas = {
 				army_leader_start_level = 1
 				navy_leader_start_coordination_level = 2
 				planning_speed = 0.10
-				army_core_defence_factor = 0.10
+				army_core_defence_factor = 0.05
 			}
 		}
 		JAP_economy_by_japan_infantry = {
@@ -714,7 +892,14 @@ ideas = {
 			removal_cost = -1
 
 		modifier = {
-			industrial_capacity_dockyard = 0.1
+			industrial_capacity_dockyard = 0.25
+			naval_invasion_capacity = 10
+			naval_invasion_penalty = -0.1
+			amphibious_invasion = 0.10
+			navy_max_range_factor = 0.30
+			shore_bombardment_bonus = 0.20
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1
 		}
 		}
 		JAP_tank_tactics = {
@@ -2339,11 +2524,54 @@ ideas = {
 
 			picture = jap_supremacy_of_technology
 			
-			research_bonus = {
-				infantry_weapons = 0.20
-				support_tech = 0.20
-				armor = 0.20
-				artillery = 0.20
+			modifier = { 
+			research_speed_factor = 0.2
+			}
+		}
+
+		JAP_mountaineer_focus = {
+
+			name = "Japanese Mountaineer Focus"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+				special_forces_cap = 0.10
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.05
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.10
+			}
+		}
+
+		JAP_marine_focus = {
+
+			name = "Japanese Marine Focus"
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+				special_forces_cap = 0.10
+				modifier_army_sub_unit_marines_attack_factor = 0.05
+				modifier_army_sub_unit_marines_defence_factor = 0.10
 			}
 		}
 
@@ -2799,48 +3027,6 @@ ideas = {
 				defense_bonus_against = 0.1
 			}
 
-			targeted_modifier = {
-				tag = PRC
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = SHX
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = XSM
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = YUN
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = GXC
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = SIK
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
-			targeted_modifier = {
-				tag = TNG
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
-
 			modifier = {
 				supply_consumption_factor = -0.10
 			}
@@ -3079,7 +3265,10 @@ ideas = {
 				}
 				cv_small_plane_airframe = {
 					build_cost_ic = -0.1 instant = yes
-				}				
+				}
+				medium_plane_fighter_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
 			}
 		}
 		JAP_supply_disruption = {

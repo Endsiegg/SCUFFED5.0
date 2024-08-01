@@ -537,12 +537,9 @@ characters = {
 						has_completed_focus = BUL_join_the_tripartite_pact
 					}
 				}
-				NOT = {
-					has_government = fascism
-				}
 			}
 			traits = {
-				army_chief_drill_2
+				army_chief_offensive_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -2071,7 +2068,7 @@ characters = {
 				}
 			}
 			traits = {
-				army_armored_1
+				army_armored_2
 			}
 			cost = 50
 			ai_will_do = {

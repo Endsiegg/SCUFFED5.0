@@ -1,6 +1,3 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
 GER_mefo_bills_category = {
 
 	GER_mefo_bills_mission = {
@@ -222,15 +219,14 @@ GER_mefo_bills_category = {
 			factor = 200
 		}
 	}
-	
+
 	GER_cancel_mefos = {
 
 		icon = ger_mefo_bills
 
 		available = {
-			is_ai = no
-			hidden_trigger = { 
-				NOT = { has_country_flag = ger_has_cancelled_mefo } 
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
 				NOT = {
 					OR = {
 						NOT = { GER_has_mefo_bills = yes }
@@ -245,8 +241,8 @@ GER_mefo_bills_category = {
 		fire_only_once = no
 
 		visible = {
-			hidden_trigger = { 
-				NOT = { has_country_flag = ger_has_cancelled_mefo } 
+			hidden_trigger = {
+				NOT = { has_country_flag = ger_has_cancelled_mefo }
 				NOT = {
 					OR = {
 						NOT = { GER_has_mefo_bills = yes }
@@ -266,13 +262,13 @@ GER_mefo_bills_category = {
 			factor = 0
 		}
 	}
-	
+
 	GER_renew_mefos = {
 
 		icon = ger_mefo_bills
 
 		available = {
-			hidden_trigger = { 
+			hidden_trigger = {
 				has_country_flag = ger_has_cancelled_mefo
 				NOT = {
 					OR = {
@@ -288,7 +284,7 @@ GER_mefo_bills_category = {
 		fire_only_once = no
 
 		visible = {
-			hidden_trigger = { 
+			hidden_trigger = {
 				has_country_flag = ger_has_cancelled_mefo
 				NOT = {
 					OR = {
@@ -310,6 +306,7 @@ GER_mefo_bills_category = {
 		}
 	}
 }
+
 operations = {
 
 	GER_barbarossa_mission = {
@@ -1218,7 +1215,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -1263,12 +1260,10 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 
 					if = {
 						limit = {
-							AND = {
-								PBM = {
-									has_intelligence_agency = no
-								}
-								has_dlc = "La Resistance"
+							PBM = {
+								has_intelligence_agency = no
 							}
+							has_dlc = "La Resistance"
 						}
 						PBM = {
 							create_intelligence_agency = { #i'm not finding the correct name for each RK's Agency. That's a lot of effort for something 99% of players wont see.
@@ -1303,7 +1298,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -1314,6 +1309,9 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						limit = {
 							D10 = {
 								exists = yes
+							}
+							GER = { #No extra units for ai
+								is_ai = no 
 							}
 						}
 						capital_scope = {  #gives them a 2 width so they aren't without a single unit
@@ -1469,6 +1467,12 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					controls_state = 143 
 					controls_state = 144
 					controls_state = 967
+					
+					controls_state = 1032 #Telemark
+					controls_state = 1031 #Opplandene
+					controls_state = 1033 #Helgeland
+					controls_state = 1034 #Troms
+					controls_state = 1035 #Finnmark
 				}
 			}
 		}
@@ -1514,6 +1518,12 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 								state = 143 
 								state = 144
 								state = 967
+
+								state = 1032 #Telemark
+								state = 1031 #Opplandene
+								state = 1033 #Helgeland
+								state = 1034 #Troms
+								state = 1035 #Finnmark
 							}
 						}
 						custom_effect_tooltip = r56_becomes_controller_tt
@@ -1559,6 +1569,11 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					transfer_state = 143
 					transfer_state = 144
 					transfer_state = 967
+					transfer_state = 1032 #Telemark
+					transfer_state = 1031 #Opplandene
+					transfer_state = 1033 #Helgeland
+					transfer_state = 1034 #Troms
+					transfer_state = 1035 #Finnmark
 					set_capital = {state = 110} 
 
 					add_offsite_building = { #'Payment' for letting them go
@@ -1566,7 +1581,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -1641,7 +1656,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 								name = "Riechskommissariat Garrison"
 								priority = 1
 								division_names_group = GER_GAR_01
-								is_locked = yes
+								is_locked = no
 								regiments = {
 									garrison = { x = 0 y = 0 }
 								}
@@ -1909,7 +1924,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -1927,7 +1942,6 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						amount = 2500 #Yes, they need this much.
 						variant_name = "Volkssturm Small Arms"
 					}
-
 					
 					add_equipment_to_stockpile = {
 						type = support_equipment
@@ -1952,16 +1966,13 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						amount = 5
 						producer = GER
 					}
-
 					
 					if = {
 						limit = {
-							AND = {
-								NLK = {
-									has_intelligence_agency = no
-								}
-								has_dlc = "La Resistance"
+							NLK = {
+								has_intelligence_agency = no
 							}
+							has_dlc = "La Resistance"
 						}
 						NLK = {
 							create_intelligence_agency = { #i'm not finding the correct name for each RK's Agency. That's a lot of effort for something 99% of players wont see.
@@ -1997,7 +2008,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -2251,7 +2262,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -2298,12 +2309,10 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					
 					if = {
 						limit = {
-							AND = {
-								BRK = {
-									has_intelligence_agency = no
-								}
-								has_dlc = "La Resistance"
+							BRK = {
+								has_intelligence_agency = no
 							}
+							has_dlc = "La Resistance"
 						}
 						BRK = {
 							create_intelligence_agency = { #i'm not finding the correct name for each RK's Agency. That's a lot of effort for something 99% of players wont see.
@@ -2338,7 +2347,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -2694,7 +2703,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -2765,7 +2774,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -3092,7 +3101,6 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					set_cosmetic_tag = UKR_reichskommissariat
 					create_country_leader = {
 						name = "Erich Koch"
-						desc = "POLITICS_HINRICH_LOHSE_DESC"
 						picture = "gfx/leaders/GER/r56_portrait_GER_Erich_Koch.dds"
 						expire = "1965.1.1"
 						ideology = nazism
@@ -3133,7 +3141,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -3204,7 +3212,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -3215,6 +3223,9 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						limit = {
 							D05 = {
 								exists = yes
+							}
+							GER = {
+								is_ai = no
 							}
 						}
 						capital_scope = { 
@@ -3642,7 +3653,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -3713,7 +3724,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -4027,6 +4038,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					controls_state = 231
 					controls_state = 230
 					controls_state = 229
+					controls_state = 1044
 				}
 			}
 		}
@@ -4065,6 +4077,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						controls_state = 231
 						controls_state = 230
 						controls_state = 229
+						controls_state = 1044
 					}
 				}
 			}
@@ -4095,6 +4108,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 								state = 231
 								state = 230
 								state = 229
+								state = 1044
 							}
 						}
 						custom_effect_tooltip = r56_becomes_controller_tt
@@ -4149,6 +4163,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					set_state_controller = 231
 					set_state_controller = 230
 					set_state_controller = 229
+					set_state_controller = 1044
 					set_capital = {state = 231 } 
 
 					add_offsite_building = { #'payment' for letting them go. 3 are sent to overlord
@@ -4156,7 +4171,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -4201,7 +4216,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
@@ -4337,6 +4352,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						remove_state_core = 221
 						remove_state_core = 229
 						remove_state_core = 230
+						remove_state_core = 1044
 
 						add_state_claim = 234
 						add_state_claim = 238
@@ -4354,6 +4370,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 						add_state_claim = 828
 						add_state_claim = 229
 						add_state_claim = 230
+						add_state_claim = 1044
 						
 						every_state = {
 							limit = {
@@ -4620,7 +4637,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -4692,7 +4709,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 								name = "Riechskommissariat Garrison"
 								priority = 1
 								division_names_group = GER_GAR_01
-								is_locked = yes
+								is_locked = no
 								regiments = {
 									garrison = { x = 0 y = 0 }
 								}
@@ -4987,7 +5004,7 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 					}
 
 					#AI hand out
-					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 180 }
+					add_timed_idea = { idea = GER_establishing_the_reichskommissar days = 365 }
 					add_manpower = 25000 #Yes, they need this much.
 					create_equipment_variant = { #Fun easter egg if you caputre their equipment
 						name = "Volkssturm Small Arms"
@@ -5057,17 +5074,19 @@ GER_reichskommissariats = { # Note that the governments start with no cores henc
 							name = "Riechskommissariat Garrison"
 							priority = 1
 							division_names_group = GER_GAR_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								garrison = { x = 0 y = 0 }
 							}
 						}
 					}
-
 					if = {
 						limit = {
 							D09 = {
 								exists = yes
+							}
+							GER = { #No extra units for ai
+								is_ai = no
 							}
 						}
 						capital_scope = { 
@@ -5429,8 +5448,8 @@ GER_civil_war_category = {
 }
 
 political_actions = {
-
-WGR_establish_a_provisional_capital = {
+	
+	WGR_establish_a_provisional_capital = {
 		priority = 119
 		icon = GFX_decision_SOV_place_hq
 
@@ -5468,10 +5487,9 @@ WGR_establish_a_provisional_capital = {
 		}
 	}
 
-	# Reinstate Wilhelm IV into the line of succession
 	reinstate_wilhelm_iv_succession_rights = {
 
-                allowed = {
+		allowed = {
 			original_tag = GER
 		}	
 
@@ -5510,11 +5528,11 @@ WGR_establish_a_provisional_capital = {
 			}
 		}
 	}
-	
+
 	# Agnatic-Cognatic Primogeniture
 	modernize_the_succession_laws = {
 
-                allowed = {
+		allowed = {
 			original_tag = GER
 		}	
 
@@ -5547,18 +5565,15 @@ WGR_establish_a_provisional_capital = {
 	
 	recall_von_lettow_vorbeck = {
 
-                allowed = {
+        allowed = {
 			original_tag = GER
 		}	
 		available = {
 			has_civil_war = no
 		}
 		visible = {
-			OR = {
-				has_country_leader = { ruling_only = yes character = GER_wilhelm_ii }
-				has_country_leader = { ruling_only = yes character = GER_wilhelm_iii }
-				has_country_leader = { ruling_only = yes character = GER_victoria }
-			}
+			has_completed_focus = GER_african_claims
+			has_government = neutrality
 		}
 		cost = 25
 		fire_only_once = yes
@@ -5641,7 +5656,7 @@ foreign_politics = {
 			has_government = neutrality
 			OR = {
 				has_completed_focus = GER_ally_the_shade
-				has_completed_focus = GER_r56rp_mon_allies_alliance
+				has_completed_focus = GER_mon_allies_alliance
 			}
 			has_country_flag = modernized_succession_laws
 		}
@@ -5780,16 +5795,12 @@ GER_military_buildup = {
 		days_mission_timeout = 1800
 		is_good = no
 		activation = {
-			OR = {
-				has_completed_focus = GER_plan_z
-			}
+			has_completed_focus = GER_plan_z
 		}
 
 		
 		visible = {
-			OR = {
-				has_completed_focus = GER_plan_z
-			}
+			has_completed_focus = GER_plan_z
 		}
 
 		complete_effect = {
@@ -5812,7 +5823,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {
@@ -5834,7 +5845,7 @@ GER_military_buildup = {
 					size < 750
 				}
 				has_equipment = {
-					fighter_equipment < 250
+					small_plane_airframe < 250
 				}
 			}
 			NOT = {
@@ -5876,7 +5887,7 @@ special_projects = {
 		days_remove = 365
 		remove_effect = {
 			add_tech_bonus = {
-				name = GER_heavy_water
+				name = GER_begin_heavy_water_production
 				category = nuclear
 				uses = 2
 				bonus = 2
@@ -5902,6 +5913,7 @@ special_projects = {
 
 		cost = 50
 		fire_only_once = yes
+		cancel_if_not_visible = yes
 
 		ai_will_do = {
 			factor = 0
@@ -6003,6 +6015,7 @@ special_projects = {
 
 		cost = 50
 		fire_only_once = yes
+		cancel_if_not_visible = yes
 
 		ai_will_do = {
 			factor = 0
@@ -6747,7 +6760,6 @@ GER_monarchist_balance_of_power_category = {
 			command_power > 9
 		}
 
-		custom_cost_text = EGY_decision_cost_command_power_4
 
 		days_re_enable = 30
 

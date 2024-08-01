@@ -10,6 +10,7 @@ JAP_intervene_in_china = {
 			any_enemy_country = {
 				is_literally_china = yes
 			}
+			has_completed_focus = JAP_secure_china
 		}
 
 		fire_only_once = no
@@ -48,14 +49,11 @@ JAP_intervene_in_china = {
 		icon = jap_conquer_china
 
 		available = {	
-			event_target:WTT_current_china_leader = {
-				has_capitulated = no
-				exists = yes
-			}
+			has_war_with = CHI
 		}
 
 		visible = {
-			has_completed_focus = JAP_secure_china
+			has_completed_focus = JAP_ichi_go
 			any_enemy_country = {
 				is_literally_china = yes
 			}

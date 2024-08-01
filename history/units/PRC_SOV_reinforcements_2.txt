@@ -7,7 +7,6 @@
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
 	}
 }
 
@@ -100,6 +99,16 @@ units = {
 	}
 	division = {
 		name = "18 Renmin Jundui"
+		location = 12331
+		division_template = "Erjinzhi Juntuán"
+	}
+	division = {
+		name = "19 Renmin Jundui"
+		location = 12331
+		division_template = "Erjinzhi Juntuán"
+	}
+	division = {
+		name = "20 Renmin Jundui"
 		location = 12331
 		division_template = "Erjinzhi Juntuán"
 	}

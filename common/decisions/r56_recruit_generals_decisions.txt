@@ -20,7 +20,9 @@ form_nation_mod_category = {
 			HUN = {
 				exists = no
 			}
-
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}
 			
 							
 		}
@@ -66,7 +68,9 @@ form_nation_mod_category = {
 			AUS = {
 				exists = no
 			}
-
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}
 			
 							
 		}
@@ -113,7 +117,9 @@ form_nation_mod_category = {
 			CRO = {
 				exists = no
 			}
-			
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}			
 			
 		}
 		
@@ -160,7 +166,9 @@ form_nation_mod_category = {
 			CZE = {
 				exists = no
 			}
-		
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}			
 		}
 		
 		visible = {
@@ -206,7 +214,9 @@ form_nation_mod_category = {
 			GER = {
 				exists = no
 			}
-		
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}			
 							
 		}
 		
@@ -248,7 +258,9 @@ form_nation_mod_category = {
 			LIT = {
 				exists = no
 			}
-					
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 
 		cost = 80
@@ -290,7 +302,9 @@ form_nation_mod_category = {
 			LAT = {
 				exists = no
 			}
-			
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -335,7 +349,9 @@ form_nation_mod_category = {
 			EST = {
 				exists = no
 			}
-			
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -383,7 +399,9 @@ form_nation_mod_category = {
 			DEN = {
 				exists = no
 			}
-				
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -429,7 +447,9 @@ form_nation_mod_category = {
 			SWE = {
 				exists = no
 			}
-				
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -474,7 +494,10 @@ form_nation_mod_category = {
 			}
 			NOR = {
 				exists = no
-			}				
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -521,7 +544,9 @@ form_nation_mod_category = {
 			FIN = {
 				exists = no
 			}
-					
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -564,7 +589,10 @@ form_nation_mod_category = {
 			}
 			MON = {
 				exists = no
-			}				
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -607,7 +635,10 @@ form_nation_mod_category = {
 			}
 			MEN = {
 				exists = no
-			}				
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 		
 		visible = {
@@ -658,6 +689,10 @@ form_nation_mod_category = {
 				is_core_of = ROOT
 			}
 			has_civil_war = no
+			has_game_rule = {
+				rule = spr_fragmentation_status
+				option = SPR_EU4
+			}
 			ADU = {
 				exists = no
 			}					
@@ -708,7 +743,20 @@ form_nation_mod_category = {
 			290 = {
 				is_core_of = ROOT
 			}
-			has_civil_war = no		
+			has_civil_war = no
+			NOT = {
+				OR = {
+					has_game_rule = {
+						rule = spr_fragmentation_status
+						option = SPR_EU4
+					}
+					has_game_rule = {
+						rule = africa_colonization_status
+						option = AFRICA_DECOLONIZED
+					}					
+				}
+
+			}				
 		}
 
 		complete_effect = {				
@@ -751,6 +799,9 @@ form_nation_mod_category = {
 			}
 			SCO = {
 				exists = no
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
 			}					
 		}
 
@@ -794,6 +845,9 @@ form_nation_mod_category = {
 			}
 			IRE = {
 				exists = no
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
 			}					
 		}
 
@@ -832,6 +886,9 @@ form_nation_mod_category = {
 			}
 			BRA = {
 				exists = no
+			}
+			NOT = {
+				has_idea = generic_recent_army_unification
 			}					
 		}
 
@@ -882,7 +939,9 @@ form_andalusia_category = {
 			MOR = {
 				exists = no
 			}
-					
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}					
 		}
 
 		cost = 80

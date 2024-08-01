@@ -149,8 +149,8 @@ if = {
 }
 add_ideas = {
 	RAJ_Agrarian_Economy
-	RAJ_Caste_Debuff_3
-	RAJ_Princely_States
+	RAJ_caste_system
+	
 }
 
 set_convoys = 20
@@ -187,13 +187,11 @@ recruit_character = RAJ_sarojini_naidu
 recruit_character = RAJ_reginald_savory
 recruit_character = RAJ_pramod_ranjan_sengupta
 recruit_character = RAJ_arjan_singh_vibhusan
-recruit_character = RAJ_mahatma_mohandas_gandhi
 recruit_character = RAJ_arthur_a_barrett
 recruit_character = RAJ_bhaskar_soman
 recruit_character = RAJ_ravindra_darshan_singh
 recruit_character = RAJ_bhimrao_ramji_ambedkar
 recruit_character = RAJ_kodandera_cariappa
-recruit_character = RAJ_Francis_Mudie
 recruit_character = RAJ_homi_j_bhabha
 recruit_character = RAJ_subhas_chanda_bose_tfv
 recruit_character = RAJ_anyang_bhula
@@ -218,7 +216,6 @@ recruit_character = RAJ_Ram_Manohar
 recruit_character = RAJ_Sir_Jeremy_Raisman
 recruit_character = RAJ_subhas_chanda_bose
 recruit_character = RAJ_bahadur_jayla_of_khoch_bahur
-recruit_character = RAJ_Jawaharlal_Nehru_advisor
 recruit_character = RAJ_Gulzara_Singh
 recruit_character = RAJ_Shah_Nawaz
 recruit_character = RAJ_Lakshmi_Sahgal
@@ -274,19 +271,4 @@ if = {
 }
 433 = { #Rajahsthan
 	add_dynamic_modifier = { modifier = dense_rural_infrastructure }
-}
-
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	create_equipment_variant = {
-		name = "BugFix Plane" #
-		type = small_plane_cas_airframe_1
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-	}
 }

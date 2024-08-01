@@ -396,6 +396,7 @@ USA_mio_trait_superfortress: "Superfortress"
 USA_mio_trait_smooth_finish: "Smooth Finish"
 USA_mio_trait_jet_fighter_design: "Jet Fighter Design"
 
+
 ###################
 ###### JAPAN ######
 ###################
@@ -883,16 +884,6 @@ SPR_hispano_suiza_organization: "$SPR_hispano_suiza$"
 ##### PORTUGAL #####
 ####################
 
-POR_complete_industrial_expansion:0 "Complete Industrial Expansion"
-POR_complete_industrial_expansion_desc:0 "After long expansion of the countires industrial sector, Portugal has built a new and robust economy. It is time to decide what to specalise in as a country"
-POR_invest_in_synthetic_resources:0 "Invest in Synthetic Resources"
-POR_invest_in_synthetic_resources_desc:0 "Turn the profits from our new industry and fund the foundation and expansion of synthetic resources"
-POR_invest_in_laboratories:0 "Invest In Laboratories"
-POR_invest_in_laboratories_desc:0 "Turn the profits from our new industry and fund the foundation and expansion of Laboratories"
-POR_hire_luis_araujo:0 "Hire Luís Araújo"
-POR_hire_luis_araujo_desc:0 "To head our new special forces army sector we must hire Luís Araújo to lead them"
-
-
 ### ORGANIZATIONS ###
 POR_ogma_organization: "$ogma$"
 POR_arsenal_alfeite_organization: "$arsenal_alfeite$"
@@ -901,8 +892,7 @@ POR_fabrica_material_guerra_organization: "$fabrica_material_guerra$"
 POR_ogme_organization: "$ogme$"
 POR_fma_organization: "$fma$"
 POR_generic_infantry_equipment_organization: "$POR_fabrica_material_guerra_organization$"
-POR_lisnave: "$lisnave$"
-POR_nautiber: "$nautiber$"
+
 ### TRAITS ###
 
 
@@ -1795,3 +1785,40 @@ DEBUG_generic_infantry_equipment_organization: "$generic_infantry_equipment_orga
 DEBUG_generic_support_equipment_organization: "$generic_support_equipment_organization$"
 DEBUG_generic_motorized_mechanized_organization: "$generic_motorized_mechanized_organization$"
 DEBUG_generic_armored_car_organization: "$generic_armored_car_organization$"
+
+################
+#### Brazil ####
+################
+
+BRA_amrj_organization: "Arsenal de Marinha do Rio de Janeiro"
+BRA_rossi_organization: "Amadeo Rossi"
+BRA_cbc_organization: "Companhia Brasileira de Cartuchos"
+BRA_fnm_organization: "Fábrica Nacional de Motores"
+BRA_embraer_organization: "Empresa Brasileira de Aeronáutica"
+BRA_bernadini_organization: "Bernadini"
+BRA_ddam_organization: "Departamento de Artilharia"
+
+#CHILE
+CHL_arsenales_de_marina_organization: "Arsenales de Marina"
+CHL_epartamento_de_tanques_del_ejercito_organization: "Departamento De Tanques Del Ejército"
+CHL_enaer_organization: "ENAER"
+CHL_fanaero_chile_organization: "Fanaero-Chile"
+CHL_famae_organization: "FAMAE"
+CHL_famae_rama_de_artilleria_organization: "FAMAE - Rama de Artillería"
+CHL_willys_famae_corvo_organization: "Willys FAMAE Corvo"
+CHL_csav_organization: "CSAV"
+
+#ARGENTINA
+
+ARG_fabricaciones_militares_epartamento_de_tanques_del_ejercito_organization: "Fabricaciones Militares Departamento De Tanques Del Ejercito"
+ARG_arsenales_de_marina_organization: "Arsenales de Marina"
+ARG_astarsa_organization: "Astarsa"
+ARG_fma_organization: "FMA"
+ARG_fabricaciones_militares_organization: "Fabricaciones Militares"
+ARG_fabricaciones_militares_art_organization: "Fabricaciones Militares - Departamento De Artillería"
+ARG_hispano_argentina_organization: "Hispano - Argentina"
+ARG_mio_trait_dreams_of_a_domestic_tank_trait: "Dreams of a Domestic Tank"
+
+#SIAM
+SIA_raider_ship_organization: "Sasebo Naval Arsenal"
+SIA_task_force_ship_organization: "Newport News Shipbuilding"

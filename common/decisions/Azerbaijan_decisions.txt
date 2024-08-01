@@ -124,7 +124,7 @@ The_destiny_of_azerbaijan_category = {
 		remove_effect = {
 			division_template = {
 				name = "Azerbaijani Volunteers"				# azerbaijani Volunteers
-				is_locked = yes
+				is_locked = no
 				division_names_group = AZR_INF_01
 
 				regiments = {

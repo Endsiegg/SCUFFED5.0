@@ -43,6 +43,8 @@
  bra_2_prestes_column:0 "2nd Communist Putsch"
  BRA_2_prestes_column:0 "2nd Prestes Column"
  bra_2_prestes_column_desc:0 "The National Alliance of Liberation attempted a Coup against President Vargas. Now, with the workers' and people's support, the Marxists have an opportunity to forge in Brazil a glorious egalitarian socialist republic!"
+ bra_abertura:0 "Non Dvcor Dvco"
+ bra_abertura_desc:0 "What I do not understand is how a nation, like Brazil, after more than a century of constitutional life and liberalism, has regressed into a dictatorship without brakes and without limits which degrades and depletes us before the civilized world!"
  bra_acominas:0 "USIMINAS"
  bra_acominas_desc:0 "Usinas Siderurgicas de Minas Gerais SA will be a leading steel company in the production and marketing of hot and cold rolled steel, coils, slabs, and coated, mainly for the sectors of capital goods and consumer goods, in addition to the automotive industry."
  bra_almirantado:0 "A Revolta da Armada"
@@ -493,7 +495,6 @@ BRA_estado_novo_desc:0 "Ever since 1889, Brazil has shown itself fragile to subv
  bra_rural_elite_desc:0 "Despite Vargas's inauguration as president, the rural elites still control politics at the municipal level and hold almost all of the country's economic power. This monopoly on the republic's finances prevents the use of capital to expand the industrial sector."
  bra_industrial_elite_desc:0 "A rural country like ours finds investing in infrastructural and industrial developments costly. To guarantee growth, the government has to overtax the economy and force budget constraints to pay its contractors."
  #bra_entrepreneurs_desc:0 "The creation of the National Bank for Economic and Social Development will allow small business owners to borrow loans that will enable them to establish themselves in the market. The new [BRA.GetAdjective] middle class will open its businesses, create its industries and facilitate monetary circulation in the country. However, this economic boom tends to stabilize within a few months."
- bra_tank_designer:0 "Railway Company of the State of São Paulo"
  bra_tank_designer_2:0 "Specialized Engineers S.A"
  bra_naval_manu_1:0 "Rio de Janeiro's Naval Arsenal"
  bra_naval_manu_2:0 "Santos's Dockyard Company"
@@ -844,3 +845,6 @@ bra_monarquia_focus_t:0 "Brazil seeks imperialist policy."
 
 #Politicians#
 POLITICS_DUTRA_DESC:0 "Eurico Gaspar Dutra was born in small town of Cuiaba of a province Mato Grosso. His interest in the army and immense will to serve led him to falsify documents to be recruited at the age of 19 and enter the Military Academy of "Praia Vermelha" in Rio de Janeiro, which he successfully ended at the age of 23.\n\nThe man's military career is known for its specification on the artillery, military engineering, and army tactics and his loyalty to the Brazilian Republic and its leadership by suppressing various revolts and uprisings in the countryside of the nation.\n\nHis rise in military up to colonel and later to the army's commander has led to him occupying the seat of Minister of War since 1936."
+
+#Mio
+BRA_cfsp_organization_unlock_tt:0 "Unlocks §OCompanhias Ferroviárias de São Paulo§! tank refurbishment plant."

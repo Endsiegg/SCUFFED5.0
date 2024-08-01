@@ -1007,7 +1007,7 @@ focus = {
 				}
 				set_state_flag = NZL_national_roads_board_Inf1
 			}
-
+			add_extra_state_shared_building_slots = 2
 			random_owned_controlled_state = {
 				prioritize = { 723 }
 				limit = {
@@ -1016,6 +1016,7 @@ focus = {
 						size > 1
 					}
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -1688,7 +1689,7 @@ focus = {
 
 	completion_reward = {
 		division_template = {
-				is_locked = yes
+				is_locked = no
 				name = "Maori Volunteers"
 				division_names_group = NZL_INF_01
 				regiments = {
@@ -3310,7 +3311,7 @@ focus = {
 	completion_reward = {
 		add_ideas = neutrality_idea
 		division_template = {
-				is_locked = yes
+				is_locked = no
 				name = "Home Guard"
 				division_names_group = NZL_INF_01
 				regiments = {

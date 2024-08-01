@@ -5,12 +5,9 @@ ideas = {
 		use_list_view = yes
 		
 		undisturbed_isolation = {
-			level = 7
-			
 			allowed = {
 				always = no
 			}
-			
 			removal_cost = -1
 		
 			modifier = {
@@ -42,7 +39,6 @@ ideas = {
 		}
 		
 		isolation = {
-			level = 6
 			allowed = {
 				always = no
 			}
@@ -75,25 +71,18 @@ ideas = {
 		}
 		
 		civilian_economy = {
-			level = 5
-		
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.15
 				consumer_goods_expected_value = 0.35
-				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.3
-				production_speed_infrastructure_factor = 0.2
-				production_speed_rail_way_factor = 0.1
-				production_speed_supply_node_factor = 0.1		
-				max_fuel_factor = -0.5
-				fuel_gain_factor = -0.5
-				production_factory_max_efficiency_factor = -0.1
-				conversion_cost_civ_to_mil_factor= 0.30
-				conversion_cost_mil_to_civ_factor = -0.30
-				#production_factory_start_efficiency_factor = -0.1
+				production_speed_infrastructure_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
 			}
 			
 			default = yes
@@ -102,7 +91,6 @@ ideas = {
 		}
 		
 		low_economic_mobilisation = {
-			level = 4
 			available = {
 				has_war_support > 0.15
 				if = {
@@ -128,6 +116,13 @@ ideas = {
 						original_tag = TUR
 						has_dlc = "Battle for the Bosporus"
 					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
 				}
 			}
 			on_add = {
@@ -145,17 +140,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = 0.075
 				consumer_goods_expected_value = 0.3
 				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = -0.15
-				production_speed_infrastructure_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+				production_speed_arms_factory_factor = -0.1
 				fuel_gain_factor = -0.25
-				max_fuel_factor = -0.25
-				production_factory_max_efficiency_factor = -0.05
-				conversion_cost_civ_to_mil_factor= 0.20
-				conversion_cost_mil_to_civ_factor = -0.20
-				#production_factory_start_efficiency_factor = -0.05
 			}
 			
 			cancel_if_invalid = no
@@ -182,7 +171,6 @@ ideas = {
 		}
 		
 		partial_economic_mobilisation = {
-			level = 3
 			available = {
 				has_war_support > 0.25
 
@@ -201,6 +189,19 @@ ideas = {
 					has_war_support > 0.5
 					congress_high_support_trigger = yes
 				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -209,12 +210,7 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.25
 				production_speed_arms_factory_factor = 0.1
-				production_speed_radar_station_factor = 0.035
-				production_speed_air_base_factor = 0.035
-				production_speed_naval_base_factor = 0.035
-				production_speed_anti_air_building_factor = 0.035
-				production_speed_coastal_bunker_factor = 0.035
-				production_speed_bunker_factor = 0.035
+				production_speed_dockyard_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
@@ -243,8 +239,6 @@ ideas = {
 		}
 		
 		war_economy = {
-			level = 2
-			
 			available = {
 				has_war_support > 0.5
 				OR = {
@@ -277,28 +271,30 @@ ideas = {
 					has_war_support > 0.75
 					congress_high_support_trigger = yes
 				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
 			}
 		
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.10
 				consumer_goods_expected_value = 0.2
 				production_speed_arms_factory_factor = 0.2
-				production_speed_radar_station_factor = 0.05
-				production_speed_air_base_factor = 0.05
-				production_speed_naval_base_factor = 0.05
-				production_speed_dockyard_factor = 0.05
-				production_speed_anti_air_building_factor = 0.05
-				production_speed_coastal_bunker_factor = 0.05
-				production_speed_bunker_factor = 0.05
-				production_speed_synthetic_refinery_factor = 0.05
-				production_speed_rail_way_factor = 0.1
-				production_speed_supply_node_factor = 0.1	
-				
-				conversion_cost_civ_to_mil_factor = -0.2
-				conversion_cost_mil_to_civ_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
 			}
 			
 			cancel_if_invalid = no
@@ -347,8 +343,6 @@ ideas = {
 		}
 		
 		tot_economic_mobilisation = {
-			level = 1
-			
 			available = {
 				has_war = yes
 				has_war_support > 0.8
@@ -373,6 +367,19 @@ ideas = {
 					}
 					has_war_support > 0.9
 					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
 				}
 			}
 			on_add = {
@@ -440,31 +447,18 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.20
 				consumer_goods_expected_value = 0.10
 				conscription = -0.03
 				production_speed_arms_factory_factor = 0.3
-				production_speed_dockyard_factor = 0.075
-				production_speed_radar_station_factor = 0.075
-				production_speed_rocket_site_factor = 0.075
-				production_speed_air_base_factor = 0.075
-				production_speed_naval_base_factor = 0.075
-				production_speed_anti_air_building_factor = 0.075
-				production_speed_coastal_bunker_factor = 0.075
-				production_speed_bunker_factor = 0.075
-				production_speed_nuclear_reactor_factor = 0.1
-				production_speed_rail_way_factor = 0.2
-				production_speed_supply_node_factor = 0.2	
-				
-				conversion_cost_civ_to_mil_factor = -0.3
-				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_dockyard_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
 			}
 			
 			cancel_if_invalid = no
-		}
+		} 
 
 		japanese_war_economy = {
-			level = 1
 			picture = japanese_war_economy
 
 			allowed = {
@@ -502,6 +496,46 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		emperors_economy = {
+			picture = GFX_idea_emperors_economy
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+				has_completed_focus = JAP_emperors_economy
+				has_war_support > 0.5
+			}
+
+			visible = {
+				tag = JAP
+			}
+
+			cost = 2000
+			removal_cost = 1
+
+			modifier = {
+				stability_factor = 0.25
+				consumer_goods_expected_value = 0.2
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = -0.3
+				production_speed_radar_station_factor = 0.15
+				production_speed_air_base_factor = 0.15
+				production_speed_anti_air_building_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_dockyard = -0.5
+
+
+				
+				conversion_cost_civ_to_mil_factor= -0.5
+			}
+
+			removal_cost = -1
+			cancel_if_invalid = no
+		}
+
 		new_economic_policy = {
 
 			picture = new_economic_policy
@@ -519,10 +553,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.15	
-				production_speed_buildings_factor = 0.05 
-				global_building_slots_factor = -0.2
-				min_export = -0.2
+				consumer_goods_expected_value = 0.15
+				production_speed_buildings_factor = 0.1
+				global_building_slots_factor = -0.1
+				min_export = -0.6
 			}
 			
 			cancel_if_invalid = no
@@ -549,10 +583,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_expected_value = 0.10
-				production_speed_buildings_factor = 0.10
-				global_building_slots_factor = -0.1
-				min_export = -0.2
+				consumer_goods_expected_value = 0.05
+				production_speed_buildings_factor = 0.2
+				global_building_slots_factor = -0.2
+				min_export = -1
 			}
 			
 			cancel_if_invalid = no
@@ -561,6 +595,42 @@ ideas = {
    				factor = 0
    			}
 		}
+
+		Macedonian_economy = {
+			picture = generic_fascism_rising
+
+			allowed = {
+				tag = GRE
+			}
+
+			available = {
+				has_completed_focus = GRE_War_Economy
+				has_war_support > 0.6
+			}
+
+			visible = {
+				tag = GRE
+			}
+
+			cost = 300
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.15
+				production_speed_radar_station_factor = 0.15
+				production_speed_air_base_factor = 0.15
+				production_speed_naval_base_factor = 0.15
+				production_speed_anti_air_building_factor = 0.15
+				conversion_cost_civ_to_mil_factor= -0.5
+			}
+
+			removal_cost = -1
+			cancel_if_invalid = no
+		}
+
 	}
 	
 	trade_laws = { 
@@ -737,7 +807,7 @@ ideas = {
 				}
 			}
 						
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			
 			modifier = {
@@ -815,7 +885,7 @@ ideas = {
 			}
 			
 			
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			
 			modifier = {
@@ -901,7 +971,7 @@ ideas = {
 				}
 			}
 		
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			
 			modifier = {
@@ -990,7 +1060,7 @@ ideas = {
 				can_access_market = no
 				desc = can_not_access_market_closed_economy
 			}
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			
 			
@@ -1032,5 +1102,6 @@ ideas = {
 				}
    			}
 		}
+
 	}
 }

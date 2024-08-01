@@ -219,8 +219,6 @@ set_variable = { GER_total_war_economy_cost_factor = 0 }
 set_variable = { GER_front_line_cities_production_speed_bunker_factor = 0 }
 set_variable = { GER_a_world_in_flames_army_core_defence_factor = 0 }
 
-
-
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
@@ -401,7 +399,7 @@ if = {
 	}
 }
 
-
+add_ideas = GER_mefo_bills_1
 
 activate_mission = GER_mefo_bills_mission
 set_variable = { var = ger_gateway_to_europe_influence value = 0 }
@@ -445,7 +443,7 @@ add_ideas = {
 	partial_economic_mobilisation
 	GER_enigma_machine0
 	r56_ger_naval_treaty
-	GER_mefo_bills_1
+	GER_effects_of_the_depression
 }
 
 recruit_character = GER_wilhelm_pieck
@@ -562,6 +560,8 @@ recruit_character = GER_Paul_Lejeune_Jung
 recruit_character = GER_theodor_duesterberg
 recruit_character = GER_baldur_von_schirach
 
+recruit_character = GER_bernhard_rogge			#moved from West Germany file, turned into young admiral
+
 add_ideas = {
 	konstantin_von_neurath		#main advocate of Rhineland gamble - foreign minister in 1936
 }
@@ -569,12 +569,6 @@ recruit_character = GER_hans_kahle			#commie commander
 recruit_character = GER_hans_beimler		#commie commander
 recruit_character = GER_rudolf_hernnstadt	#commie journalist
 recruit_character = GER_johannes_becher		#commie poet
-
-# RT56RP Characters
-recruit_character = GER_ober_ost_command_RT56RP
-recruit_character = GER_colonial_goverment_RT56RP
-recruit_character = GER_Theodore_Seitz_RT56RP
-recruit_character = GER_Franz_Ritter_von_Epp_RT56RP
 
 if = {
 	limit = {

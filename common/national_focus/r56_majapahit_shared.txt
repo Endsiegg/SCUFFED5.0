@@ -37,6 +37,9 @@
 		}
 
 		available = {		
+			NOT = {
+				has_idea = generic_recent_political_unification
+			}
 			custom_trigger_tooltip = {
 				tooltip = is_majapahit_tt
 				has_cosmetic_tag = MAJ_UNIFIED
@@ -73,6 +76,9 @@
 			factor = 10
 		}
 		available = {
+			NOT = {
+				has_idea = generic_recent_economic_unification
+			}
 			num_of_controlled_states > 3	
 		}
 
@@ -140,6 +146,9 @@
 		x = -1
 		y = 1
 		available = {
+			NOT = {
+				has_idea = generic_recent_economic_unification
+			}
 			num_of_controlled_states > 2
 			has_tech = construction3	
 		}
@@ -191,6 +200,9 @@
 		x = 0
 		y = 1
 		available = {
+			NOT = {
+				has_idea = generic_recent_economic_unification
+			}
 			num_of_controlled_states > 2
 			has_tech = construction3	
 		}
@@ -266,6 +278,11 @@
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			NOT = {
+				has_idea = generic_recent_economic_unification
+			}	
+		}
 
 		bypass = {
 		
@@ -305,6 +322,11 @@
 		cost = 10
 		prerequisite = {
 			focus = MAJ_UNIFIED_defend_the_new_union
+		}
+		available = {
+			NOT = {
+				has_idea = generic_recent_army_unification
+			}
 		}
 		relative_position_id = MAJ_UNIFIED_defend_the_new_union
 		x = 0

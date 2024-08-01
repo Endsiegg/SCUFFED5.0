@@ -29,7 +29,7 @@ ideas = {
 				stability_factor = -0.05
 			}
 			
-			cost = 175
+			cost = 150
 			
 			cancel_if_invalid = no
 			
@@ -67,7 +67,7 @@ ideas = {
 				stability_factor = -0.05
 			}
 			
-			cost = 200
+			cost = 150
 
 			ai_will_do = {
    				factor = 0.5
@@ -126,7 +126,7 @@ ideas = {
 				stability_factor = -0.05
 			}
 
-			cost = 200
+			cost = 150
 
 			ai_will_do = {
    				factor = 0.5
@@ -155,7 +155,7 @@ ideas = {
 				
 			}
 			
-			cost = 175
+			cost = 150
 			
 			cancel_if_invalid = no
 

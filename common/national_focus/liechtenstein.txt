@@ -1310,7 +1310,7 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			has_idea = r56i_laws_security_order
+			#has_idea = r56i_laws_security_order
 			OR = {
 				has_idea = extensive_conscription
 				has_idea = service_by_requirement
@@ -1323,9 +1323,9 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_idea = r56i_laws_security_balanced
-						has_idea = r56i_laws_security_rights
-						has_idea = r56i_laws_security_order
+						#has_idea = r56i_laws_security_balanced
+						#has_idea = r56i_laws_security_rights
+						#has_idea = r56i_laws_security_order
 					}
 				}
 				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_laws_social
@@ -2256,10 +2256,10 @@ focus_tree = {
 			if = {
                 limit = {
                     NOT = {
-                        has_idea = r56i_laws_gender_limited # They still can't vote
+                        #has_idea = r56i_laws_gender_limited # They still can't vote
                     }
                 }
-                add_ideas = r56i_laws_gender_limited
+                #add_ideas = r56i_laws_gender_limited
             }
 		}
 	}

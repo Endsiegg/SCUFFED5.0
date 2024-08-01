@@ -2,7 +2,6 @@
 # Portugal Events
 ###########################
 
-add_namespace = lar_portugal_industrial
 add_namespace = lar_portugal_iberian_summit
 add_namespace = lar_portugal_navy_mutiny
 add_namespace = lar_portugal_iberian_workers_united
@@ -13,85 +12,6 @@ add_namespace = lar_portugal_spanish_civil_war
 add_namespace = lar_portugal_royal_iberian_alliance
 add_namespace = lar_portugal_overseas_provinces
 
-
-country_event = {
-	id = lar_portugal_industrial.1
-	title = "Portugal Industrial Focus"
-	desc = "Portugal must decide what industry to focus its output on"
-	picture = GFX_report_event_generic_factory
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Tool Industry for Infantry Equiptment"
-
-		ai_chance = {
-			base = 0
-		}
-		mio:POR_fma_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-		mio:POR_ogme_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-		mio:POR_fabrica_material_guerra_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-		mio:POR_fnmal_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-	}
-
-	option = {
-		name = "Tool Industry for Aircraft"
-
-		ai_chance = {
-			base = 0
-		}
-		mio:POR_ogma_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-	}
-
-	option = {
-		name = "Tool Industry for Ships"
-
-		ai_chance = {
-			base = 0
-		}
-		mio:POR_nautiber = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-		mio:POR_lisnave = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-		mio:POR_arsenal_alfeite_organization = {
-			complete_mio_trait = portugal_industrial_focus_material
-		}
-	}
-
-	option = {
-		name = "Tool Industry for Construction"
-
-		ai_chance = {
-			base = 0
-		}
-
-		if = {
-			limit = {
-				has_idea = POR_a_new_industry
-			}
-			swap_ideas = {
-				remove_idea = POR_a_new_industry
-				add_idea = POR_a_new_industry_2
-			}
-		}
-		else = {
-			add_ideas = POR_a_new_industry
-		}
-	}
-
-}
 
 ######## IBERIAN SUMMIT ########
 # Iberian summit - country suggests joining axis
@@ -1818,17 +1738,6 @@ country_event = {
 				target = ROOT
 				transfer_troops = yes
 			}
-			IF = {
-				limit = {
-					check_variable = {
-						r56rp_rules_fp_controlled < 4
-					}
-				}
-				custom_effect_tooltip = r56rp_rules_fp_set_4.tt
-				set_variable = { r56rp_rules_fp_controlled = 4 }
-				set_variable = { r56rp_rules_normalwargoaldeclaration =  60789.984 }
-				set_variable = { r56rp_rules_focuswargoaldeclaration = 60785.64 }
-			}
 			hidden_effect = {
 				set_cosmetic_tag = KPB_kingdom_portugal_and_brazil	
 			}
@@ -1894,7 +1803,6 @@ country_event = {
 				set_cosmetic_tag = EOB_empire_brazil_neutrality
 				create_country_leader = {
 					name = "Prince Pedro Henrique"
-					desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
 					picture = GFX_portrait_Prince_Pedro_Henrique
 					expire = "1981.07.05"
 					ideology = despotism
@@ -1909,7 +1817,7 @@ country_event = {
 					ideology = fascism
 					size = POR_bra_monarchist_cw_opposition
 					capital = 501
-					states = { 495 497 1001 1000 498 499 280 502 503 504 505 1002 }
+					states = { 495 1052 497 1001 1000 498 499 280 502 503 504 505 1002 }
 				}
 				random_country = {
 					limit = {
@@ -1935,7 +1843,6 @@ country_event = {
 					}
 					create_country_leader = {
 						name = "Plínio Salgado"
-						desc = "POLITICS_PLINIO_SALGADO_DESC"
 						picture = GFX_portrait_Plinio_Salgado
 						expire = "1965.1.1"
 						ideology = fascism_ideology
@@ -1968,7 +1875,7 @@ country_event = {
 					ideology = neutrality
 					size = POR_bra_monarchist_cw_opposition
 					capital = 501
-					states = { 495 497 1001 1000 280 502 503 504 505 1002 }
+					states = { 495 1052 497 1001 1000 280 502 503 504 505 1002 }
 				}
 				if = {
 					limit = {
@@ -1987,7 +1894,6 @@ country_event = {
 					set_cosmetic_tag = EOB_empire_brazil_neutrality
 					create_country_leader = {
 						name = "Prince Pedro Henrique"
-						desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
 						picture = GFX_portrait_Prince_Pedro_Henrique
 						expire = "1981.07.05"
 						ideology = despotism
@@ -1997,7 +1903,6 @@ country_event = {
 					}
 					create_country_leader = {
 						name = "Plínio Salgado"
-						desc = "POLITICS_PLINIO_SALGADO_DESC"
 						picture = GFX_portrait_Plinio_Salgado
 						expire = "1965.1.1"
 						ideology = fascism_ideology
@@ -2058,7 +1963,6 @@ country_event = {
 			set_cosmetic_tag = EOB_empire_brazil_neutrality
 			create_country_leader = {
 				name = "Prince Pedro Henrique"
-				desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
 				picture = GFX_portrait_Prince_Pedro_Henrique
 				expire = "1981.07.05"
 				ideology = despotism
@@ -2494,7 +2398,7 @@ country_event = {
 
 	option = {
 		name = lar_portugal_overseas_provinces.1.a
-		add_stability = 0.05
+		add_stability = -0.1
 		every_state = {
 			limit = {
 				is_core_of = ANG
@@ -2550,7 +2454,6 @@ country_event = {
 
 	option = {
 		name = lar_portugal_overseas_provinces.2.a
-		add_stability = 0.05
 		every_state = {		#easier and less troublesome than generic
 			limit = {
 				is_core_of = MZB

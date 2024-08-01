@@ -1118,3 +1118,11 @@
  wtt_prc.31.desc:0 "Working under cover of night, our comrades in [JAP.GetManchuriaPuppet] have managed to sabotage a vital bridge. The small commando force reports that the bridge has been completely destroyed and took an ammunition train with it as it collapsed.\n\n\They have made sure to be seen by the locals, making it clear that this was an act of sabotage. It remains to be seen if this will prompt the [JAP.GetAdjective] into action."
  wtt_prc.32.desc:0 "We have successfully ambushed and annihilated a [JAP.GetAdjective] patrol in [JAP.GetManchuriaPuppet]. Their bodies were left at the scene to ensure the Imperialists got the right message. \n\nTime will tell if they consider this action reasons enough to go to war."
  wtt_prc.20.c:0 "We should withdraw from the continent altogether."
+
+
+
+
+#force attack - danteeee
+wtt_germany.1007.t:0 "Wilhelm III found dead in bathtub"
+wtt_germany.1007.desc:0 "This morning, the German Empire awoke to shocking news that sent ripples of grief and uncertainty throughout the nation. Emperor Wilhelm III has been found dead in his bathtub under mysterious circumstances. The discovery was made by his personal valet who immediately alerted the authorities. While initial reports suggest that the cause of death might be accidental, the sudden and unexpected nature of the Emperor's demise has fueled a myriad of rumors and speculations. Some whisper of foul play and political intrigue, while others suspect a tragic accident or even self-harm. The official investigation is underway, but until more details are known, the nation stands on the edge of turmoil."
+wtt_germany.1007.a:0 "Long live the kaiserin!"

@@ -82,7 +82,7 @@ GEN_ARMY_rely_on_soviet_tactics_desc:0 ""
 GEN_ARMY_weapon_prototype_development:0 "Fight Against Steel"
 GEN_ARMY_weapon_prototype_development_desc:0 "Constant border clashes with various forces penetrating our defences has provided us with a few lessons to study and one of them is the wast ineffectiveness of single-shot firearms our troops possess in mass numbers. We shall reach out to our benefactors in an effort to obtain modern weapon schematics."
 
-GEN_ARMY_mass_firearm_production:0 "Communications and Conscription"
+GEN_ARMY_mass_firearm_production:0 "Reinforcements"
 GEN_ARMY_mass_firearm_production_desc:0 ""
 
 GEN_ARMY_focus_on_infantry:0 "Focus on Infantry"
@@ -153,3 +153,4 @@ GEN_Steel_on_Wheels:0 "Steel on Wheels"
 
 GEN_Army_Modernization:0 "Army Modernization"
 GEN_Boots_on_the_Ground:0 "Boots on the Ground"
+

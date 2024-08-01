@@ -370,7 +370,7 @@ focus_tree = {
 					division_template = {
 						name = "Z Special Unit"
 						division_names_group = AST_INF_01
-						is_locked = yes
+						is_locked = no
 						regiments = {
 							jungletroop = { x = 0 y = 0 }
 							jungletroop = { x = 0 y = 1 }
@@ -395,7 +395,7 @@ focus_tree = {
 						division_template = {
 							name = "Z Special Unit"
 							division_names_group = AST_INF_01
-							is_locked = yes
+							is_locked = no
 							regiments = {
 								jungletroop = { x = 0 y = 0 }
 								jungletroop = { x = 0 y = 1 }
@@ -2231,6 +2231,7 @@ focus_tree = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2342,6 +2343,7 @@ focus_tree = {
 
 		completion_reward = {
 			517 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2349,6 +2351,7 @@ focus_tree = {
 				}
 			}
 			519 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -2356,6 +2359,7 @@ focus_tree = {
 				}
 			}
 			522 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2447,6 +2451,7 @@ focus_tree = {
 
 		completion_reward = {
 			521 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2454,6 +2459,7 @@ focus_tree = {
 				}
 			}
 			520 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
 					level = 2
@@ -5880,9 +5886,9 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = {
-						has_idea = r56i_laws_security_balanced
-						has_idea = r56i_laws_security_rights
-						has_idea = r56i_laws_security_order
+						#has_idea = r56i_laws_security_balanced
+						#has_idea = r56i_laws_security_rights
+						#has_idea = r56i_laws_security_order
 					}
 				}
 				custom_effect_tooltip = EFFECT_CHANGE_LAW_r56i_laws_social

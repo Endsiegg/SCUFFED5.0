@@ -44,7 +44,11 @@ country_event = {
 					has_country_flag = BRA_AI_RANDOM_COMMUNIST
 					has_game_rule = {
 						rule = BRA_ai_behavior
-						option = COMMUNIST
+						option = BRA_COMMUNIST_STALINISM
+					}
+					has_game_rule = {
+						rule = BRA_ai_behavior
+						option = BRA_COMMUNIST_INDEPENDENT
 					}
 				}
 				add = 1000
@@ -117,7 +121,7 @@ country_event = {
 		add_popularity = { ideology = fascism popularity = 0.1 } 
 		hidden_effect = { set_country_flag = bra_suicidio_1 }
 		add_ideas = bra_instabilidade
-		#add_timed_idea = { idea = bra_polaca_idea days = 100 } 
+		add_timed_idea = { idea = bra_polaca_idea days = 100 } 
 	}
 }
 

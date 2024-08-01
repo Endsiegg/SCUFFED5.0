@@ -71,9 +71,6 @@ SOV_okb_19_organization = {
 	allowed = {	
 		tag = SOV
 	}
-	available = {
-		FROM = { has_completed_focus = SOV_expand_the_aircraft_industry }
-	}
 	initial_trait = {
 		name = generic_mio_initial_trait_range_focused_aircraft_designer
 

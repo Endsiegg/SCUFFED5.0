@@ -1,6 +1,4 @@
-#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
+#####---------------------------------------------------------------------> edited by Greatexperiment
 
 continuous_focus_palette = {
 
@@ -194,7 +192,6 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_naval_production
 		
 		available = {
-			always = no
 		}
 		
 		modifier = {
@@ -202,7 +199,7 @@ continuous_focus_palette = {
 		}
 		
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 		
 		supports_ai_strategy = ai_focus_naval
@@ -212,28 +209,6 @@ continuous_focus_palette = {
 		available_if_capitulated = yes
 	}
 
-	focus = {
-		id = continuous_air_production
-		
-		icon = GFX_goal_continuous_air_production
-		
-		available = {
-			always = no
-		}
-		
-		idea = idea_continuous_air_production
-		
-		ai_will_do = {
-			factor = 0
-		}
-		
-		supports_ai_strategy = ai_focus_aviation
-		
-		daily_cost = 1
-		
-		available_if_capitulated = yes
-	}
-	
 	focus = {
 		id = continuous_non_factory_construct
 		
@@ -249,6 +224,7 @@ continuous_focus_palette = {
 			production_speed_air_base_factor = 0.1
 			production_speed_naval_base_factor = 0.1
 			production_speed_synthetic_refinery_factor = 0.1
+			production_speed_rubber_refinery_factor = 0.1
 			production_speed_aluminum_mill_factor = 0.1
 			production_speed_steel_mill_factor = 0.1
 			production_speed_rocket_site_factor = 0.1
@@ -356,14 +332,13 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_research
 		
 		available = {
-			always = no
-			#hidden_trigger = { has_dlc = "Together for Victory" }
+			hidden_trigger = { has_dlc = "Together for Victory" }
 		}
 
 		enabled = {
 			is_in_faction = yes
 			num_faction_members > 1
-			num_tech_sharing_groups < 1
+			#num_tech_sharing_groups < 1	#see block below for correct check
 
 			custom_trigger_tooltip = {
 				tooltip = NO_OTHER_SHARING_GROUPS

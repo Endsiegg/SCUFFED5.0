@@ -827,14 +827,16 @@ country_event = {
 	option = {
 		name = belgium.28.a
 		ai_chance = {
-			factor = 30
+			factor = 90
 		}
-		BEL = { puppet = HOL }
+		BEL = { puppet = ROOT }
+		
+		
 	}
 	
 	option = {
 		name = belgium.28.b
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 1 }
 		trigger = {
 			HOL = {
 				is_puppet = no
@@ -2928,7 +2930,7 @@ country_event = {
 		date > 1942.10.12
 	}
 	mean_time_to_happen = {
-			days = 20
+			days = 5
 		}	
 	option = {
 		name = belgium.81.a

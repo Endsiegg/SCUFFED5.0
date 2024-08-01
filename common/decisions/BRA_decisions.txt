@@ -1119,9 +1119,9 @@ BRA_us_of_south_america_cat = {
 				}			
 			}
 		}
-		cost = 100
+		cost = 200
 		fire_only_once = no
-		days_remove = 30
+		days_remove = 180
 		ai_will_do = {
 			base = 5
 			modifier = {
@@ -1160,7 +1160,7 @@ BRA_us_of_south_america_cat = {
 			has_completed_focus	= BRA_reach_out_to_our_neighbors
 		}
 		available = {
-			has_completed_focus	= BRA_reach_out_to_our_neighbors
+			is_faction_leader = yes	#r56 addition in place of another focus check, was inviting without a faction
 			FROM = {
 				has_opinion = {
 					target = ROOT
@@ -1173,21 +1173,19 @@ BRA_us_of_south_america_cat = {
 		}
 		on_map_mode = map_and_decisions_view
 		target_trigger = {
-		    FROM = { 
-		    	AND = {
-		    		NOT = { 
-		    			is_in_faction_with = ROOT
-		    			tag = ROOT
-		    		}
-		    		OR = { 
-		    			is_subject = no
-		    			is_subject_of = ROOT
-		    		}
-		    	}
-		    	capital_scope = { is_on_continent = south_america }
+		    FROM = {
+				capital_scope = { is_on_continent = south_america }
+				NOT = { 
+					tag = ROOT
+				}
+				is_in_faction = no	#r56 addition in place of being in brazils faction, anyone in a faction sais no
+				OR = { 
+					is_subject = no
+					is_subject_of = ROOT
+				}
 		    }
 		}
-		cost = 20
+		cost = 100
 		ai_will_do = {
 			base = 35
 			modifier = {

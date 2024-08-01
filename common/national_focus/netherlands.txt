@@ -4194,6 +4194,11 @@ focus_tree = {
 					}
 				}
 			}
+			add_tech_bonus = {
+   				 	bonus = 1.0
+    				uses = 1
+    				category = ship_modules_tech
+				}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -6209,7 +6214,7 @@ focus_tree = {
 					name = "Hare Majesteits Duitse Legioen"
 					priority = 1
 					division_names_group = HOL_INF_01
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -6556,7 +6561,7 @@ focus_tree = {
 					name = "American Garrison"
 					priority = 1
 					division_names_group = USA_INF_01
-					is_locked = yes
+					is_locked = no
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }

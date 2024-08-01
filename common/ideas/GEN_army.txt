@@ -256,6 +256,31 @@ ideas = {
 				river_crossing_factor = -0.05
 			}				
 		}
+		GEN_reinforcements = {
+			name = "Reinforcements"
+
+			available = {
+				has_war = yes
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = SWE_varnplikt
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_strength_factor = 0.05
+				land_reinforce_rate = 0.03
+			}				
+		}
 		GEN_Train_the_Troops = {
 			name = "Train The Army"
 

@@ -2739,7 +2739,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_joint_aluminum_mining_company
-		icon = GFX_goal_tblra_aluminium
+		icon = GFX_focus_SWE_landsverk
 		prerequisite = { focus = HUN_trade_deal_with_germany }
 		x = 0
 		y = 2
@@ -5156,6 +5156,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_reintegrate_the_railroads_Inf
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5166,6 +5167,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_reintegrate_the_railroads_Inf_2
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5176,6 +5178,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = HUN_reintegrate_the_railroads_Inf_3
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5201,6 +5204,7 @@ focus_tree = {
 						size > 0
 					}
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5216,6 +5220,7 @@ focus_tree = {
 						size > 0
 					}
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5231,6 +5236,7 @@ focus_tree = {
 						size > 0
 					}
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -5418,7 +5424,7 @@ focus_tree = {
 				uses = 2
 				category = industry
 			}
-			unlock_decision_category_tooltip = HUN_gyor_program_decision_category
+			#unlock_decision_category_tooltip = HUN_gyor_program_decision_category
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -6231,7 +6237,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = HUN_establish_the_air_force
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 30
@@ -6250,8 +6256,7 @@ focus_tree = {
 		id = HUN_heavy_fighter_effort
 		icon = GFX_focus_usa_escort_fighters
 		prerequisite = { focus = HUN_indigenous_designs }
-		mutually_exclusive = { focus = HUN_light_fighter_effort }
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = HUN_indigenous_designs
 
@@ -6281,8 +6286,7 @@ focus_tree = {
 		id = HUN_light_fighter_effort
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = HUN_indigenous_designs }
-		mutually_exclusive = { focus = HUN_heavy_fighter_effort }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = HUN_indigenous_designs
 
@@ -6308,71 +6312,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 
-	focus = {
-		id = HUN_cas_focus
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = HUN_indigenous_designs }
-		mutually_exclusive = { focus = HUN_tac_focus }
-		x = 1
-		y = 1
-		relative_position_id = HUN_indigenous_designs
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available_if_capitulated = yes
-
-
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_cas_focus
-				bonus = 1
-				ahead_reduction = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
-	focus = {
-		id = HUN_tac_focus
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = HUN_indigenous_designs }
-		mutually_exclusive = { focus = HUN_cas_focus }
-		x = 3
-		y = 1
-		relative_position_id = HUN_indigenous_designs
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 50
-		}
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = HUN_tac_focus
-				bonus = 1
-				ahead_reduction = 1
-				uses = 1
-				category = medium_air
-			}
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-
+	
+	
 	focus = {
 		id = HUN_license_foreign_designs
 		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = HUN_establish_the_air_force }
-		x = 5
+		x = 2
 		y = 5
 		relative_position_id = HUN_establish_the_air_force
 
@@ -6561,7 +6507,7 @@ focus_tree = {
 		id = HUN_Aircraft_Developement
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = HUN_establish_the_air_force }
-		x = 2
+		x = 0
 		y = 3
 		relative_position_id = HUN_establish_the_air_force
 
@@ -6593,9 +6539,9 @@ focus_tree = {
 		id = HUN_joint_air_development
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = HUN_Aircraft_Developement }
-		x = 2
-		y = 5
-		relative_position_id = HUN_establish_the_air_force
+		x = -1
+		y = 1
+		relative_position_id = HUN_Aircraft_Developement
 
 		cost = 10
 
@@ -6627,10 +6573,10 @@ focus_tree = {
 	focus = {
 		id = HUN_foreign_aeronautical_assistance
 		icon = GFX_goal_generic_air_production
-		prerequisite = { focus = HUN_joint_air_development }
-		x = 0
-		y = 2
-		relative_position_id = HUN_joint_air_development
+		prerequisite = { focus = HUN_Aircraft_Developement }
+		x = 1
+		y = 1
+		relative_position_id = HUN_Aircraft_Developement
 
 		cost = 10
 
@@ -6667,7 +6613,7 @@ focus_tree = {
 		id = HUN_army_maneuvers
 		icon = GFX_goal_plan
 		prerequisite = { focus = HUN_bled_agreement }
-		x = 6
+		x = 3
 		y = 1
 		relative_position_id = HUN_bled_agreement
 
@@ -6690,7 +6636,6 @@ focus_tree = {
 				category = land_doctrine
 			}
 			set_technology = { bicycle_infantry = 1 }
-			load_oob = "bicycle_OOB"
 			
 			if = {
 				limit = {
@@ -7178,7 +7123,7 @@ focus_tree = {
 		id = HUN_naval_warfare
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = HUN_secret_rearmament }
-		x = 12
+		x = 9
 		y = 1
 		relative_position_id = HUN_secret_rearmament
 

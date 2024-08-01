@@ -15,10 +15,8 @@ GER_porsche_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER 
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR #democratic germany
-			tag = GCR #commie germany
 
 			AND = {
 				tag = MEX 
@@ -50,6 +48,26 @@ GER_porsche_organization = {
 			FROM = { has_completed_focus = NOR_invite_german_engineers }
 		}
 	}
+
+	add_trait = { 
+		name = "Porsche Armor"
+		icon = GFX_generic_mio_trait_icon_armor_value
+		special_trait_background = yes
+
+		position = { x=0 y=1 }
+		
+		visible = {
+			FROM = { original_tag = GER }
+		}
+
+		equipment_bonus = {
+			armor_value = .05
+			reliability = .05
+			soft_attack = .05
+			hard_attack = .05
+			breakthrough = .05
+		}
+	}
 }
 
 GER_henschel_organization = {
@@ -58,10 +76,8 @@ GER_henschel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER 
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
 			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
@@ -96,24 +112,7 @@ GER_henschel_organization = {
 					FROM = { original_tag = ETH } 
 				} 
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_henschel_mio_flag
-				}
-			}
 			
-		}
-		IF = {
-			limit = { FROM = { original_tag = BUL } } 
-			FROM = { 
-				OR = {
-					is_subject = no
-					is_subject_of = GER
-				}
-				#is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
-			}
 		}
 	}
 }
@@ -124,10 +123,8 @@ GER_man_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER 
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
 			AND = {
 				tag = GRE
 				has_dlc = "Battle for the Bosporus"
@@ -144,6 +141,17 @@ GER_man_organization = {
 			FROM = { NOT = { has_war_with = GER } }
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_medium_tank_designer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}	
 }
 
 #Benz 
@@ -153,10 +161,31 @@ GER_daimler_benz_organization = {
 	
 	allowed = {	
 		OR = {
-		tag = GER 
-		tag = WGR
-			tag = GZR
-			tag = GCR
+			tag = GER 
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+			tag = WGR
+		}
+	}
+	
+	available = {
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = GER } }
+			}
+			FROM = { NOT = { has_war_with = GER } }
+		}
+		IF = {
+			limit = {
+				FROM = {
+					original_tag = BRA
+				}
+			}
+			FROM = {
+				has_completed_focus = BRA_german_tanks
+			}
 		}
 	}
 
@@ -239,47 +268,86 @@ GER_germaniawerft_organization = {
 	include = generic_battle_line_ship_organization
 	icon = GFX_idea_germaniawerft
 	
-	allowed = {	
+	allowed = {
 		OR = {
-			tag = GER
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_battle_line_ship_builders
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}	
 }
 
 GER_blohm_und_voss_organization = {
 	include = generic_raider_ship_organization
 	icon = GFX_idea_blohm_und_voss
 	
-	allowed = {	
+	allowed = {
 		OR = {
-			tag = GER
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_raiding_fleet
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			surface_visibility = -0.05
+		}
+	}	
 }
 
-#GER_deutsche_werft_organization = {
-#	name = "Deutsche Werft"
-#	include = generic_submarine_organization
-#	icon = GFX_idea_generic_naval_manufacturer_2
-#	
-#	allowed = {	
-#			OR = {
-#				tag = GER
-#				tag = WGR
-#				tag = GZR
-#				tag = GCR
-#			}
-#		}
-#	
-#	available = {
-#	}
-#}
+GER_deutsche_werft_organization = {
+	name = "Deutsche Werft"
+	include = generic_submarine_organization
+	icon = GFX_idea_generic_naval_manufacturer_2
+	
+	allowed = {	
+		OR = {
+			original_tag = GER	#tag aliases initialize after this is checked
+			tag = WGR
+
+			tag = HAN
+		}
+	}
+	
+	available = {
+	}
+	initial_trait = {
+		name = generic_mio_initial_trait_submarine_designer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		equipment_bonus = {
+			sub_visibility = -0.05
+		}
+	}	
+}
+
+GER_siemens_schuckert_organization = {
+	name = "Siemens-Schuckert"
+	include = generic_submarine_organization
+	icon = GFX_idea_siemens
+	
+	allowed = {	
+		tag = PRE
+	}
+	
+	available = {
+	}
+}
 
 GER_deschimag_organization = {
 	name = GER_deschimag
@@ -288,17 +356,25 @@ GER_deschimag_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
+		}
 	}
-}
-
+	
 	available = {
 
 	}
+	initial_trait = {
+		name = generic_mio_refurbishment_repair_organization
+		limit_to_equipment_type = { capital_ship screen_ship ship_hull_submarine }
+		equipment_bonus = {
+			max_strength = 0.03
+		}
 
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.01
+		}
+	}
 
 } 
 
@@ -318,7 +394,7 @@ GER_messerschmitt_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER
+			original_tag = GER	#tag aliases initialize after this is checked
 			NOR_AAT = yes 
 		}
 	}
@@ -386,14 +462,14 @@ GER_junkers_organization = {
 	
 	allowed = {	 
 		OR = {
-			tag = GER 
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
 			}
+
+			tag = PRE
 		}
 	}
 	
@@ -403,6 +479,14 @@ GER_junkers_organization = {
 			FROM = { has_completed_focus = ETH_invite_foreign_industrialists }
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_cas_aircraft_designer
+
+		equipment_bonus = {
+			air_ground_attack = 0.05
+			maximum_speed = -0.03
+		}
+	}	
 
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
@@ -446,14 +530,26 @@ GER_focke_wulf_organization = {
 	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_focke_wulf
 	
-	allowed = {	
+	allowed = {
 		OR = {
-		tag = GER 
-		tag = WGR
-			tag = GZR
-			tag = GCR
+			original_tag = GER	#tag aliases initialize after this is checked
+			tag = WGR
+
+			#located in Bremen
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_multi_role_aircraft_designer
+
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
+
+		equipment_bonus = {
+			air_ground_attack = 0.02
+			naval_strike_attack = 0.02
+			air_attack = 0.02
+			air_defence = 0.02
+		}
+	}	
 }
 
 GER_heinkel_organization = {
@@ -462,10 +558,11 @@ GER_heinkel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER 
+			original_tag = GER	#tag aliases initialize after this is checked
 			tag = WGR
-			tag = GZR
-			tag = GCR
+
+			tag = MEK #Mekelenburg, where the seat was located
+
 			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
@@ -487,19 +584,12 @@ GER_heinkel_organization = {
 			limit = {
 				FROM = { original_tag = BUL }
 			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_heinkel_mio_flag
-				}
-			}
 			FROM = { 
 				OR = {
 					is_subject = no
 					is_subject_of = GER
 				}
 				#is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 		ELSE_IF = {
@@ -515,13 +605,12 @@ GER_dornier_organization = {
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_dornier
 	
-	allowed = {	
+	allowed = {
 		OR = {
 			original_tag = GER	#tag aliases initialize after this is checked
-		tag = WGR
+			tag = WGR
 
 			tag = BAY #yes
-			tag = GCR
 		}
 	}
 	initial_trait = {
@@ -625,7 +714,7 @@ BAY_bayerische_flugzeugwerke_organization = {
 }
 
 BAY_waggon_und_maschinenbau_gmbh_donauworth_organization = {
-	name = "Waggon- und Maschinenbau GmbH Donauwörth"
+	name = "Waggon- und Maschinenbau GmbH DonauwÃ¶rth"
 	include = generic_cas_aircraft_organization
 	icon = GFX_idea_generic_air_manufacturer_1
 	
@@ -633,6 +722,8 @@ BAY_waggon_und_maschinenbau_gmbh_donauworth_organization = {
 		tag = BAY #
 	}
 }
+
+
 
 
 ################################### 
@@ -714,6 +805,53 @@ GER_mauser_organization = {
 			}
 		}
 	}
+	initial_trait = {
+		name = generic_mio_initial_trait_infantry_manufacturer
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}	
+    add_trait = { 
+        token = GER_mio_trait_mg34
+        name = GER_mio_trait_mg34
+        icon = GFX_generic_mio_department_icon_infantry_offense
+        special_trait_background = yes
+
+        position = { x=0 y=1 }
+        relative_position_id = generic_mio_trait_reinforced_stocks
+
+        all_parents = {
+            generic_mio_trait_reinforced_stocks
+        }
+
+		visible = {
+			owner = {
+				NOT = {
+					original_tag = ETH
+				}
+			}
+		}
+
+        available = {
+
+        }
+
+        equipment_bonus = {
+            soft_attack = 0.03
+            breakthrough = 0.02
+            defense = 0.03
+			build_cost_ic = 0.02
+        }
+    }
 }
 
 GER_opel_organization = {
@@ -722,11 +860,7 @@ GER_opel_organization = {
 	
 	allowed = {	
 		OR = {
-			tag = GER
-			AND = {
-				tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
+			original_tag = GER	#tag aliases initialize after this is checked
 			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
@@ -745,19 +879,12 @@ GER_opel_organization = {
 
 		IF = {
 			limit = { FROM = { original_tag = BUL } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_opel_mio_flag
-				}
-			}
 			FROM = { 
 				OR = {
 					is_subject = no
 					is_subject_of = GER
 				}
 				#is_in_faction_with = GER
-				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
 		IF = {
@@ -765,24 +892,11 @@ GER_opel_organization = {
 			FROM = { has_country_flag = GER_mot_chosen }
 		}	
 	}
-	add_trait = { 
-		token = GER_mio_r56rp_opel
-		name = GER_mio_r56rp_opel
-		icon = GFX_generic_mio_department_icon_motorized_materials
-		special_trait_background = yes
+	initial_trait = {
+		name = generic_mio_initial_trait_motorized_mechanized_manufacturer
 
-		position = { x=3 y=0 }
-		
-		available = {
-			owner = {
-				has_completed_focus = GER_volkswagen
-			}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
 		}
-
-		limit_to_equipment_type = { motorized_equipment }
-
-		equipment_bonus = {
-			build_cost_ic = -0.10
-		}
-	}
+	}	
 }

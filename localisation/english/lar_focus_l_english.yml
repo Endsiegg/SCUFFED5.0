@@ -24,6 +24,8 @@
  SPR_the_popular_front_desc:1 "The danger posed by Fascism and religious superstitions to our personal liberties is paramount, and we must establish a broad front of political parties that are united in their opposition to the Right. Only if we band together will we be able to halt their advance and save our republic."
  SPR_secure_the_guardia_de_asalto:0 "Secure the Guardia de Asalto"
  SPR_secure_the_guardia_de_asalto_desc:1 "The polarization of society is increasing, and violence along with it. We must ensure the loyalty of the Assault Guards, our well-trained heavy police reserve. They will be invaluable if the violence continues to escalate."
+ SPA_anti_major_cuck_idea:0 "Plan Against the Major Powers"
+ SPA_anti_major_cuck_idea_desc:1 "The key to success in this civil war, is not to be cucked by the Major powers greed for grind."
  SPR_secure_the_guardia_de_asalto_tt:1 "Upon the start of the civil war, gain 3 trained units with §Y6 infantry§! battalions. The Nationalists gain 6 poorly-trained units with §Y3 infantry§! battalions.\n"
  SPR_secure_the_guardia_de_asalto_tt_2:0 "Upon the start of the civil war, gain 5 trained units with §Y6 infantry§! battalions. The Nationalists gain 10 poorly-trained units with §Y3 infantry§! battalions.\n"
  SPR_secure_the_guardia_get_both_types_tt:0 "§RIf neither focus is taken, the Nationalists will receive both types instead!§!\n"
@@ -640,7 +642,7 @@
  FRA_invest_in_the_colonies:1 "Develop the Colonies"
  FRA_invest_in_the_colonies_desc:0 "Our industrial heartlands in Europe don't have the population and resources to sustain a large industrial expansion. If our economy is to be competitive with the rest of the world, we must utilize our colonies."
  FRA_colonial_industry_effect_tt:2 "Adds two §YCivilian Factories§! to every colonial state previously invested in.\n"
- FRA_industrial_expansion_effect_tt:1 "Adds two §YCivilian Factories§! to metropolitan states previously invested in.\n"
+ FRA_industrial_expansion_effect_tt:1 "Adds two §YCivilian Factories§! to every state previously invested in.\n"
  FRA_military_factories_effect_tt:1 "Adds two §YMilitary Factories§! to every state previously invested in.\n"
  FRA_invest_in_west_africa:0 "Invest In West Africa"
  FRA_invest_in_west_africa_desc:0 "The vast reserves of workers and resources in western Africa make it a perfect candidate for investment."
@@ -1278,19 +1280,6 @@
  POR_regimento_de_comandos_desc:0 "We have need of elite forces, trained for different combat situations and able to perform in the harshest conditions.\n\n"Audaces Fortuna Juvat""
  FRA_laissez_faire_tt:0 "Our economy will become more efficient after a period of about two years."
  FRA_carry_the_revolution_west_tt:0 "Grants a §YTopple Government§! wargoal against §YSpain§! or any surviving, non-communist factions of the Spanish Civil War."
-
- POR_potential_civil_war_low_requirement_tt:0 "§RIf §YStability§! §Ris below §Y30%§R at the time this focus is completed, a civil war will start!§!§!§!§!"
- POR_allied_banking:0 "Allied Banking"
- POR_allied_banking_description:0 "With Ties with Britan growing it is important for us to intigrate our banking sectors"
- POR_more_buildings:0 "Mobilize Portugal"
- POR_more_buildings_desc:0 "It is time we catch up, put our distaste aside, and catch up to the other powers that we were once keeping paces with. The Development Continental Portugal will be will one step towards this new directive."
- POR_more_buildings_tt:0 "Will Upgrade Mainland Portugal States"
- POR_allied_banking_idea:0 "Allied Banking"
- POR_portuguese_urbanization:0 "Portuguese Urbanization"
- POR_portuguese_urbanization_desc:0 "Portuguese Urbanization"
- POR_owns_portugal_tt:0 "Owns All of Portuguese Mainland "
-
-
 
 
 

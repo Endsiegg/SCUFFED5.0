@@ -391,6 +391,7 @@ CZE_template_design = {
 		value = -50
 	}
 }
+
 CZE_industry = {
 	allowed = { original_tag = CZE }
 	enable = {
@@ -429,3 +430,6 @@ CZE_dont_be_afk = {
 		value = 100
 	}
 }
+
+
+

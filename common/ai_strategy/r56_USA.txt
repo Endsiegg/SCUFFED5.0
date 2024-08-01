@@ -171,13 +171,13 @@ USA_wants_synth = {
 			date > 1941.06.20
 			has_completed_focus = USA_rubber_reserve_company
 		}
-		synthetic_refinery < 20
+		rubber_refinery < 20
 	}
 
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = building_target
-		id = synthetic_refinery
+		id = rubber_refinery
 		value = 4
 	}
 }

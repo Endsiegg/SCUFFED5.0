@@ -1,8 +1,6 @@
-﻿#####################################################################
-### DO NOT CHANGE FILE NAME, THIS IS AN OVERRIDE TO R56 / VANILLA ###
-#####################################################################
-
-#this is where the random-ass low stability events fire.
+﻿###########################
+#stability events
+###########################
 
 add_namespace = stability
 
@@ -46,7 +44,6 @@ country_event = {
 		NOT = { has_completed_focus = SPR_all_must_bear_the_torch }	#regional defense council of spain with stability drop
 		NOT = { has_completed_focus = HON_free_our_markets }		#ancap honduras with constant stability drop
 		NOT = { has_completed_focus = MON_oust_genden }				#ancom mongolia with constant stability drop
-		NOT = { has_idea = PRC_guerilla_warfare }		     		#
 	}
 
 	mean_time_to_happen = { 
@@ -133,7 +130,7 @@ country_event = {
 				if = {
 					limit = {
 						not = { 
-							has_idea = r56i_laws_security_order 
+							#has_idea = r56i_laws_security_order 
 							} #prevents strikes
 						}
 						add_ideas = strikes_1 
@@ -141,7 +138,7 @@ country_event = {
 				}
 				else_if = {
 						limit = {
-							has_idea = r56i_laws_security_order 
+							#has_idea = r56i_laws_security_order 
 						}
 						country_event = strikes_rt56.1
 					}
@@ -175,10 +172,6 @@ country_event = {
 	
 	option = { 
 		name = stability.3.a
-		ai_chance = {
-			
-		}
-		
 	}
 
 }
@@ -1240,7 +1233,7 @@ country_event = {
 	id = mutiny_event.1
 	title = mutiny_event.1.t	
 	desc = mutiny_event.1.desc	#
-	picture = GFX_report_event_japanese_soldiers					# 
+	picture = GFX_report_event_japanese_soldiers_03					# 
 		
 	is_triggered_only = yes
 	
@@ -1303,7 +1296,7 @@ country_event = {
 	id = mutiny_event.4
 	title = mutiny_event.4.t	
 	desc = mutiny_event.4.desc	#
-	picture = GFX_report_event_czech_soldier_01					# 
+	picture = GFX_report_event_japanese_soldiers_01					# 
 		
 	is_triggered_only = yes
 	

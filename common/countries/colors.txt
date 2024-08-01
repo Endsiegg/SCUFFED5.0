@@ -1,12 +1,12 @@
 #reload countrycolors
 
 GER = {
-	color = HSV { 0.1 0.15 0.4 }
+	color = rgb { 81 81 81 }
 	color_ui = rgb { 138 155 116 }
 }
 ENG = {
-	color = rgb { 201 56 93 }
-	color_ui = rgb { 255 73 121 }
+	color = rgb { 175 20 20 }
+	color_ui = rgb { 175 20 20 }
 }
 SOV = {
 	color = rgb { 125 13 24 }
@@ -24,7 +24,7 @@ LUX = {
 	color = rgb { 65 175 179 }
 	color_ui = rgb { 85 228 233 }
 }
-BEL = { 
+BEL = {
 	color = rgb { 193 171 8  }
 	color_ui = rgb { 251 222 10 }
 }
@@ -61,8 +61,8 @@ SPR = {
 	color_ui = rgb { 255 255 122 }
 }
 ITA = {
-	color = rgb { 67 127 63 }
-	color_ui = rgb { 87 165 82 }
+	color = rgb { 0 146 70 }
+	color_ui = rgb { 0 146 70 }
 }
 ROM = {
 	color = rgb { 215 196 72 }
@@ -145,7 +145,7 @@ BRA = {
 	color_ui = rgb { 99 189 82 }
 }
 CAN = {
-	color = rgb { 119 48 39 }
+	color = rgb { 102 45 23 }
 	color_ui = rgb { 155 62 51 }
 }
 CHI = {
@@ -233,8 +233,8 @@ SAF = {
 	color_ui = rgb { 0 122 77 }
 }
 SAU = {
-    color = rgb { 123 122 125 }
-    color_ui = rgb { 222 247 198 }
+	color = rgb { 171 190 152 }
+	color_ui = rgb { 222 247 198 }
 }
 SIA = {
 	color = rgb { 171 190 152 }
@@ -261,7 +261,7 @@ YUN = {
 	color_ui = rgb { 222 247 198 }
 }
 USA = {
-	color = rgb { 20 133 237 }
+	color = rgb { 70 107 181 }
 	color_ui = rgb { 87 160 255 }
 }
 MON = {
@@ -344,15 +344,6 @@ LBA = {
 	color_ui = rgb { 200 180 90 }
 }
 
-EGY = {
-	color = rgb { 230 230 70 }
-	color_ui = rgb { 230 230 70 }
-}
-
-PAL = {
-	color = rgb { 30 80 30 }
-	color_ui = rgb { 30 80 30 }
-}
 
 LEB = {
 	color = rgb { 130  150  60 }
@@ -725,10 +716,6 @@ SHL = {
 	color = rgb { 51 51 255 }
 	color_ui = rgb { 51 51 255 }
 }
-ALS = {
-	color = rgb { 235 216 92 }
-	color_ui = rgb { 235 216 92 }
-}
 NAP = {
 	color = rgb { 100 50 150 }
 	color_ui = rgb { 100 50 150 }
@@ -905,23 +892,11 @@ TTS = {
 	color = rgb { 230 230 0 }
 	color_ui = rgb { 179 179 0 }
 }
-#MPL = {
-#	color = rgb { 3  41  0 }
-#	color_ui = rgb { 3  41  0 }
-#}
-BCO = {
-	color = rgb { 130 90 80 }
-	color_ui = rgb { 130 90 80 }
+QIN = {
+	color = rgb { 255 153 153 }
+	color_ui = rgb { 255 153 153 }
 }
-ABT = {
-	color = rgb { 190 78 120 }
-	color_ui = rgb { 190 78 120 }
-}
-MET = {
-	color = rgb { 200 150 65 }
-	color_ui = rgb { 200 150 65 }
-}
-ACN = {
-	color = rgb { 160 160 120 }
-	color_ui = rgb { 160 160 120 }
+ARY = {
+	color = rgb { 7 7 7 }
+	color_ui = rgb { 255 153 153 }
 }
