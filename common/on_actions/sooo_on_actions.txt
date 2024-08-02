@@ -19,7 +19,7 @@ on_actions = {
 					add_ideas = sooo_player_was_here 
 					add_timed_idea = {
 						idea = sooo_Day_one_production
-						days = 31
+						days = 60
 					}
 				}
 				
