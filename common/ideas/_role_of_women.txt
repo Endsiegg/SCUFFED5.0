@@ -5,7 +5,7 @@ ideas = {
 
 		stay_at_home = {
 						
-			cost = 150
+			cost = 100
 			removal_cost = -1
 			level = 4
 			
@@ -21,10 +21,11 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
+			
 			default = yes
 		}
 		women_workers = {		
-			cost = 150
+			cost = 200
 			removal_cost = -1
 			level = 3
 			
@@ -42,14 +43,14 @@ ideas = {
 
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_factory = 0.05
+				industrial_capacity_factory = 0.10
 			}
 			
 			cancel_if_invalid = no
 		}
 		women_auxillary = {
 						
-			cost = 150
+			cost = 200
 			removal_cost = -1
 			level = 3
 			
@@ -66,8 +67,8 @@ ideas = {
 
 			modifier = {
 				supply_consumption_factor = -0.05
-				production_speed_supply_node_factor = 0.1
-				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.20
+				production_speed_rail_way_factor = 0.20
 			}
 			
 			cancel_if_invalid = no
@@ -75,7 +76,7 @@ ideas = {
 		
 		limited_female_service = {
 						
-			cost = 150
+			cost = 200
 			removal_cost = -1
 			level = 2
 			
@@ -91,7 +92,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.015
+				conscription = 0.035
 				stability_factor = -0.05
 			}
 			
@@ -123,7 +124,7 @@ ideas = {
 			}
 
 			modifier = {
-				conscription = 0.075
+				conscription = 0.10
 				political_power_factor = -0.40
 				stability_factor = -0.10
 			}
