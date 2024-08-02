@@ -91,6 +91,7 @@ ideas = {
 			modifier = {
 				#production_factory_efficiency_gain_factor = 0.10
 				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
 			}
 			
 			ai_will_do = {
@@ -142,7 +143,7 @@ ideas = {
 			}
 
 			modifier = {
-				justify_war_goal_time = -0.20
+				justify_war_goal_time = -0.15
 				production_speed_arms_factory_factor = 0.05
 				production_speed_dockyard_factor = 0.05
 			}
